@@ -21,3 +21,11 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+*.suo
+*.sln
+Debug/
+Realease/
+x64
+Bin
+Obj
+.vs/
