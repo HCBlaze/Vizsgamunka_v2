@@ -42,8 +42,8 @@ namespace Asztali_alkalmazas.Classes
         }
         private int _setID(int i)
         {
-            Id = i;
-            return Id;
+            int _id = i;
+            return _id;
         }
         public void setUsername(string fname, string lname, int i)
         {

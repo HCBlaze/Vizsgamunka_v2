@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using MySql.Data.MySqlClient;
 using System.Drawing.Text;
+using Asztali_alkalmazas.Classes;
 
 namespace Asztali_alkalmazas.UI
 {
@@ -336,7 +337,5 @@ namespace Asztali_alkalmazas.UI
 
             }
         }
-
-
     }
 }
