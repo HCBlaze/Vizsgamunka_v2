@@ -41,6 +41,8 @@ namespace Asztali_alkalmazas.UI.UserControls
         private string picSrc = "";
         private string username;
         private string pwd;
+        string format = "yyyy-MM-dd";
+        string createNUpdateFormat = "yyyy-MM-dd HH:mm:ss";
         Users ujUser = new Users();
         PasswordCrypt uj = new PasswordCrypt();
             //Alapvető ablak UserControl műveletek
@@ -204,8 +206,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 conn.Open();
                 cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                string format = "yyyy-MM-dd";
-                cmd.CommandText = "UPDATE `local_store_project_23`.`users` SET Last_name ='" + ujUser.Lastname + "', First_name = '" + ujUser.Firstname + "', `Email`= '" + ujUser.Email + "', Birth = '" + ujUser.BirthDate.ToString(format) + "' where Username = @Username;";
+                cmd.CommandText = "UPDATE `local_store_project_23`.`users` SET Last_name ='" + ujUser.Lastname + "', First_name = '" + ujUser.Firstname + "', `Email`= '" + ujUser.Email + "', Birth = '" + ujUser.BirthDate.ToString(format) + "', updated_at= '"+DateTime.Now.ToString(createNUpdateFormat)+"' where Username = @Username;";
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -238,7 +239,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             conn.Open();
             cmd = new MySqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "UPDATE local_store_project_23.users SET Password = '" + uj.CryptedPwd + "' where Username= @Username;";
+            cmd.CommandText = "UPDATE local_store_project_23.users SET Password = '" + uj.CryptedPwd + "', updated_at = '"+DateTime.Now.ToString(createNUpdateFormat)+"' where Username= @Username;";
             cmd.Parameters.AddWithValue("@Username", username);
             cmd.ExecuteNonQuery();
             conn.Close();

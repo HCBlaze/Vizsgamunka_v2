@@ -79,10 +79,12 @@ namespace Asztali_alkalmazas.UI
         {
             panelSlide.Height = mainBT.Height;
             panelSlide.Top = mainBT.Top;
+            panelSlide.Visible = true;
             panelSlide2.Visible = false;
 
             userProfil_UC1.Visible = false;
             adminControl_UC1.Visible = false;
+            customer_UC1.Visible = false;
             try
             {
                 Load_PicSrc();
@@ -96,9 +98,15 @@ namespace Asztali_alkalmazas.UI
 
         private void CustomerBT_Click(object sender, EventArgs e)
         {
+            adminControl_UC1.Visible = false;
+            userProfil_UC1.Visible = false;
             panelSlide.Height = CustomerBT.Height;
             panelSlide.Top = CustomerBT.Top;
+            panelSlide.Visible = true;
             panelSlide2.Visible = false;
+            customer_UC1.Location = adminControl_UC1.Location;
+            customer_UC1.Dock = DockStyle.Fill;
+            customer_UC1.Visible = true;
         }
 
         private void adminBT_Click(object sender, EventArgs e)
@@ -111,12 +119,15 @@ namespace Asztali_alkalmazas.UI
             adminControl_UC1.Dock= DockStyle.Fill;
             adminControl_UC1.Visible = true;
             userProfil_UC1.Visible = false;
+            customer_UC1.Visible = false;
+            panelSlide.Visible = false;
         }
 
         private void supplierBT_Click(object sender, EventArgs e)
         {
             panelSlide.Height = supplierBT.Height;
             panelSlide.Top = supplierBT.Top;
+            panelSlide.Visible = true;
             panelSlide2.Visible = false;
         }
 
@@ -124,6 +135,7 @@ namespace Asztali_alkalmazas.UI
         {
             panelSlide.Height = raktarBT.Height;
             panelSlide.Top = raktarBT.Top;
+            panelSlide.Visible = true;
             panelSlide2.Visible = false;
         }
 
@@ -131,12 +143,14 @@ namespace Asztali_alkalmazas.UI
         {
             panelSlide.Height = ordersBT.Height;
             panelSlide.Top = ordersBT.Top;
+            panelSlide.Visible = true;
             panelSlide2.Visible = false;
         }
         private void ExitBT_Click(object sender, EventArgs e)
         {
             panelSlide.Height = ExitBT.Height;
             panelSlide.Top = ExitBT.Top;
+            panelSlide.Visible = true;
             panelSlide2.Visible = false;
 
             DialogResult Exit;
@@ -150,9 +164,11 @@ namespace Asztali_alkalmazas.UI
         {
             userProfil_UC1.Visible = true;
             adminControl_UC1.Visible = false;
+            customer_UC1.Visible = false;
             panelSlide2.Width = userProfilBT.Width;
             panelSlide2.Left = userProfilBT.Left;
             panelSlide2.Visible = true;
+            panelSlide.Visible = false;
         }
 
         private void kijelentkezBT_Click(object sender, EventArgs e)
@@ -160,6 +176,7 @@ namespace Asztali_alkalmazas.UI
             panelSlide2.Width = kijelentkezBT.Width;
             panelSlide2.Left = kijelentkezBT.Left;
             panelSlide2.Visible = true;
+            panelSlide.Visible = false;
 
             DialogResult Logout;
             Logout = MessageBox.Show("Biztos kijelentkezel?", "Project 23", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -177,6 +194,7 @@ namespace Asztali_alkalmazas.UI
 
         private void closeBT_Click(object sender, EventArgs e)
         {
+            panelSlide.Visible = true;
             DialogResult Exit;
             Exit = MessageBox.Show("Bezárja a programot?", "Project 23", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (Exit == DialogResult.Yes)

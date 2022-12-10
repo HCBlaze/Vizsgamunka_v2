@@ -98,6 +98,7 @@
   <ItemGroup>
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\Order.cs" />
+    <Compile Include="Classes\OrderItem.cs" />
     <Compile Include="Classes\PasswordCrypt.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Supplier.cs" />
@@ -134,6 +135,12 @@
     <Compile Include="UI\UserControls\AdminControl_UC.Designer.cs">
       <DependentUpon>AdminControl_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserControls\Customer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\Customer_UC.Designer.cs">
+      <DependentUpon>Customer_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserControls\HomeScreen_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\AdminControl_UC.resx">
       <DependentUpon>AdminControl_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\Customer_UC.resx">
+      <DependentUpon>Customer_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\HomeScreen_UC.resx">
       <DependentUpon>HomeScreen_UC.cs</DependentUpon>
@@ -287,6 +297,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\icons8_purchase_order_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\icons8_reset_50px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

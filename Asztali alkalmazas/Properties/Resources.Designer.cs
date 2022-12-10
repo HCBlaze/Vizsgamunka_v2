@@ -173,6 +173,16 @@ namespace Asztali_alkalmazas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_reset_50px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_reset_50px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shutdown_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_shutdown_50px", resourceCulture);

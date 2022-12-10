@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPanel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelSlide = new System.Windows.Forms.Panel();
             this.ordersBT = new System.Windows.Forms.Button();
             this.ExitBT = new System.Windows.Forms.Button();
-            this.panelSlide = new System.Windows.Forms.Panel();
             this.raktarBT = new System.Windows.Forms.Button();
             this.supplierBT = new System.Windows.Forms.Button();
             this.CustomerBT = new System.Windows.Forms.Button();
@@ -49,7 +49,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.adminBT = new System.Windows.Forms.Button();
             this.panelSlide2 = new System.Windows.Forms.Panel();
             this.kijelentkezBT = new System.Windows.Forms.Button();
             this.userProfilBT = new System.Windows.Forms.Button();
@@ -58,9 +57,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.adminBT = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.adminControl_UC1 = new Asztali_alkalmazas.UI.UserControls.AdminControl_UC();
             this.userProfil_UC1 = new Asztali_alkalmazas.UI.UserControls.UserProfil_UC();
+            this.customer_UC1 = new Asztali_alkalmazas.UI.UserControls.Customer_UC();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +85,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 1044);
             this.panel1.TabIndex = 0;
+            // 
+            // panelSlide
+            // 
+            this.panelSlide.BackColor = System.Drawing.Color.Orange;
+            this.panelSlide.Location = new System.Drawing.Point(0, 282);
+            this.panelSlide.Name = "panelSlide";
+            this.panelSlide.Size = new System.Drawing.Size(15, 109);
+            this.panelSlide.TabIndex = 3;
             // 
             // ordersBT
             // 
@@ -116,14 +125,6 @@
             this.ExitBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ExitBT.UseVisualStyleBackColor = true;
             this.ExitBT.Click += new System.EventHandler(this.ExitBT_Click);
-            // 
-            // panelSlide
-            // 
-            this.panelSlide.BackColor = System.Drawing.Color.Orange;
-            this.panelSlide.Location = new System.Drawing.Point(0, 282);
-            this.panelSlide.Name = "panelSlide";
-            this.panelSlide.Size = new System.Drawing.Size(15, 109);
-            this.panelSlide.TabIndex = 3;
             // 
             // raktarBT
             // 
@@ -345,22 +346,6 @@
             this.panel4.Size = new System.Drawing.Size(1470, 132);
             this.panel4.TabIndex = 2;
             // 
-            // adminBT
-            // 
-            this.adminBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminBT.FlatAppearance.BorderSize = 0;
-            this.adminBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_system_administrator_male_50px;
-            this.adminBT.Location = new System.Drawing.Point(1124, 19);
-            this.adminBT.Name = "adminBT";
-            this.adminBT.Size = new System.Drawing.Size(134, 86);
-            this.adminBT.TabIndex = 25;
-            this.adminBT.Text = "Admin felület";
-            this.adminBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.adminBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.adminBT.UseVisualStyleBackColor = true;
-            this.adminBT.Click += new System.EventHandler(this.adminBT_Click);
-            // 
             // panelSlide2
             // 
             this.panelSlide2.BackColor = System.Drawing.Color.Orange;
@@ -456,6 +441,22 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Felhasználó:";
             // 
+            // adminBT
+            // 
+            this.adminBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminBT.FlatAppearance.BorderSize = 0;
+            this.adminBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_system_administrator_male_50px;
+            this.adminBT.Location = new System.Drawing.Point(1124, 19);
+            this.adminBT.Name = "adminBT";
+            this.adminBT.Size = new System.Drawing.Size(134, 86);
+            this.adminBT.TabIndex = 25;
+            this.adminBT.Text = "Admin felület";
+            this.adminBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.adminBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminBT.UseVisualStyleBackColor = true;
+            this.adminBT.Click += new System.EventHandler(this.adminBT_Click);
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -482,11 +483,22 @@
             this.userProfil_UC1.TabIndex = 3;
             this.userProfil_UC1.Visible = false;
             // 
+            // customer_UC1
+            // 
+            this.customer_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.customer_UC1.Location = new System.Drawing.Point(859, 238);
+            this.customer_UC1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customer_UC1.Name = "customer_UC1";
+            this.customer_UC1.Size = new System.Drawing.Size(1454, 848);
+            this.customer_UC1.TabIndex = 5;
+            this.customer_UC1.Visible = false;
+            // 
             // ControlPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1670, 1044);
+            this.Controls.Add(this.customer_UC1);
             this.Controls.Add(this.adminControl_UC1);
             this.Controls.Add(this.userProfil_UC1);
             this.Controls.Add(this.panel4);
@@ -545,5 +557,6 @@
         private UserControls.AdminControl_UC adminControl_UC1;
         private System.Windows.Forms.Button adminBT;
         private System.Windows.Forms.Button ordersBT;
+        private UserControls.Customer_UC customer_UC1;
     }
 }

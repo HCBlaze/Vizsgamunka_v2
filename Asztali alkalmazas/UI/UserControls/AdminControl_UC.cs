@@ -18,6 +18,8 @@ namespace Asztali_alkalmazas.UI.UserControls
     {
         MySqlConnection conn;
         string connstring;
+        string format = "yyyy-MM-dd";
+        string createNUpdateFormat = "yyyy-MM-dd HH:mm:ss";
         int id;
         string username;
         string currentId;
@@ -286,8 +288,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 conn.Open();
                 cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                string format = "yyyy-MM-dd";
-                cmd.CommandText = "INSERT INTO `local_store_project_23`.`users`(`Password`, `First_name`, `Last_name`, `Email`, `Birth`, `Permission`, `Deleted`)  VALUES ('" + pwd.CryptedPwd + "', '" + uj.Firstname + "', '" + uj.Lastname + "', '" + uj.Email + "', '" + uj.BirthDate.ToString(format) + "', '" + uj.Permission + "', '" + uj.Deleted + "')";
+                cmd.CommandText = "INSERT INTO `local_store_project_23`.`users`(`Password`, `First_name`, `Last_name`, `Email`, `Birth`, `Permission`, `Deleted`, `created_at`,`updated_at`)  VALUES ('" + pwd.CryptedPwd + "', '" + uj.Firstname + "', '" + uj.Lastname + "', '" + uj.Email + "', '" + uj.BirthDate.ToString(format) + "', '" + uj.Permission + "', '" + uj.Deleted + "','"+DateTime.Now.ToString(createNUpdateFormat)+"', '"+DateTime.Now.ToString(createNUpdateFormat)+"')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Létrehozva!");
                 conn.Close();
@@ -541,8 +542,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 conn.Open();
                 cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                string format = "yyyy-MM-dd";
-                cmd.CommandText = "UPDATE `local_store_project_23`.`users` SET Password= '" + pwd.CryptedPwd + "', First_name= '" + uj.Firstname + "',Last_name= '" + uj.Lastname + "', `Email`= '" + uj.Email + "',Birth= '" + uj.BirthDate.ToString(format) + "',Permission= '" + uj.Permission + "', Deleted= '" + uj.Deleted + "' WHERE id= '" + currentId + "'";
+                cmd.CommandText = "UPDATE `local_store_project_23`.`users` SET Password= '" + pwd.CryptedPwd + "', First_name= '" + uj.Firstname + "',Last_name= '" + uj.Lastname + "', `Email`= '" + uj.Email + "',Birth= '" + uj.BirthDate.ToString(format) + "',Permission= '" + uj.Permission + "', Deleted= '" + uj.Deleted + "', updated_at= '"+DateTime.Now.ToString(createNUpdateFormat)+"' WHERE id= '" + currentId + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 reLoadActive();
