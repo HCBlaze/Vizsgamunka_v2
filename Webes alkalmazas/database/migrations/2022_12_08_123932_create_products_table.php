@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->foreignId("SupplierId")->constrained("Suppliers");
             $table->decimal("UnitPrice");
             $table->string("Package");
+            $table->integer("stock");
             $table->timestamps();
         });
     }

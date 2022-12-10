@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string("Password");
             $table->string("First_name");
             $table->string("Last_name");
-            $table->string("E-mail");
+            $table->string("Email");
             $table->date("Birth");
             $table->foreignId("Permission")->constrained("permissions");
             $table->tinyInteger("Deleted");
