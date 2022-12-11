@@ -59,9 +59,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.adminBT = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.customer_UC1 = new Asztali_alkalmazas.UI.UserControls.Customer_UC();
             this.adminControl_UC1 = new Asztali_alkalmazas.UI.UserControls.AdminControl_UC();
             this.userProfil_UC1 = new Asztali_alkalmazas.UI.UserControls.UserProfil_UC();
-            this.customer_UC1 = new Asztali_alkalmazas.UI.UserControls.Customer_UC();
+            this.supplier_UC1 = new Asztali_alkalmazas.UI.UserControls.Supplier_UC();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -461,6 +462,16 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // customer_UC1
+            // 
+            this.customer_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.customer_UC1.Location = new System.Drawing.Point(859, 238);
+            this.customer_UC1.Margin = new System.Windows.Forms.Padding(4);
+            this.customer_UC1.Name = "customer_UC1";
+            this.customer_UC1.Size = new System.Drawing.Size(1454, 848);
+            this.customer_UC1.TabIndex = 5;
+            this.customer_UC1.Visible = false;
+            // 
             // adminControl_UC1
             // 
             this.adminControl_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
@@ -483,21 +494,21 @@
             this.userProfil_UC1.TabIndex = 3;
             this.userProfil_UC1.Visible = false;
             // 
-            // customer_UC1
+            // supplier_UC1
             // 
-            this.customer_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.customer_UC1.Location = new System.Drawing.Point(859, 238);
-            this.customer_UC1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.customer_UC1.Name = "customer_UC1";
-            this.customer_UC1.Size = new System.Drawing.Size(1454, 848);
-            this.customer_UC1.TabIndex = 5;
-            this.customer_UC1.Visible = false;
+            this.supplier_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.supplier_UC1.Location = new System.Drawing.Point(1102, 450);
+            this.supplier_UC1.Name = "supplier_UC1";
+            this.supplier_UC1.Size = new System.Drawing.Size(1454, 848);
+            this.supplier_UC1.TabIndex = 6;
+            this.supplier_UC1.Visible = false;
             // 
             // ControlPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1670, 1044);
+            this.Controls.Add(this.supplier_UC1);
             this.Controls.Add(this.customer_UC1);
             this.Controls.Add(this.adminControl_UC1);
             this.Controls.Add(this.userProfil_UC1);
@@ -558,5 +569,6 @@
         private System.Windows.Forms.Button adminBT;
         private System.Windows.Forms.Button ordersBT;
         private UserControls.Customer_UC customer_UC1;
+        private UserControls.Supplier_UC supplier_UC1;
     }
 }

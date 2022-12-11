@@ -88,6 +88,7 @@ namespace Asztali_alkalmazas.UI.UserControls
 
         private void ReLoadDGV()
         {
+            CustomersDGV.ClearSelection();
             CustomersDGV.DataSource = null;
             CustomersDGV.DataSource = GetCustomersList();
         }
@@ -220,15 +221,14 @@ namespace Asztali_alkalmazas.UI.UserControls
                 MessageBox.Show("Nem változtattál semmilyen adaton.");
             }
         }
-
-        private void userProfilBT_Click(object sender, EventArgs e)
-        {
-            ReLoadDGV();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             CustomersDGV.DataSource = GetCustomerOrder();
+        }
+
+        private void customerDGVReload_Click(object sender, EventArgs e)
+        {
+            ReLoadDGV();
         }
     }
 }

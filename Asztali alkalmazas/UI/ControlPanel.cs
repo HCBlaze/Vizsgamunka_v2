@@ -100,6 +100,7 @@ namespace Asztali_alkalmazas.UI
         {
             adminControl_UC1.Visible = false;
             userProfil_UC1.Visible = false;
+            supplier_UC1.Visible = false;
             panelSlide.Height = CustomerBT.Height;
             panelSlide.Top = CustomerBT.Top;
             panelSlide.Visible = true;
@@ -114,21 +115,27 @@ namespace Asztali_alkalmazas.UI
             panelSlide2.Width = adminBT.Width;
             panelSlide2.Left = adminBT.Left;
             panelSlide2.Visible = true;
-
             adminControl_UC1.Location = userProfil_UC1.Location;
             adminControl_UC1.Dock= DockStyle.Fill;
             adminControl_UC1.Visible = true;
             userProfil_UC1.Visible = false;
             customer_UC1.Visible = false;
+            supplier_UC1.Visible = false;
             panelSlide.Visible = false;
         }
 
         private void supplierBT_Click(object sender, EventArgs e)
         {
+            adminControl_UC1.Visible = false;
+            userProfil_UC1.Visible = false;
+            customer_UC1.Visible= false;
             panelSlide.Height = supplierBT.Height;
             panelSlide.Top = supplierBT.Top;
             panelSlide.Visible = true;
             panelSlide2.Visible = false;
+            supplier_UC1.Location = adminControl_UC1.Location;
+            supplier_UC1.Dock = DockStyle.Fill;
+            supplier_UC1.Visible = true;
         }
 
         private void raktarBT_Click(object sender, EventArgs e)

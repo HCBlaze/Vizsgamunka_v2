@@ -40,8 +40,9 @@
             this.customerNewBT = new System.Windows.Forms.Button();
             this.customerDeleteBT = new System.Windows.Forms.Button();
             this.getCustomerOrderBT = new System.Windows.Forms.Button();
-            this.userProfilBT = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.customerDGVReload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             // 
             this.customerPhone.Location = new System.Drawing.Point(1046, 145);
             this.customerPhone.Name = "customerPhone";
-            this.customerPhone.Size = new System.Drawing.Size(194, 20);
+            this.customerPhone.Size = new System.Drawing.Size(194, 22);
             this.customerPhone.TabIndex = 26;
             this.customerPhone.Leave += new System.EventHandler(this.customerPhone_Leave);
             // 
@@ -82,7 +83,7 @@
             // 
             this.customerFNTB.Location = new System.Drawing.Point(670, 145);
             this.customerFNTB.Name = "customerFNTB";
-            this.customerFNTB.Size = new System.Drawing.Size(194, 20);
+            this.customerFNTB.Size = new System.Drawing.Size(194, 22);
             this.customerFNTB.TabIndex = 25;
             this.customerFNTB.Leave += new System.EventHandler(this.customerFNTB_Leave);
             // 
@@ -90,7 +91,7 @@
             // 
             this.customerLNTB.Location = new System.Drawing.Point(277, 145);
             this.customerLNTB.Name = "customerLNTB";
-            this.customerLNTB.Size = new System.Drawing.Size(194, 20);
+            this.customerLNTB.Size = new System.Drawing.Size(194, 22);
             this.customerLNTB.TabIndex = 24;
             this.customerLNTB.Leave += new System.EventHandler(this.customerLNTB_Leave);
             // 
@@ -177,22 +178,6 @@
             this.getCustomerOrderBT.UseVisualStyleBackColor = true;
             this.getCustomerOrderBT.Click += new System.EventHandler(this.button1_Click);
             // 
-            // userProfilBT
-            // 
-            this.userProfilBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.userProfilBT.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.icons8_reset_50px_1;
-            this.userProfilBT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.userProfilBT.FlatAppearance.BorderSize = 0;
-            this.userProfilBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userProfilBT.Location = new System.Drawing.Point(1408, 412);
-            this.userProfilBT.Name = "userProfilBT";
-            this.userProfilBT.Size = new System.Drawing.Size(33, 28);
-            this.userProfilBT.TabIndex = 31;
-            this.userProfilBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.userProfilBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.userProfilBT.UseVisualStyleBackColor = true;
-            this.userProfilBT.Click += new System.EventHandler(this.userProfilBT_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -204,12 +189,40 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Adatbázis újratöltése:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label6.Location = new System.Drawing.Point(1112, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Formátum:+36 xx xxx xxxx";
+            // 
+            // customerDGVReload
+            // 
+            this.customerDGVReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.customerDGVReload.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.icons8_reset_50px_1;
+            this.customerDGVReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.customerDGVReload.FlatAppearance.BorderSize = 0;
+            this.customerDGVReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerDGVReload.Location = new System.Drawing.Point(1408, 412);
+            this.customerDGVReload.Name = "customerDGVReload";
+            this.customerDGVReload.Size = new System.Drawing.Size(33, 28);
+            this.customerDGVReload.TabIndex = 31;
+            this.customerDGVReload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.customerDGVReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.customerDGVReload.UseVisualStyleBackColor = true;
+            this.customerDGVReload.Click += new System.EventHandler(this.customerDGVReload_Click);
+            // 
             // Customer_UC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.userProfilBT);
+            this.Controls.Add(this.customerDGVReload);
             this.Controls.Add(this.getCustomerOrderBT);
             this.Controls.Add(this.customerDeleteBT);
             this.Controls.Add(this.customerNewBT);
@@ -245,7 +258,8 @@
         private System.Windows.Forms.Button customerNewBT;
         private System.Windows.Forms.Button customerDeleteBT;
         private System.Windows.Forms.Button getCustomerOrderBT;
-        private System.Windows.Forms.Button userProfilBT;
+        private System.Windows.Forms.Button customerDGVReload;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

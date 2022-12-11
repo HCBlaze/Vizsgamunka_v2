@@ -94,8 +94,9 @@ namespace Asztali_alkalmazas.UI.UserControls
         public void ErrorLogs(string error)
         {
             string log = "logs.txt";
+            string datum = DateTime.Now.ToString(createNUpdateFormat);
             StreamWriter iras = new StreamWriter(log, true, Encoding.UTF8);
-            iras.WriteLine(error);
+            iras.WriteLine(datum+" - "+error);
             iras.Close();
         }
         // Regisztrációs form részei: 
