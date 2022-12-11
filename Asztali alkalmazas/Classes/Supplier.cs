@@ -97,7 +97,7 @@ namespace Asztali_alkalmazas.Classes
         private string _setPhoneNumber(string number)
         {
             string _number;
-            if (number.StartsWith("+36") && number.Length == 12)
+            if (number.StartsWith("+36") && number.Length >= 12)
             {
                 _number = number;
             }
