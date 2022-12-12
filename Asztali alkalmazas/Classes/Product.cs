@@ -54,7 +54,7 @@ namespace Asztali_alkalmazas.Classes
 
         public void setSupplierId(int id)
         {
-            Id = _setSupplierId(id);
+            SupplierId = _setSupplierId(id);
         }
         private int _setSupplierId(int i)
         {
@@ -73,6 +73,16 @@ namespace Asztali_alkalmazas.Classes
             decimal _price = price;
 
             return _price;
+        }
+
+        public void setPackage(string a)
+        {
+            Package = _setPackage(a);
+        }
+
+        private string _setPackage(string a)
+        {
+            return a;
         }
 
         public void setStock(int stock)
