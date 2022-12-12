@@ -85,6 +85,7 @@ namespace Asztali_alkalmazas.UI
             userProfil_UC1.Visible = false;
             adminControl_UC1.Visible = false;
             customer_UC1.Visible = false;
+            prodcut_UC1.Visible = false;
             try
             {
                 Load_PicSrc();
@@ -101,6 +102,7 @@ namespace Asztali_alkalmazas.UI
             adminControl_UC1.Visible = false;
             userProfil_UC1.Visible = false;
             supplier_UC1.Visible = false;
+            prodcut_UC1.Visible = false;
             panelSlide.Height = CustomerBT.Height;
             panelSlide.Top = CustomerBT.Top;
             panelSlide.Visible = true;
@@ -121,7 +123,9 @@ namespace Asztali_alkalmazas.UI
             userProfil_UC1.Visible = false;
             customer_UC1.Visible = false;
             supplier_UC1.Visible = false;
+            prodcut_UC1.Visible = false;
             panelSlide.Visible = false;
+
         }
 
         private void supplierBT_Click(object sender, EventArgs e)
@@ -129,6 +133,7 @@ namespace Asztali_alkalmazas.UI
             adminControl_UC1.Visible = false;
             userProfil_UC1.Visible = false;
             customer_UC1.Visible= false;
+            prodcut_UC1.Visible = false;
             panelSlide.Height = supplierBT.Height;
             panelSlide.Top = supplierBT.Top;
             panelSlide.Visible = true;
@@ -140,10 +145,17 @@ namespace Asztali_alkalmazas.UI
 
         private void raktarBT_Click(object sender, EventArgs e)
         {
+            adminControl_UC1.Visible = false;
+            userProfil_UC1.Visible = false;
+            customer_UC1.Visible = false;
+            supplier_UC1.Visible = false;
             panelSlide.Height = raktarBT.Height;
             panelSlide.Top = raktarBT.Top;
             panelSlide.Visible = true;
             panelSlide2.Visible = false;
+            prodcut_UC1.Location = adminControl_UC1.Location;
+            prodcut_UC1.Dock = DockStyle.Fill;
+            prodcut_UC1.Visible = true;
         }
 
         private void ordersBT_Click(object sender, EventArgs e)
@@ -172,6 +184,8 @@ namespace Asztali_alkalmazas.UI
             userProfil_UC1.Visible = true;
             adminControl_UC1.Visible = false;
             customer_UC1.Visible = false;
+            supplier_UC1.Visible = false;
+            prodcut_UC1.Visible = false;
             panelSlide2.Width = userProfilBT.Width;
             panelSlide2.Left = userProfilBT.Left;
             panelSlide2.Visible = true;

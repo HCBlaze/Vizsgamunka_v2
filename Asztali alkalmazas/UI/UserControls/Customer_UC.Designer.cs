@@ -76,7 +76,7 @@
             this.customerPhone.Location = new System.Drawing.Point(1046, 145);
             this.customerPhone.Name = "customerPhone";
             this.customerPhone.Size = new System.Drawing.Size(194, 22);
-            this.customerPhone.TabIndex = 26;
+            this.customerPhone.TabIndex = 3;
             this.customerPhone.Leave += new System.EventHandler(this.customerPhone_Leave);
             // 
             // customerFNTB
@@ -84,7 +84,7 @@
             this.customerFNTB.Location = new System.Drawing.Point(670, 145);
             this.customerFNTB.Name = "customerFNTB";
             this.customerFNTB.Size = new System.Drawing.Size(194, 22);
-            this.customerFNTB.TabIndex = 25;
+            this.customerFNTB.TabIndex = 2;
             this.customerFNTB.Leave += new System.EventHandler(this.customerFNTB_Leave);
             // 
             // customerLNTB
@@ -92,7 +92,7 @@
             this.customerLNTB.Location = new System.Drawing.Point(277, 145);
             this.customerLNTB.Name = "customerLNTB";
             this.customerLNTB.Size = new System.Drawing.Size(194, 22);
-            this.customerLNTB.TabIndex = 24;
+            this.customerLNTB.TabIndex = 1;
             this.customerLNTB.Leave += new System.EventHandler(this.customerLNTB_Leave);
             // 
             // label4
@@ -136,7 +136,7 @@
             this.customerUpdateBT.Location = new System.Drawing.Point(541, 314);
             this.customerUpdateBT.Name = "customerUpdateBT";
             this.customerUpdateBT.Size = new System.Drawing.Size(229, 38);
-            this.customerUpdateBT.TabIndex = 27;
+            this.customerUpdateBT.TabIndex = 5;
             this.customerUpdateBT.Text = "Szerkeztés";
             this.customerUpdateBT.UseVisualStyleBackColor = true;
             this.customerUpdateBT.Click += new System.EventHandler(this.customerUpdateBT_Click);
@@ -148,7 +148,7 @@
             this.customerNewBT.Location = new System.Drawing.Point(73, 314);
             this.customerNewBT.Name = "customerNewBT";
             this.customerNewBT.Size = new System.Drawing.Size(229, 38);
-            this.customerNewBT.TabIndex = 28;
+            this.customerNewBT.TabIndex = 4;
             this.customerNewBT.Text = "Új";
             this.customerNewBT.UseVisualStyleBackColor = true;
             this.customerNewBT.Click += new System.EventHandler(this.customerNewBT_Click);
@@ -160,7 +160,7 @@
             this.customerDeleteBT.Location = new System.Drawing.Point(1022, 314);
             this.customerDeleteBT.Name = "customerDeleteBT";
             this.customerDeleteBT.Size = new System.Drawing.Size(229, 38);
-            this.customerDeleteBT.TabIndex = 29;
+            this.customerDeleteBT.TabIndex = 6;
             this.customerDeleteBT.Text = "Törlés";
             this.customerDeleteBT.UseVisualStyleBackColor = true;
             this.customerDeleteBT.Click += new System.EventHandler(this.customerDeleteBT_Click);
@@ -173,7 +173,7 @@
             this.getCustomerOrderBT.Location = new System.Drawing.Point(942, 23);
             this.getCustomerOrderBT.Name = "getCustomerOrderBT";
             this.getCustomerOrderBT.Size = new System.Drawing.Size(499, 38);
-            this.getCustomerOrderBT.TabIndex = 30;
+            this.getCustomerOrderBT.TabIndex = 8;
             this.getCustomerOrderBT.Text = "Kijelölt vásárló vásárlási előzményének megjelenítése";
             this.getCustomerOrderBT.UseVisualStyleBackColor = true;
             this.getCustomerOrderBT.Click += new System.EventHandler(this.button1_Click);
@@ -210,7 +210,7 @@
             this.customerDGVReload.Location = new System.Drawing.Point(1408, 412);
             this.customerDGVReload.Name = "customerDGVReload";
             this.customerDGVReload.Size = new System.Drawing.Size(33, 28);
-            this.customerDGVReload.TabIndex = 31;
+            this.customerDGVReload.TabIndex = 7;
             this.customerDGVReload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.customerDGVReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.customerDGVReload.UseVisualStyleBackColor = true;

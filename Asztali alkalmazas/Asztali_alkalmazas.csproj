@@ -147,6 +147,12 @@
     <Compile Include="UI\UserControls\HomeScreen_UC.Designer.cs">
       <DependentUpon>HomeScreen_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserControls\Prodcut_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\Prodcut_UC.Designer.cs">
+      <DependentUpon>Prodcut_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserControls\Supplier_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\HomeScreen_UC.resx">
       <DependentUpon>HomeScreen_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\Prodcut_UC.resx">
+      <DependentUpon>Prodcut_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\Supplier_UC.resx">
       <DependentUpon>Supplier_UC.cs</DependentUpon>

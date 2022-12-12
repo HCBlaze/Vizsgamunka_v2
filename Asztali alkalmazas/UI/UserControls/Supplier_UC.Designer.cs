@@ -90,7 +90,7 @@
             this.supplierPhoneTB.Location = new System.Drawing.Point(1179, 139);
             this.supplierPhoneTB.Name = "supplierPhoneTB";
             this.supplierPhoneTB.Size = new System.Drawing.Size(194, 22);
-            this.supplierPhoneTB.TabIndex = 39;
+            this.supplierPhoneTB.TabIndex = 4;
             this.supplierPhoneTB.Leave += new System.EventHandler(this.supplierPhoneTB_Leave);
             // 
             // supplierContactNameTB
@@ -98,7 +98,7 @@
             this.supplierContactNameTB.Location = new System.Drawing.Point(486, 139);
             this.supplierContactNameTB.Name = "supplierContactNameTB";
             this.supplierContactNameTB.Size = new System.Drawing.Size(194, 22);
-            this.supplierContactNameTB.TabIndex = 38;
+            this.supplierContactNameTB.TabIndex = 2;
             this.supplierContactNameTB.Leave += new System.EventHandler(this.supplierContactNameTB_Leave);
             // 
             // supplierCompanyNameTB
@@ -106,7 +106,7 @@
             this.supplierCompanyNameTB.Location = new System.Drawing.Point(93, 139);
             this.supplierCompanyNameTB.Name = "supplierCompanyNameTB";
             this.supplierCompanyNameTB.Size = new System.Drawing.Size(194, 22);
-            this.supplierCompanyNameTB.TabIndex = 37;
+            this.supplierCompanyNameTB.TabIndex = 1;
             this.supplierCompanyNameTB.Leave += new System.EventHandler(this.supplierCompanyNameTB_Leave);
             // 
             // label4
@@ -147,7 +147,7 @@
             this.supplierCityTB.Location = new System.Drawing.Point(835, 139);
             this.supplierCityTB.Name = "supplierCityTB";
             this.supplierCityTB.Size = new System.Drawing.Size(194, 22);
-            this.supplierCityTB.TabIndex = 42;
+            this.supplierCityTB.TabIndex = 3;
             this.supplierCityTB.Leave += new System.EventHandler(this.supplierCityTB_Leave);
             // 
             // label5
@@ -168,7 +168,7 @@
             this.supplierDeleteBT.Location = new System.Drawing.Point(1063, 317);
             this.supplierDeleteBT.Name = "supplierDeleteBT";
             this.supplierDeleteBT.Size = new System.Drawing.Size(229, 38);
-            this.supplierDeleteBT.TabIndex = 45;
+            this.supplierDeleteBT.TabIndex = 7;
             this.supplierDeleteBT.Text = "Törlés";
             this.supplierDeleteBT.UseVisualStyleBackColor = true;
             this.supplierDeleteBT.Click += new System.EventHandler(this.supplierDeleteBT_Click);
@@ -180,7 +180,7 @@
             this.supplierNewBT.Location = new System.Drawing.Point(114, 317);
             this.supplierNewBT.Name = "supplierNewBT";
             this.supplierNewBT.Size = new System.Drawing.Size(229, 38);
-            this.supplierNewBT.TabIndex = 44;
+            this.supplierNewBT.TabIndex = 5;
             this.supplierNewBT.Text = "Új";
             this.supplierNewBT.UseVisualStyleBackColor = true;
             this.supplierNewBT.Click += new System.EventHandler(this.supplierNewBT_Click);
@@ -193,7 +193,7 @@
             this.supplierUpdateBT.Location = new System.Drawing.Point(582, 317);
             this.supplierUpdateBT.Name = "supplierUpdateBT";
             this.supplierUpdateBT.Size = new System.Drawing.Size(229, 38);
-            this.supplierUpdateBT.TabIndex = 43;
+            this.supplierUpdateBT.TabIndex = 6;
             this.supplierUpdateBT.Text = "Szerkeztés";
             this.supplierUpdateBT.UseVisualStyleBackColor = true;
             this.supplierUpdateBT.Click += new System.EventHandler(this.supplierUpdateBT_Click);
@@ -219,7 +219,7 @@
             this.supplierDGVReload.Location = new System.Drawing.Point(1416, 457);
             this.supplierDGVReload.Name = "supplierDGVReload";
             this.supplierDGVReload.Size = new System.Drawing.Size(33, 28);
-            this.supplierDGVReload.TabIndex = 46;
+            this.supplierDGVReload.TabIndex = 8;
             this.supplierDGVReload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.supplierDGVReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.supplierDGVReload.UseVisualStyleBackColor = true;
@@ -233,7 +233,7 @@
             this.getSupplierProductsBT.Location = new System.Drawing.Point(951, 5);
             this.getSupplierProductsBT.Name = "getSupplierProductsBT";
             this.getSupplierProductsBT.Size = new System.Drawing.Size(499, 38);
-            this.getSupplierProductsBT.TabIndex = 48;
+            this.getSupplierProductsBT.TabIndex = 9;
             this.getSupplierProductsBT.Text = "Kijelölt beszállító árucikkjének megjelenítése";
             this.getSupplierProductsBT.UseVisualStyleBackColor = true;
             this.getSupplierProductsBT.Click += new System.EventHandler(this.getSupplierProductsBT_Click);
