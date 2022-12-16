@@ -117,6 +117,12 @@
     <Compile Include="UI\ControlPanel.Designer.cs">
       <DependentUpon>ControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Loader.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     </Compile>
     <Compile Include="UI\UserControls\HomeScreen_UC.Designer.cs">
       <DependentUpon>HomeScreen_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\Order_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\Order_UC.Designer.cs">
+      <DependentUpon>Order_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserControls\Prodcut_UC.cs">
       <SubType>UserControl</SubType>
@@ -178,6 +190,9 @@
     <EmbeddedResource Include="UI\ControlPanel.resx">
       <DependentUpon>ControlPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Loader.resx">
       <DependentUpon>Loader.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\HomeScreen_UC.resx">
       <DependentUpon>HomeScreen_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\Order_UC.resx">
+      <DependentUpon>Order_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\Prodcut_UC.resx">
       <DependentUpon>Prodcut_UC.cs</DependentUpon>
@@ -318,6 +336,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\icons8_reset_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\icons8_Checkmark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\icons8_print_50px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

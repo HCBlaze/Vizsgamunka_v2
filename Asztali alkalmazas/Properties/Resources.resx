@@ -124,6 +124,9 @@
   <data name="close_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\close-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_Checkmark_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_Checkmark_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_customer_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_customer_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +147,9 @@
   </data>
   <data name="icons8_minimize_window_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_minimize_window_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_print_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_print_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_profile_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_profile_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -59,11 +59,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.adminBT = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.order_UC1 = new Asztali_alkalmazas.UI.UserControls.Order_UC();
+            this.prodcut_UC1 = new Asztali_alkalmazas.UI.UserControls.Prodcut_UC();
             this.supplier_UC1 = new Asztali_alkalmazas.UI.UserControls.Supplier_UC();
             this.customer_UC1 = new Asztali_alkalmazas.UI.UserControls.Customer_UC();
             this.adminControl_UC1 = new Asztali_alkalmazas.UI.UserControls.AdminControl_UC();
             this.userProfil_UC1 = new Asztali_alkalmazas.UI.UserControls.UserProfil_UC();
-            this.prodcut_UC1 = new Asztali_alkalmazas.UI.UserControls.Prodcut_UC();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -463,6 +464,24 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // order_UC1
+            // 
+            this.order_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.order_UC1.Location = new System.Drawing.Point(758, 299);
+            this.order_UC1.Name = "order_UC1";
+            this.order_UC1.Size = new System.Drawing.Size(1454, 848);
+            this.order_UC1.TabIndex = 8;
+            this.order_UC1.Visible = false;
+            // 
+            // prodcut_UC1
+            // 
+            this.prodcut_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.prodcut_UC1.Location = new System.Drawing.Point(216, 592);
+            this.prodcut_UC1.Name = "prodcut_UC1";
+            this.prodcut_UC1.Size = new System.Drawing.Size(1454, 848);
+            this.prodcut_UC1.TabIndex = 7;
+            this.prodcut_UC1.Visible = false;
+            // 
             // supplier_UC1
             // 
             this.supplier_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
@@ -504,20 +523,12 @@
             this.userProfil_UC1.TabIndex = 3;
             this.userProfil_UC1.Visible = false;
             // 
-            // prodcut_UC1
-            // 
-            this.prodcut_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.prodcut_UC1.Location = new System.Drawing.Point(216, 592);
-            this.prodcut_UC1.Name = "prodcut_UC1";
-            this.prodcut_UC1.Size = new System.Drawing.Size(1454, 848);
-            this.prodcut_UC1.TabIndex = 7;
-            this.prodcut_UC1.Visible = false;
-            // 
             // ControlPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1670, 1044);
+            this.Controls.Add(this.order_UC1);
             this.Controls.Add(this.prodcut_UC1);
             this.Controls.Add(this.supplier_UC1);
             this.Controls.Add(this.customer_UC1);
@@ -582,5 +593,6 @@
         private UserControls.Customer_UC customer_UC1;
         private UserControls.Supplier_UC supplier_UC1;
         private UserControls.Prodcut_UC prodcut_UC1;
+        private UserControls.Order_UC order_UC1;
     }
 }
