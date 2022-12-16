@@ -13,6 +13,7 @@ namespace Asztali_alkalmazas.Classes
         public string OrderNumber { get; private set; }
         public int CustomerId { get; private set; }
         public decimal TotalAmount { get; private set; }
+        public string OrderStatus { get; private set; }
 
 
 
@@ -21,13 +22,14 @@ namespace Asztali_alkalmazas.Classes
 
         }
 
-        public Order(int id, DateTime orderdate, string ordernumber, int customerid, decimal totalamount)
+        public Order(int id, DateTime orderdate, string ordernumber, int customerid, decimal totalamount, string orderStatus)
         {
             this.Id = id;
             this.OrderDate = orderdate;
             this.OrderNumber = ordernumber;
             this.CustomerId = customerid;
             this.TotalAmount = totalamount;
+            this.OrderStatus = orderStatus;
         }
         public void setId(int id)
         {
@@ -87,6 +89,32 @@ namespace Asztali_alkalmazas.Classes
         {
             decimal _id = i;
             return _id;
+        }
+
+        public void setOrderStatus(int i)
+        {
+            OrderStatus = _setOrderStatus(i);
+        }
+        private string _setOrderStatus(int i)
+        {
+            string status;
+
+            switch (i)
+            {
+                case 1:
+                    status = "New";
+                    break;
+                case 2:
+                    status = "inProgress";
+                    break;
+                case 3:
+                    status = "Finished";
+                    break;
+                default:
+                    status = "New";
+                    break;
+            }
+            return status;
         }
     }
 }
