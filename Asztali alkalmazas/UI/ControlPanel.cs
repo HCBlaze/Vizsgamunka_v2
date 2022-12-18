@@ -74,7 +74,26 @@ namespace Asztali_alkalmazas.UI
             base.WndProc(ref m);
         }
         //Borderless form meretezhetőségének beállításának vége
+        //Betöltésnél lefutó események
+        private void ControlPanel_Load(object sender, EventArgs e)
+        {
+            Load_UserData();
+            get_UserData();
+            mainBT_Click(sender, e);
+            adminControl_UC1.Visible = false;
+            try
+            {
 
+                Load_PicSrc();
+                userProfilePic.Image = new Bitmap(picSrc);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        //------------------------------------------------------------------------- Menügombokhoz UC rendelése és beállítása -------------------------------------------------------------------------
         private void mainBT_Click(object sender, EventArgs e)
         {
             userProfil_UC1.Visible = false;
@@ -86,6 +105,8 @@ namespace Asztali_alkalmazas.UI
             panelSlide.Top = mainBT.Top;
             panelSlide.Visible = true;
             panelSlide2.Visible = false;
+            homeScreen_UC1.Dock= DockStyle.Fill;
+            homeScreen_UC1.Visible= true;
             try
             {
                 Load_PicSrc();
@@ -104,6 +125,7 @@ namespace Asztali_alkalmazas.UI
             supplier_UC1.Visible = false;
             prodcut_UC1.Visible = false;
             order_UC1.Visible = false;
+            homeScreen_UC1.Visible = false;
             panelSlide.Height = CustomerBT.Height;
             panelSlide.Top = CustomerBT.Top;
             panelSlide.Visible = true;
@@ -121,6 +143,7 @@ namespace Asztali_alkalmazas.UI
             prodcut_UC1.Visible = false;
             panelSlide.Visible = false;
             order_UC1.Visible = false;
+            homeScreen_UC1.Visible = false;
             panelSlide2.Width = adminBT.Width;
             panelSlide2.Left = adminBT.Left;
             panelSlide2.Visible = true;
@@ -136,6 +159,7 @@ namespace Asztali_alkalmazas.UI
             customer_UC1.Visible= false;
             prodcut_UC1.Visible = false;
             order_UC1.Visible = false;
+            homeScreen_UC1.Visible = false;
             panelSlide.Height = supplierBT.Height;
             panelSlide.Top = supplierBT.Top;
             panelSlide.Visible = true;
@@ -152,6 +176,7 @@ namespace Asztali_alkalmazas.UI
             customer_UC1.Visible = false;
             supplier_UC1.Visible = false;
             order_UC1.Visible = false;
+            homeScreen_UC1.Visible = false;
             panelSlide.Height = raktarBT.Height;
             panelSlide.Top = raktarBT.Top;
             panelSlide.Visible = true;
@@ -168,6 +193,7 @@ namespace Asztali_alkalmazas.UI
             customer_UC1.Visible = false;
             supplier_UC1.Visible = false;
             prodcut_UC1.Visible = false;
+            homeScreen_UC1.Visible = false;
             panelSlide.Height = ordersBT.Height;
             panelSlide.Top = ordersBT.Top;
             panelSlide.Visible = true;
@@ -198,6 +224,7 @@ namespace Asztali_alkalmazas.UI
             supplier_UC1.Visible = false;
             prodcut_UC1.Visible = false;
             order_UC1.Visible = false;
+            homeScreen_UC1.Visible = false;
             panelSlide2.Width = userProfilBT.Width;
             panelSlide2.Left = userProfilBT.Left;
             panelSlide2.Visible = true;
@@ -303,7 +330,8 @@ namespace Asztali_alkalmazas.UI
                 this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
             }
         }
-
+        //------------------------------------------------------------------------- Menügombokhoz UC rendelése és beállítása vége -------------------------------------------------------------------------
+        //------------------------------------------------------------------------- Felhasználó adatainak lekérése tárolása majd kiolvasása és kép beállítása -------------------------------------------------------------------------
         private void Load_PicSrc()
         {
             string adat = "picSrc.txt";
@@ -366,28 +394,13 @@ namespace Asztali_alkalmazas.UI
             }
             conn.Close();
         }
-
+        //------------------------------------------------------------------------- Felhasználó adatainak lekérése tárolása majd kiolvasása és kép beállítása vége -------------------------------------------------------------------------
+        //------------------------------------------------------------------------- Pontos idő jelzése -------------------------------------------------------------------------
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime currentTime = DateTime.Now;
             label6.Text = currentTime.ToString();
         }
-
-        private void ControlPanel_Load(object sender, EventArgs e)
-        {
-            Load_UserData();
-            get_UserData();
-            adminControl_UC1.Visible = false;
-            try
-            {
-
-                Load_PicSrc();
-                userProfilePic.Image = new Bitmap(picSrc);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
+        //------------------------------------------------------------------------- Pontos idő vége -------------------------------------------------------------------------
     }
 }

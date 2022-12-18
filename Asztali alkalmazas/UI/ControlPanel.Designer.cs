@@ -59,6 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.adminBT = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.homeScreen_UC1 = new Asztali_alkalmazas.UI.UserControls.HomeScreen_UC();
             this.order_UC1 = new Asztali_alkalmazas.UI.UserControls.Order_UC();
             this.prodcut_UC1 = new Asztali_alkalmazas.UI.UserControls.Prodcut_UC();
             this.supplier_UC1 = new Asztali_alkalmazas.UI.UserControls.Supplier_UC();
@@ -464,8 +465,18 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // homeScreen_UC1
+            // 
+            this.homeScreen_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.homeScreen_UC1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.homeScreen_UC1.Location = new System.Drawing.Point(309, 262);
+            this.homeScreen_UC1.Name = "homeScreen_UC1";
+            this.homeScreen_UC1.Size = new System.Drawing.Size(1470, 854);
+            this.homeScreen_UC1.TabIndex = 9;
+            // 
             // order_UC1
             // 
+            this.order_UC1.AllowDrop = true;
             this.order_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.order_UC1.Location = new System.Drawing.Point(758, 299);
             this.order_UC1.Name = "order_UC1";
@@ -528,6 +539,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1670, 1044);
+            this.Controls.Add(this.homeScreen_UC1);
             this.Controls.Add(this.order_UC1);
             this.Controls.Add(this.prodcut_UC1);
             this.Controls.Add(this.supplier_UC1);
@@ -594,5 +606,6 @@
         private UserControls.Supplier_UC supplier_UC1;
         private UserControls.Prodcut_UC prodcut_UC1;
         private UserControls.Order_UC order_UC1;
+        private UserControls.HomeScreen_UC homeScreen_UC1;
     }
 }

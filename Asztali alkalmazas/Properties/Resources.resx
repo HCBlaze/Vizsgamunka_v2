@@ -124,11 +124,23 @@
   <data name="close_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\close-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_area_chart_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_area_chart_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_budget_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_budget_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_Checkmark_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_Checkmark_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_customer_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_customer_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_delivered_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_delivered_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Done_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_Done_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_exit_sign_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_exit_sign_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,6 +151,9 @@
   <data name="icons8_home_page_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_home_page_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_line_chart_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_line_chart_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_Logout_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_Logout_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +162,9 @@
   </data>
   <data name="icons8_minimize_window_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_minimize_window_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_new_product_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_new_product_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_print_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_print_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +184,17 @@
   <data name="icons8_supplier_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_supplier_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_supplier_50px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_supplier_50px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_system_administrator_male_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_system_administrator_male_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_toggle_full_screen_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_toggle_full_screen_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_user_rights_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\icons8_user_rights_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_warehouse_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_warehouse_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

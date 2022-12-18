@@ -83,6 +83,26 @@ namespace Asztali_alkalmazas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_area_chart_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_area_chart_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_budget_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_budget_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Checkmark_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Checkmark_50px", resourceCulture);
@@ -96,6 +116,26 @@ namespace Asztali_alkalmazas.Properties {
         internal static System.Drawing.Bitmap icons8_customer_50px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_customer_50px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delivered_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_delivered_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Done_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Done_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +173,16 @@ namespace Asztali_alkalmazas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_line_chart_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_line_chart_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Logout_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Logout_50px", resourceCulture);
@@ -156,6 +206,16 @@ namespace Asztali_alkalmazas.Properties {
         internal static System.Drawing.Bitmap icons8_minimize_window_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_minimize_window_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_new_product_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_new_product_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +283,16 @@ namespace Asztali_alkalmazas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_supplier_50px_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_supplier_50px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_system_administrator_male_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_system_administrator_male_50px", resourceCulture);
@@ -236,6 +306,16 @@ namespace Asztali_alkalmazas.Properties {
         internal static System.Drawing.Bitmap icons8_toggle_full_screen_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_toggle_full_screen_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_rights_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_user_rights_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
