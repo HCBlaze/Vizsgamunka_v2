@@ -105,7 +105,7 @@ namespace Asztali_alkalmazas.UI
             panelSlide.Top = mainBT.Top;
             panelSlide.Visible = true;
             panelSlide2.Visible = false;
-            homeScreen_UC1.Dock= DockStyle.Fill;
+            homeScreen_UC1.Dock = DockStyle.Fill;
             homeScreen_UC1.Visible= true;
             try
             {

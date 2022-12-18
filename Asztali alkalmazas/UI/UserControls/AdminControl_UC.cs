@@ -13,7 +13,6 @@ using System.IO;
 
 namespace Asztali_alkalmazas.UI.UserControls
 {
-        // Csóbor S. Erik csinálta
     public partial class AdminControl_UC : UserControl
     {
         MySqlConnection conn;

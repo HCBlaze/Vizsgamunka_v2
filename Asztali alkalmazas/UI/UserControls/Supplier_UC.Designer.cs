@@ -63,14 +63,16 @@
             // 
             this.suppliersDGV.AllowUserToAddRows = false;
             this.suppliersDGV.AllowUserToDeleteRows = false;
+            this.suppliersDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.suppliersDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.suppliersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.suppliersDGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.suppliersDGV.Location = new System.Drawing.Point(0, 491);
+            this.suppliersDGV.Location = new System.Drawing.Point(0, 455);
             this.suppliersDGV.Name = "suppliersDGV";
             this.suppliersDGV.ReadOnly = true;
             this.suppliersDGV.RowTemplate.Height = 24;
-            this.suppliersDGV.Size = new System.Drawing.Size(1454, 357);
+            this.suppliersDGV.Size = new System.Drawing.Size(1454, 393);
             this.suppliersDGV.TabIndex = 21;
             this.suppliersDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.suppliersDGV_CellClick);
             // 
@@ -79,7 +81,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label6.Location = new System.Drawing.Point(1245, 168);
+            this.label6.Location = new System.Drawing.Point(1179, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 13);
             this.label6.TabIndex = 40;
@@ -87,17 +89,17 @@
             // 
             // supplierPhoneTB
             // 
-            this.supplierPhoneTB.Location = new System.Drawing.Point(1179, 139);
+            this.supplierPhoneTB.Location = new System.Drawing.Point(1113, 139);
             this.supplierPhoneTB.Name = "supplierPhoneTB";
-            this.supplierPhoneTB.Size = new System.Drawing.Size(194, 22);
+            this.supplierPhoneTB.Size = new System.Drawing.Size(194, 20);
             this.supplierPhoneTB.TabIndex = 4;
             this.supplierPhoneTB.Leave += new System.EventHandler(this.supplierPhoneTB_Leave);
             // 
             // supplierContactNameTB
             // 
-            this.supplierContactNameTB.Location = new System.Drawing.Point(486, 139);
+            this.supplierContactNameTB.Location = new System.Drawing.Point(420, 139);
             this.supplierContactNameTB.Name = "supplierContactNameTB";
-            this.supplierContactNameTB.Size = new System.Drawing.Size(194, 22);
+            this.supplierContactNameTB.Size = new System.Drawing.Size(194, 20);
             this.supplierContactNameTB.TabIndex = 2;
             this.supplierContactNameTB.Leave += new System.EventHandler(this.supplierContactNameTB_Leave);
             // 
@@ -105,7 +107,7 @@
             // 
             this.supplierCompanyNameTB.Location = new System.Drawing.Point(93, 139);
             this.supplierCompanyNameTB.Name = "supplierCompanyNameTB";
-            this.supplierCompanyNameTB.Size = new System.Drawing.Size(194, 22);
+            this.supplierCompanyNameTB.Size = new System.Drawing.Size(194, 20);
             this.supplierCompanyNameTB.TabIndex = 1;
             this.supplierCompanyNameTB.Leave += new System.EventHandler(this.supplierCompanyNameTB_Leave);
             // 
@@ -114,7 +116,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Akashi_hun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(1116, 108);
+            this.label4.Location = new System.Drawing.Point(1050, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 19);
             this.label4.TabIndex = 36;
@@ -125,7 +127,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Akashi_hun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(410, 108);
+            this.label3.Location = new System.Drawing.Point(344, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 19);
             this.label3.TabIndex = 35;
@@ -144,9 +146,9 @@
             // 
             // supplierCityTB
             // 
-            this.supplierCityTB.Location = new System.Drawing.Point(835, 139);
+            this.supplierCityTB.Location = new System.Drawing.Point(769, 139);
             this.supplierCityTB.Name = "supplierCityTB";
-            this.supplierCityTB.Size = new System.Drawing.Size(194, 22);
+            this.supplierCityTB.Size = new System.Drawing.Size(194, 20);
             this.supplierCityTB.TabIndex = 3;
             this.supplierCityTB.Leave += new System.EventHandler(this.supplierCityTB_Leave);
             // 
@@ -155,7 +157,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Akashi_hun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(759, 108);
+            this.label5.Location = new System.Drawing.Point(693, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 19);
             this.label5.TabIndex = 41;
@@ -200,10 +202,11 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1262, 465);
+            this.label7.Location = new System.Drawing.Point(1262, 430);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 16);
             this.label7.TabIndex = 47;
@@ -216,7 +219,7 @@
             this.supplierDGVReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.supplierDGVReload.FlatAppearance.BorderSize = 0;
             this.supplierDGVReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.supplierDGVReload.Location = new System.Drawing.Point(1416, 457);
+            this.supplierDGVReload.Location = new System.Drawing.Point(1416, 422);
             this.supplierDGVReload.Name = "supplierDGVReload";
             this.supplierDGVReload.Size = new System.Drawing.Size(33, 28);
             this.supplierDGVReload.TabIndex = 8;
@@ -227,8 +230,9 @@
             // 
             // getSupplierProductsBT
             // 
+            this.getSupplierProductsBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.getSupplierProductsBT.Enabled = false;
-            this.getSupplierProductsBT.Font = new System.Drawing.Font("Akashi_hun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getSupplierProductsBT.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getSupplierProductsBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.getSupplierProductsBT.Location = new System.Drawing.Point(951, 5);
             this.getSupplierProductsBT.Name = "getSupplierProductsBT";

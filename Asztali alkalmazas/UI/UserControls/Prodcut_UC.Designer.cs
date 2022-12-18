@@ -67,6 +67,7 @@
             this.productUpdateNDeleteDGV = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.orderStock = new System.Windows.Forms.TabPage();
+            this.selectProductSupplierId = new System.Windows.Forms.Label();
             this.suppliersDataCB = new System.Windows.Forms.GroupBox();
             this.supplierPhoneLL = new System.Windows.Forms.Label();
             this.supplierCityLL = new System.Windows.Forms.Label();
@@ -89,7 +90,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.productsCB = new System.Windows.Forms.ComboBox();
-            this.selectProductSupplierId = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.newProduct.SuspendLayout();
             this.productDetailsGB.SuspendLayout();
@@ -117,6 +117,7 @@
             // 
             // newProduct
             // 
+            this.newProduct.AutoScroll = true;
             this.newProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.newProduct.Controls.Add(this.productDetailsGB);
             this.newProduct.Controls.Add(this.label4);
@@ -147,9 +148,9 @@
             this.productDetailsGB.Controls.Add(this.label3);
             this.productDetailsGB.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.productDetailsGB.ForeColor = System.Drawing.Color.Orange;
-            this.productDetailsGB.Location = new System.Drawing.Point(95, 290);
+            this.productDetailsGB.Location = new System.Drawing.Point(60, 253);
             this.productDetailsGB.Name = "productDetailsGB";
-            this.productDetailsGB.Size = new System.Drawing.Size(1285, 485);
+            this.productDetailsGB.Size = new System.Drawing.Size(1049, 411);
             this.productDetailsGB.TabIndex = 5;
             this.productDetailsGB.TabStop = false;
             this.productDetailsGB.Text = "Termék adatai:";
@@ -163,9 +164,9 @@
             this.newProductBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newProductBT.Font = new System.Drawing.Font("Akashi_hun", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newProductBT.ForeColor = System.Drawing.Color.Orange;
-            this.newProductBT.Location = new System.Drawing.Point(3, 420);
+            this.newProductBT.Location = new System.Drawing.Point(3, 346);
             this.newProductBT.Name = "newProductBT";
-            this.newProductBT.Size = new System.Drawing.Size(1279, 62);
+            this.newProductBT.Size = new System.Drawing.Size(1043, 62);
             this.newProductBT.TabIndex = 10;
             this.newProductBT.Text = "Termék felvétele";
             this.newProductBT.UseVisualStyleBackColor = true;
@@ -174,7 +175,7 @@
             // productSupplierIdLL
             // 
             this.productSupplierIdLL.AutoSize = true;
-            this.productSupplierIdLL.Location = new System.Drawing.Point(1163, 38);
+            this.productSupplierIdLL.Location = new System.Drawing.Point(964, 40);
             this.productSupplierIdLL.Name = "productSupplierIdLL";
             this.productSupplierIdLL.Size = new System.Drawing.Size(62, 25);
             this.productSupplierIdLL.TabIndex = 9;
@@ -182,7 +183,7 @@
             // 
             // productStockTB
             // 
-            this.productStockTB.Location = new System.Drawing.Point(930, 262);
+            this.productStockTB.Location = new System.Drawing.Point(731, 262);
             this.productStockTB.Name = "productStockTB";
             this.productStockTB.Size = new System.Drawing.Size(240, 33);
             this.productStockTB.TabIndex = 8;
@@ -198,7 +199,7 @@
             // 
             // productPackageTB
             // 
-            this.productPackageTB.Location = new System.Drawing.Point(492, 262);
+            this.productPackageTB.Location = new System.Drawing.Point(385, 262);
             this.productPackageTB.Name = "productPackageTB";
             this.productPackageTB.Size = new System.Drawing.Size(240, 33);
             this.productPackageTB.TabIndex = 6;
@@ -217,7 +218,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(1001, 220);
+            this.label8.Location = new System.Drawing.Point(802, 220);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 19);
             this.label8.TabIndex = 4;
@@ -228,7 +229,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(554, 220);
+            this.label7.Location = new System.Drawing.Point(452, 220);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 19);
             this.label7.TabIndex = 3;
@@ -250,7 +251,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(889, 41);
+            this.label5.Location = new System.Drawing.Point(690, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(281, 19);
             this.label5.TabIndex = 1;
@@ -272,7 +273,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(571, 211);
+            this.label4.Location = new System.Drawing.Point(580, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(338, 41);
             this.label4.TabIndex = 4;
@@ -311,6 +312,7 @@
             // 
             // updateProdcutOrDelete
             // 
+            this.updateProdcutOrDelete.AutoScroll = true;
             this.updateProdcutOrDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.updateProdcutOrDelete.Controls.Add(this.label18);
             this.updateProdcutOrDelete.Controls.Add(this.productUpdateDGVReload);
@@ -329,10 +331,11 @@
             // 
             // label18
             // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(1253, 70);
+            this.label18.Location = new System.Drawing.Point(1251, 70);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(149, 16);
             this.label18.TabIndex = 34;
@@ -345,7 +348,7 @@
             this.productUpdateDGVReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.productUpdateDGVReload.FlatAppearance.BorderSize = 0;
             this.productUpdateDGVReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productUpdateDGVReload.Location = new System.Drawing.Point(1407, 62);
+            this.productUpdateDGVReload.Location = new System.Drawing.Point(1405, 62);
             this.productUpdateDGVReload.Name = "productUpdateDGVReload";
             this.productUpdateDGVReload.Size = new System.Drawing.Size(33, 28);
             this.productUpdateDGVReload.TabIndex = 33;
@@ -356,15 +359,14 @@
             // 
             // productDeleteBT
             // 
-            this.productDeleteBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productDeleteBT.FlatAppearance.BorderSize = 0;
             this.productDeleteBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.productDeleteBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productDeleteBT.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.productDeleteBT.ForeColor = System.Drawing.Color.Orange;
-            this.productDeleteBT.Location = new System.Drawing.Point(39, 762);
+            this.productDeleteBT.Location = new System.Drawing.Point(39, 745);
             this.productDeleteBT.Name = "productDeleteBT";
-            this.productDeleteBT.Size = new System.Drawing.Size(588, 53);
+            this.productDeleteBT.Size = new System.Drawing.Size(539, 54);
             this.productDeleteBT.TabIndex = 6;
             this.productDeleteBT.Text = "Termék törlése";
             this.productDeleteBT.UseVisualStyleBackColor = true;
@@ -373,15 +375,14 @@
             // 
             // productUpdateBT
             // 
-            this.productUpdateBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productUpdateBT.FlatAppearance.BorderSize = 0;
             this.productUpdateBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.productUpdateBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productUpdateBT.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.productUpdateBT.ForeColor = System.Drawing.Color.Orange;
-            this.productUpdateBT.Location = new System.Drawing.Point(39, 700);
+            this.productUpdateBT.Location = new System.Drawing.Point(39, 683);
             this.productUpdateBT.Name = "productUpdateBT";
-            this.productUpdateBT.Size = new System.Drawing.Size(588, 54);
+            this.productUpdateBT.Size = new System.Drawing.Size(539, 54);
             this.productUpdateBT.TabIndex = 5;
             this.productUpdateBT.Text = "Termék szerkeztése";
             this.productUpdateBT.UseVisualStyleBackColor = true;
@@ -405,7 +406,7 @@
             this.productUpdateGB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.productUpdateGB.Location = new System.Drawing.Point(39, 70);
             this.productUpdateGB.Name = "productUpdateGB";
-            this.productUpdateGB.Size = new System.Drawing.Size(588, 627);
+            this.productUpdateGB.Size = new System.Drawing.Size(539, 607);
             this.productUpdateGB.TabIndex = 5;
             this.productUpdateGB.TabStop = false;
             this.productUpdateGB.Text = "Termékek adatainak szerkeztése";
@@ -519,10 +520,11 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(1004, 29);
+            this.label10.Location = new System.Drawing.Point(1021, 29);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(181, 38);
             this.label10.TabIndex = 4;
@@ -532,13 +534,15 @@
             // 
             this.productUpdateNDeleteDGV.AllowUserToAddRows = false;
             this.productUpdateNDeleteDGV.AllowUserToDeleteRows = false;
+            this.productUpdateNDeleteDGV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.productUpdateNDeleteDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productUpdateNDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productUpdateNDeleteDGV.Location = new System.Drawing.Point(699, 94);
+            this.productUpdateNDeleteDGV.Location = new System.Drawing.Point(716, 94);
             this.productUpdateNDeleteDGV.Name = "productUpdateNDeleteDGV";
             this.productUpdateNDeleteDGV.ReadOnly = true;
             this.productUpdateNDeleteDGV.RowTemplate.Height = 24;
-            this.productUpdateNDeleteDGV.Size = new System.Drawing.Size(723, 692);
+            this.productUpdateNDeleteDGV.Size = new System.Drawing.Size(723, 346);
             this.productUpdateNDeleteDGV.TabIndex = 3;
             this.productUpdateNDeleteDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productUpdateNDeleteDGV_CellClick);
             // 
@@ -555,6 +559,7 @@
             // 
             // orderStock
             // 
+            this.orderStock.AutoScroll = true;
             this.orderStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.orderStock.Controls.Add(this.selectProductSupplierId);
             this.orderStock.Controls.Add(this.suppliersDataCB);
@@ -568,6 +573,16 @@
             this.orderStock.Size = new System.Drawing.Size(1446, 819);
             this.orderStock.TabIndex = 3;
             this.orderStock.Text = "Raktárkészlet kezelése";
+            // 
+            // selectProductSupplierId
+            // 
+            this.selectProductSupplierId.AutoSize = true;
+            this.selectProductSupplierId.Location = new System.Drawing.Point(532, 159);
+            this.selectProductSupplierId.Name = "selectProductSupplierId";
+            this.selectProductSupplierId.Size = new System.Drawing.Size(55, 16);
+            this.selectProductSupplierId.TabIndex = 11;
+            this.selectProductSupplierId.Text = "label24";
+            this.selectProductSupplierId.Visible = false;
             // 
             // suppliersDataCB
             // 
@@ -692,7 +707,7 @@
             this.productSotckGB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.productSotckGB.Location = new System.Drawing.Point(72, 293);
             this.productSotckGB.Name = "productSotckGB";
-            this.productSotckGB.Size = new System.Drawing.Size(1236, 410);
+            this.productSotckGB.Size = new System.Drawing.Size(898, 410);
             this.productSotckGB.TabIndex = 6;
             this.productSotckGB.TabStop = false;
             this.productSotckGB.Text = "groupBox1";
@@ -701,7 +716,7 @@
             // productAddOrRemoveBT
             // 
             this.productAddOrRemoveBT.ForeColor = System.Drawing.Color.Black;
-            this.productAddOrRemoveBT.Location = new System.Drawing.Point(950, 34);
+            this.productAddOrRemoveBT.Location = new System.Drawing.Point(594, 26);
             this.productAddOrRemoveBT.Name = "productAddOrRemoveBT";
             this.productAddOrRemoveBT.Size = new System.Drawing.Size(268, 58);
             this.productAddOrRemoveBT.TabIndex = 2;
@@ -729,7 +744,7 @@
             this.selectedProductStockUpdateBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectedProductStockUpdateBT.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.selectedProductStockUpdateBT.ForeColor = System.Drawing.Color.Orange;
-            this.selectedProductStockUpdateBT.Location = new System.Drawing.Point(353, 326);
+            this.selectedProductStockUpdateBT.Location = new System.Drawing.Point(150, 336);
             this.selectedProductStockUpdateBT.Name = "selectedProductStockUpdateBT";
             this.selectedProductStockUpdateBT.Size = new System.Drawing.Size(588, 54);
             this.selectedProductStockUpdateBT.TabIndex = 4;
@@ -817,19 +832,12 @@
             this.productsCB.TabIndex = 1;
             this.productsCB.SelectedIndexChanged += new System.EventHandler(this.productsCB_SelectedIndexChanged);
             // 
-            // selectProductSupplierId
-            // 
-            this.selectProductSupplierId.AutoSize = true;
-            this.selectProductSupplierId.Location = new System.Drawing.Point(532, 159);
-            this.selectProductSupplierId.Name = "selectProductSupplierId";
-            this.selectProductSupplierId.Size = new System.Drawing.Size(55, 16);
-            this.selectProductSupplierId.TabIndex = 11;
-            this.selectProductSupplierId.Text = "label24";
-            this.selectProductSupplierId.Visible = false;
-            // 
             // Prodcut_UC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(1, 1);
+            this.AutoScrollMinSize = new System.Drawing.Size(500, 350);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.Controls.Add(this.tabControl1);
             this.Name = "Prodcut_UC";

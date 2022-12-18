@@ -16,7 +16,6 @@ namespace Asztali_alkalmazas.UI.UserControls
     public partial class Order_UC : UserControl
     {
         MySqlConnection conn;
-        string format = "yyyy-MM-dd HH:mm:ss";
         string phone;
         string connstring;
         string currentId;
@@ -41,7 +40,28 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
-        AdminControl_UC hibakezeles = new AdminControl_UC();
+        AdminControl_UC hibakezeles = new AdminControl_UC(); //Hibák logolása
+
+        //------------ UserControl betöltése és adatok elhelyezése és megadása ------------
+        private void Order_UC_Load(object sender, EventArgs e)
+        {
+            labelStartDate.Location = orderStartDate.Location;
+            labelEndDate.Location = orderEndDate.Location;
+            labelStartDate.Text = orderStartDate.Text;
+            labelEndDate.Text = orderEndDate.Text;
+
+            selectedOrderProductsDGV.Font = new System.Drawing.Font("Century Gothic", 11, FontStyle.Bold);
+
+            selectedDateOrdersDGV.DataSource = GetOrdersList();
+            selectedDateOrdersDGV.Columns[0].HeaderText = "ID";
+            selectedDateOrdersDGV.Columns[1].HeaderText = "Rendelés dátuma";
+            selectedDateOrdersDGV.Columns[2].HeaderText = "Rendelés azonosító";
+            selectedDateOrdersDGV.Columns[3].HeaderText = "Vásárló azonosító";
+            selectedDateOrdersDGV.Columns[4].HeaderText = "Végösszeg(HUF)";
+            selectedDateOrdersDGV.Columns[5].HeaderText = "Rendelés státusza";
+        }
+        //------------ UserControl betöltése és adatok elhelyezése és megadása vége------------
+        //------------ DataGridView különféle adattáblák ------------
         private System.Data.DataTable GetOrdersList()
         {
             System.Data.DataTable dtOrders = new System.Data.DataTable();
@@ -108,6 +128,8 @@ namespace Asztali_alkalmazas.UI.UserControls
             conn.Close();
             return getInvoiceProducts;
         }
+        //------------ DataGridView különféle adattáblák vége ------------
+        
         private string getSelectedOrderCustomerName(string customerId)
         {
             string fullName = "";
@@ -126,44 +148,41 @@ namespace Asztali_alkalmazas.UI.UserControls
             conn.Close();
             return fullName;
         }
-
-        private void labelStartDate_Click(object sender, EventArgs e)
+        //------------ Gombok és események ------------
+        private void generateInvoice_Click(object sender, EventArgs e) //Számla generálása
+        {
+            Invoice iV = new Invoice();
+            iV.customerName = labelOrderCustomerName.Text;
+            iV.customerPhone = phone;
+            iV.customerOrderDate = labelOrderDate.Text;
+            iV.customerOrderNumber = labelOrderNumber.Text;
+            iV.customerTotalAmount = labelTotalAmount.Text;
+            iV.dtInvoiceProduct = getInvoiceProducts(currentId);
+            iV.ShowDialog();
+        }
+        private void labelStartDate_Click(object sender, EventArgs e) //labelre kattintva datetimepickerren kattintás esemény meghívása
         {
             orderStartDate.Select();
             SendKeys.Send("%{DOWN}");
         }
 
-        private void labelEndDate_Click(object sender, EventArgs e)
+        private void labelEndDate_Click(object sender, EventArgs e) //labelre kattintva datetimepickerren kattintás esemény meghívása
         {
             orderEndDate.Select();
             SendKeys.Send("%{DOWN}");
         }
 
-        private void orderStartDate_ValueChanged(object sender, EventArgs e)
+        private void orderStartDate_ValueChanged(object sender, EventArgs e) //ha dátumot változtatjuk a label felveszi az értékét
         {
             labelStartDate.Text = orderStartDate.Text;
         }
 
-        private void orderEndDate_ValueChanged(object sender, EventArgs e)
+        private void orderEndDate_ValueChanged(object sender, EventArgs e) //ha dátumot változtatjuk a label felveszi az értékét
         {
             labelEndDate.Text = orderEndDate.Text;
         }
 
-        private void Order_UC_Load(object sender, EventArgs e)
-        {
-            labelStartDate.Location = orderStartDate.Location;
-            labelEndDate.Location = orderEndDate.Location;
-            labelStartDate.Text = orderStartDate.Text;
-            labelEndDate.Text = orderEndDate.Text;
 
-            selectedDateOrdersDGV.DataSource = GetOrdersList();
-            selectedDateOrdersDGV.Columns[0].HeaderText = "ID";
-            selectedDateOrdersDGV.Columns[1].HeaderText = "Rendelés dátuma";
-            selectedDateOrdersDGV.Columns[2].HeaderText = "Rendelés azonosító";
-            selectedDateOrdersDGV.Columns[3].HeaderText = "Vásárló azonosító";
-            selectedDateOrdersDGV.Columns[4].HeaderText = "Végösszeg(HUF)";
-            selectedDateOrdersDGV.Columns[5].HeaderText = "Rendelés státusza";
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -191,8 +210,6 @@ namespace Asztali_alkalmazas.UI.UserControls
         private void selectedDateOrdersDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string customerId;
-
-
             try
             {
                 if (selectedDateOrdersDGV.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -221,20 +238,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             selectedOrderProductsDGV.Columns[1].HeaderText = "Kiszerelés";
             selectedOrderProductsDGV.Columns[2].HeaderText = "Mennyiség";
         }
-
-        private void generateInvoice_Click(object sender, EventArgs e)
-        {
-            Invoice iV= new Invoice();
-            iV.customerName = labelOrderCustomerName.Text;
-            iV.customerPhone = phone;
-            iV.customerOrderDate = labelOrderDate.Text;
-            iV.customerOrderNumber = labelOrderNumber.Text;
-            iV.customerTotalAmount = labelTotalAmount.Text;
-            iV.dtInvoiceProduct = getInvoiceProducts(currentId);
-            iV.ShowDialog();
-            
-        }
-
         private void ordersStatusCB_SelectedIndexChanged(object sender, EventArgs e)
         {
            if(ordersStatusCB.SelectedIndex == 0)
@@ -250,7 +253,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 status = "Finished";
            }
         }
-
-
+        //------------ Gombok és események vége ------------
     }
 }

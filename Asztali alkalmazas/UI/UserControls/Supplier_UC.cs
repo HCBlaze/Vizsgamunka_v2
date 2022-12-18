@@ -44,7 +44,12 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         Supplier uj = new Supplier();
         AdminControl_UC hibakezeles = new AdminControl_UC();
-
+        private void Supplier_UC_Load(object sender, EventArgs e)
+        {
+            suppliersDGV.ClearSelection();
+            deleteTB();
+            ReLoadDGV();
+        }
         private void getID()
         {
             conn.Open();
@@ -59,7 +64,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
-
+        //------------ DataGridView feltöltése különféle adattáblával és újratöltés ------------
         private DataTable GetSuppliersList()
         {
             DataTable dtSuppliers = new DataTable();
@@ -91,10 +96,16 @@ namespace Asztali_alkalmazas.UI.UserControls
             deleteTB();
             suppliersDGV.DataSource = null;
             suppliersDGV.DataSource = GetSuppliersList();
+            suppliersDGV.Columns[0].HeaderText = "ID";
+            suppliersDGV.Columns[1].HeaderText = "Cégnév";
+            suppliersDGV.Columns[2].HeaderText = "Kapcsolattartó neve";
+            suppliersDGV.Columns[3].HeaderText = "Város";
+            suppliersDGV.Columns[4].HeaderText = "Mobilszám";
         }
+        //------------ DataGridView feltöltése különféle adattáblával és újratöltése vége------------
+        //------------ Saját függvények ------------
         private void setNewSupplier()
         {
-
             try
             {
                 conn.Open();
@@ -123,14 +134,8 @@ namespace Asztali_alkalmazas.UI.UserControls
             supplierCityTB.Clear();
             supplierPhoneTB.Clear();
         }
-
-        private void Supplier_UC_Load(object sender, EventArgs e)
-        {
-            suppliersDGV.ClearSelection();
-            deleteTB();
-            ReLoadDGV();
-        }
-
+        //------------ Saját függvények ------------
+        //------------ Gomb műveletekre végzett események ------------
         private void suppliersDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -154,7 +159,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 hibakezeles.ErrorLogs(hiba);
             }
         }
-
         private void supplierDeleteBT_Click(object sender, EventArgs e)
         {
             DialogResult torli;
@@ -171,7 +175,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 ReLoadDGV();
             }
         }
-
         private void supplierCompanyNameTB_Leave(object sender, EventArgs e)
         {
             if(supplierCompanyNameTB.Text.Length > 0)
@@ -179,7 +182,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setCompanyName(supplierCompanyNameTB.Text);
             }
         }
-
         private void supplierContactNameTB_Leave(object sender, EventArgs e)
         {
             if (supplierContactNameTB.Text.Length > 0)
@@ -187,7 +189,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setContactName(supplierContactNameTB.Text);
             }
         }
-
         private void supplierCityTB_Leave(object sender, EventArgs e)
         {
             if (supplierCityTB.Text.Length > 0)
@@ -195,7 +196,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setCity(supplierCityTB.Text);
             }
         }
-
         private void supplierPhoneTB_Leave(object sender, EventArgs e)
         {
             if (supplierPhoneTB.Text.Length > 0)
@@ -203,7 +203,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setPhoneNumber(supplierPhoneTB.Text);
             }
         }
-
         private void supplierUpdateBT_Click(object sender, EventArgs e)
         {
             if (uj.CompanyName != supplierCompanyNameTB.Text || uj.ContactName != supplierContactNameTB.Text || uj.City != supplierCityTB.Text || uj.Phone != supplierPhoneTB.Text)
@@ -226,7 +225,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 MessageBox.Show("Nem változtattál semmilyen adaton.");
             }
         }
-
         private void supplierDGVReload_Click(object sender, EventArgs e)
         {
             ReLoadDGV();
@@ -236,10 +234,17 @@ namespace Asztali_alkalmazas.UI.UserControls
             setNewSupplier();
             deleteTB();
         }
-
         private void getSupplierProductsBT_Click(object sender, EventArgs e)
         {
             suppliersDGV.DataSource = GetSupplierProducts();
+            suppliersDGV.Columns[0].HeaderText = "Cégnév";
+            suppliersDGV.Columns[1].HeaderText = "Kapcsolattartó neve";
+            suppliersDGV.Columns[2].HeaderText = "Város";
+            suppliersDGV.Columns[3].HeaderText = "Mobilszám";
+            suppliersDGV.Columns[4].HeaderText = "Terméknév";
+            suppliersDGV.Columns[5].HeaderText = "Egységár (HUF)";
+            suppliersDGV.Columns[6].HeaderText = "Kiszerelés";
         }
+        //------------ Gomb műveletekre végzett események vége ------------
     }
 }

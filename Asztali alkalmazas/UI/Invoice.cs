@@ -18,24 +18,35 @@ namespace Asztali_alkalmazas.UI
         private string createInvoiceDate;
         public string customerName, customerPhone, customerOrderDate, customerOrderNumber, customerTotalAmount;
         public DataTable dtInvoiceProduct;
+        private Bitmap memoryImage;
         public Invoice()
         {
             InitializeComponent();
 
             createInvoiceDate = DateTime.Now.ToString("yyyy/MM/dd");
         }
-
+        //------------ From betöltésekor megfelelő adatok feltöltése ------------
+        private void Invoice_Load(object sender, EventArgs e)
+        {
+            invoiceCreateDate.Text = createInvoiceDate + ".";
+            invoiceCustomerName.Text = customerName;
+            invoiceCustomerPhone.Text = customerPhone;
+            invoiceOrderDate.Text = customerOrderDate;
+            invoiceOrderNumber.Text = customerOrderNumber;
+            invoiceTotalAmount.Text = customerTotalAmount;
+            invoiceDGV.DataSource = dtInvoiceProduct;
+            invoiceDGV.Columns[0].HeaderText = "Termék megnevezése";
+            invoiceDGV.Columns[1].HeaderText = "Mennyiség";
+            invoiceDGV.Columns[2].HeaderText = "Kiszerelés";
+            invoiceDGV.Columns[3].HeaderText = "Termék ára(HUF)";
+        }
+        //------------ From betöltésekor megfelelő adatok feltöltése vége ------------
+        //------------ Saját függvények ------------
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             Rectangle pagearea = e.PageBounds;
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Print(this.panelPrint);
-        }
-
         private void Print(Panel invoicePrint)
         {
             PrinterSettings ps = new PrinterSettings();
@@ -45,28 +56,17 @@ namespace Asztali_alkalmazas.UI
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             printPreviewDialog1.ShowDialog();
         }
-
-        private Bitmap memoryImage;
-
         private void getPrintArea(Panel invoicePrint)
         {
-            memoryImage = new Bitmap(invoicePrint.Width+50, invoicePrint.Height);
+            memoryImage = new Bitmap(invoicePrint.Width + 50, invoicePrint.Height);
             invoicePrint.DrawToBitmap(memoryImage, new Rectangle(0, 0, invoicePrint.Width, invoicePrint.Height));
         }
-        private void Invoice_Load(object sender, EventArgs e)
+        //------------ Saját függvények vége ------------
+        //------------ Gomb műveletek ------------
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            invoiceCreateDate.Text = createInvoiceDate+".";
-            invoiceCustomerName.Text = customerName;
-            invoiceCustomerPhone.Text = customerPhone;
-            invoiceOrderDate.Text = customerOrderDate;
-            invoiceOrderNumber.Text = customerOrderNumber;
-            invoiceTotalAmount.Text = customerTotalAmount;
-            invoiceDGV.DataSource= dtInvoiceProduct;
-            invoiceDGV.Columns[0].HeaderText = "Termék megnevezése";
-            invoiceDGV.Columns[1].HeaderText = "Mennyiség";
-            invoiceDGV.Columns[2].HeaderText = "Kiszerelés";
-            invoiceDGV.Columns[3].HeaderText = "Termék ára(HUF)";
-
+            Print(this.panelPrint);
         }
+        //------------ Gomb műveletek vége ------------
     }
 }

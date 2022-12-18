@@ -76,6 +76,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.panelSlide);
             this.panel1.Controls.Add(this.ordersBT);
             this.panel1.Controls.Add(this.ExitBT);
@@ -87,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1044);
+            this.panel1.Size = new System.Drawing.Size(175, 1440);
             this.panel1.TabIndex = 0;
             // 
             // panelSlide
@@ -106,7 +107,7 @@
             this.ordersBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_purchase_order_50px;
             this.ordersBT.Location = new System.Drawing.Point(0, 626);
             this.ordersBT.Name = "ordersBT";
-            this.ordersBT.Size = new System.Drawing.Size(200, 109);
+            this.ordersBT.Size = new System.Drawing.Size(175, 109);
             this.ordersBT.TabIndex = 9;
             this.ordersBT.Text = "Rendelések";
             this.ordersBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -116,13 +117,15 @@
             // 
             // ExitBT
             // 
-            this.ExitBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ExitBT.AutoSize = true;
+            this.ExitBT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ExitBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ExitBT.FlatAppearance.BorderSize = 0;
             this.ExitBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_exit_sign_50px;
-            this.ExitBT.Location = new System.Drawing.Point(13, 955);
+            this.ExitBT.Location = new System.Drawing.Point(0, 1361);
             this.ExitBT.Name = "ExitBT";
-            this.ExitBT.Size = new System.Drawing.Size(185, 86);
+            this.ExitBT.Size = new System.Drawing.Size(175, 79);
             this.ExitBT.TabIndex = 7;
             this.ExitBT.Text = "Kilépés";
             this.ExitBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -138,7 +141,7 @@
             this.raktarBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_warehouse_50px;
             this.raktarBT.Location = new System.Drawing.Point(0, 517);
             this.raktarBT.Name = "raktarBT";
-            this.raktarBT.Size = new System.Drawing.Size(200, 109);
+            this.raktarBT.Size = new System.Drawing.Size(175, 109);
             this.raktarBT.TabIndex = 6;
             this.raktarBT.Text = "Árukészlet";
             this.raktarBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -154,7 +157,7 @@
             this.supplierBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_supplier_50px;
             this.supplierBT.Location = new System.Drawing.Point(0, 408);
             this.supplierBT.Name = "supplierBT";
-            this.supplierBT.Size = new System.Drawing.Size(200, 109);
+            this.supplierBT.Size = new System.Drawing.Size(175, 109);
             this.supplierBT.TabIndex = 5;
             this.supplierBT.Text = "Beszállítók";
             this.supplierBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -170,7 +173,7 @@
             this.CustomerBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_customer_50px_1;
             this.CustomerBT.Location = new System.Drawing.Point(0, 299);
             this.CustomerBT.Name = "CustomerBT";
-            this.CustomerBT.Size = new System.Drawing.Size(200, 109);
+            this.CustomerBT.Size = new System.Drawing.Size(175, 109);
             this.CustomerBT.TabIndex = 4;
             this.CustomerBT.Text = "Vásárlók";
             this.CustomerBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -186,7 +189,7 @@
             this.mainBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_home_page_50px;
             this.mainBT.Location = new System.Drawing.Point(0, 190);
             this.mainBT.Name = "mainBT";
-            this.mainBT.Size = new System.Drawing.Size(200, 109);
+            this.mainBT.Size = new System.Drawing.Size(175, 109);
             this.mainBT.TabIndex = 3;
             this.mainBT.Text = "Főoldal";
             this.mainBT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -203,14 +206,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 190);
+            this.panel2.Size = new System.Drawing.Size(175, 190);
             this.panel2.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 163);
+            this.label2.Location = new System.Drawing.Point(2, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 19);
             this.label2.TabIndex = 2;
@@ -220,7 +223,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 144);
+            this.label1.Location = new System.Drawing.Point(2, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 19);
             this.label1.TabIndex = 1;
@@ -233,7 +236,7 @@
             this.pictureBox1.Image = global::Asztali_alkalmazas.Properties.Resources.project_23;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 141);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 141);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -247,9 +250,9 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(200, 0);
+            this.panel3.Location = new System.Drawing.Point(175, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1470, 58);
+            this.panel3.Size = new System.Drawing.Size(2381, 58);
             this.panel3.TabIndex = 1;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -261,7 +264,7 @@
             this.maxBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maxBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_toggle_full_screen_50px;
             this.maxBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.maxBT.Location = new System.Drawing.Point(1338, 0);
+            this.maxBT.Location = new System.Drawing.Point(2243, 0);
             this.maxBT.Margin = new System.Windows.Forms.Padding(5);
             this.maxBT.Name = "maxBT";
             this.maxBT.Padding = new System.Windows.Forms.Padding(5);
@@ -280,7 +283,7 @@
             this.minBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_minimize_window_50px;
             this.minBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.minBT.Location = new System.Drawing.Point(1272, 0);
+            this.minBT.Location = new System.Drawing.Point(2177, 0);
             this.minBT.Margin = new System.Windows.Forms.Padding(5);
             this.minBT.Name = "minBT";
             this.minBT.Padding = new System.Windows.Forms.Padding(5);
@@ -299,7 +302,7 @@
             this.closeBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_shutdown_50px;
             this.closeBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.closeBT.Location = new System.Drawing.Point(1404, 0);
+            this.closeBT.Location = new System.Drawing.Point(2309, 0);
             this.closeBT.Margin = new System.Windows.Forms.Padding(5);
             this.closeBT.Name = "closeBT";
             this.closeBT.Padding = new System.Windows.Forms.Padding(5);
@@ -345,9 +348,9 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.adminBT);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(200, 58);
+            this.panel4.Location = new System.Drawing.Point(175, 58);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1470, 132);
+            this.panel4.Size = new System.Drawing.Size(2381, 105);
             this.panel4.TabIndex = 2;
             // 
             // panelSlide2
@@ -365,7 +368,7 @@
             this.kijelentkezBT.FlatAppearance.BorderSize = 0;
             this.kijelentkezBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kijelentkezBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_Logout_50px;
-            this.kijelentkezBT.Location = new System.Drawing.Point(1344, 0);
+            this.kijelentkezBT.Location = new System.Drawing.Point(2249, 0);
             this.kijelentkezBT.Name = "kijelentkezBT";
             this.kijelentkezBT.Size = new System.Drawing.Size(125, 132);
             this.kijelentkezBT.TabIndex = 23;
@@ -381,7 +384,7 @@
             this.userProfilBT.FlatAppearance.BorderSize = 0;
             this.userProfilBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userProfilBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_profile_50px;
-            this.userProfilBT.Location = new System.Drawing.Point(1271, 19);
+            this.userProfilBT.Location = new System.Drawing.Point(2176, 19);
             this.userProfilBT.Name = "userProfilBT";
             this.userProfilBT.Size = new System.Drawing.Size(60, 86);
             this.userProfilBT.TabIndex = 3;
@@ -398,7 +401,7 @@
             this.userProfilePic.Image = global::Asztali_alkalmazas.Properties.Resources.profilpic;
             this.userProfilePic.Location = new System.Drawing.Point(0, 0);
             this.userProfilePic.Name = "userProfilePic";
-            this.userProfilePic.Size = new System.Drawing.Size(111, 132);
+            this.userProfilePic.Size = new System.Drawing.Size(111, 105);
             this.userProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userProfilePic.TabIndex = 22;
             this.userProfilePic.TabStop = false;
@@ -451,7 +454,7 @@
             this.adminBT.FlatAppearance.BorderSize = 0;
             this.adminBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_system_administrator_male_50px;
-            this.adminBT.Location = new System.Drawing.Point(1124, 19);
+            this.adminBT.Location = new System.Drawing.Point(2029, 19);
             this.adminBT.Name = "adminBT";
             this.adminBT.Size = new System.Drawing.Size(134, 86);
             this.adminBT.TabIndex = 25;
@@ -477,6 +480,7 @@
             // order_UC1
             // 
             this.order_UC1.AllowDrop = true;
+            this.order_UC1.AutoScroll = true;
             this.order_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.order_UC1.Location = new System.Drawing.Point(758, 299);
             this.order_UC1.Name = "order_UC1";
@@ -486,6 +490,9 @@
             // 
             // prodcut_UC1
             // 
+            this.prodcut_UC1.AutoScroll = true;
+            this.prodcut_UC1.AutoScrollMargin = new System.Drawing.Size(1, 1);
+            this.prodcut_UC1.AutoScrollMinSize = new System.Drawing.Size(500, 350);
             this.prodcut_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.prodcut_UC1.Location = new System.Drawing.Point(216, 592);
             this.prodcut_UC1.Name = "prodcut_UC1";
@@ -528,17 +535,19 @@
             this.userProfil_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.userProfil_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userProfil_UC1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.userProfil_UC1.Location = new System.Drawing.Point(200, 190);
+            this.userProfil_UC1.Location = new System.Drawing.Point(175, 163);
             this.userProfil_UC1.Name = "userProfil_UC1";
-            this.userProfil_UC1.Size = new System.Drawing.Size(1470, 854);
+            this.userProfil_UC1.Size = new System.Drawing.Size(2381, 1277);
             this.userProfil_UC1.TabIndex = 3;
             this.userProfil_UC1.Visible = false;
             // 
             // ControlPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(1480, 920);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1670, 1044);
+            this.ClientSize = new System.Drawing.Size(1654, 1005);
             this.Controls.Add(this.homeScreen_UC1);
             this.Controls.Add(this.order_UC1);
             this.Controls.Add(this.prodcut_UC1);
@@ -553,10 +562,12 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1480, 920);
             this.Name = "ControlPanel";
             this.Text = "ControlPanel";
             this.Load += new System.EventHandler(this.ControlPanel_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

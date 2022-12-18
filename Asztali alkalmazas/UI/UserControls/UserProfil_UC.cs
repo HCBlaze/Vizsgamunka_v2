@@ -45,7 +45,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         string createNUpdateFormat = "yyyy-MM-dd HH:mm:ss";
         Users ujUser = new Users();
         PasswordCrypt uj = new PasswordCrypt();
-            //Alapvető ablak UserControl műveletek
+        //Alapvető ablak UserControl műveletek
         private void passwordChangeBT_Click(object sender, EventArgs e)
         {
             if (userProfileGB.Visible == true)

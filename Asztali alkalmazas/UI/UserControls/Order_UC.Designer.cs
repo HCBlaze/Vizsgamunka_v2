@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.selectedDateOrdersDGV = new System.Windows.Forms.DataGridView();
             this.orderStartDate = new System.Windows.Forms.DateTimePicker();
             this.orderEndDate = new System.Windows.Forms.DateTimePicker();
@@ -65,6 +64,8 @@
             // 
             this.selectedDateOrdersDGV.AllowUserToAddRows = false;
             this.selectedDateOrdersDGV.AllowUserToDeleteRows = false;
+            this.selectedDateOrdersDGV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.selectedDateOrdersDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.selectedDateOrdersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.selectedDateOrdersDGV.Location = new System.Drawing.Point(16, 361);
@@ -156,7 +157,7 @@
             this.selectedOrderDetailsGB.Controls.Add(this.label4);
             this.selectedOrderDetailsGB.Controls.Add(this.label3);
             this.selectedOrderDetailsGB.Controls.Add(this.label22);
-            this.selectedOrderDetailsGB.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.selectedOrderDetailsGB.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.selectedOrderDetailsGB.ForeColor = System.Drawing.Color.Orange;
             this.selectedOrderDetailsGB.Location = new System.Drawing.Point(16, 71);
             this.selectedOrderDetailsGB.Name = "selectedOrderDetailsGB";
@@ -238,14 +239,6 @@
             this.selectedOrderProductsDGV.AllowUserToDeleteRows = false;
             this.selectedOrderProductsDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.selectedOrderProductsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.selectedOrderProductsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.selectedOrderProductsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.selectedOrderProductsDGV.Location = new System.Drawing.Point(984, 77);
             this.selectedOrderProductsDGV.Name = "selectedOrderProductsDGV";
@@ -341,7 +334,7 @@
             this.generateInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateInvoice.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.generateInvoice.ForeColor = System.Drawing.Color.Orange;
-            this.generateInvoice.Location = new System.Drawing.Point(1214, 14);
+            this.generateInvoice.Location = new System.Drawing.Point(1224, 14);
             this.generateInvoice.Name = "generateInvoice";
             this.generateInvoice.Size = new System.Drawing.Size(198, 32);
             this.generateInvoice.TabIndex = 11;
@@ -405,6 +398,7 @@
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

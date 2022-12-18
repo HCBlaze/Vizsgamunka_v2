@@ -31,7 +31,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         {
             labelEndDate.Text = dtpEndDate.Text;
             labelStartDate.Text = dtpStartDate.Text;
-            understockDGV.Columns[1].Width = 90;
+            understockDGV.Columns[1].Width = 100;
         }
         //------------ UserControl betöltése és alap értékek felvétele vége ------------
         //------------ Dashboard classból adatok elhelyezése megfelelő helyen ------------

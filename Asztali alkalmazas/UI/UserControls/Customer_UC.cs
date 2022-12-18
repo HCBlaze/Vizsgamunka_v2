@@ -59,7 +59,11 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
-
+        private void Customer_UC_Load(object sender, EventArgs e)
+        {
+            ReLoadDGV();
+        }
+        //------------ DataGridView feltöltése klönféle adatokkal ------------
         private DataTable GetCustomersList()
         {
             DataTable dtCustomers = new DataTable();
@@ -85,14 +89,20 @@ namespace Asztali_alkalmazas.UI.UserControls
             conn.Close();
             return dtCustomerOrder;
         }
-
-        private void ReLoadDGV()
+        //------------ DataGridView feltöltése klönféle adatokkal vége ------------
+        //------------ Saját függvények ------------
+        private void ReLoadDGV() // Újra tölti a DGV-t az adatbázisból lekérdezett adatokkal
         {
             CustomersDGV.ClearSelection();
             CustomersDGV.DataSource = null;
             CustomersDGV.DataSource = GetCustomersList();
+            CustomersDGV.Columns[0].HeaderText = "ID";
+            CustomersDGV.Columns[1].HeaderText = "Keresztnév";
+            CustomersDGV.Columns[2].HeaderText = "Vezetéknév";
+            CustomersDGV.Columns[3].HeaderText = "Mobilszám";
+            
         }
-        private void setNewCustomer()
+        private void setNewCustomer() //Beállítja az új vásárlót osztályból
         {
             
             try
@@ -117,18 +127,14 @@ namespace Asztali_alkalmazas.UI.UserControls
             ReLoadDGV();
 
         }
-        private void deleteTB()
+        private void deleteTB() // törli a textboxok értékét
         {
             customerLNTB.Clear();
             customerFNTB.Clear();
             customerPhone.Clear();
         }
-        private void Customer_UC_Load(object sender, EventArgs e)
-        {
-            ReLoadDGV();
-
-        }
-
+        //------------ Saját függvények vége ------------
+        //------------ Gombok funkciói ------------
         private void CustomersDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -151,24 +157,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 hibakezeles.ErrorLogs(hiba);
             }
         }
-
-        private void customerDeleteBT_Click(object sender, EventArgs e)
-        {
-            DialogResult torli;
-            torli = MessageBox.Show("Biztos törli az adott elemet?", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (torli == DialogResult.Yes)
-            {
-                conn.Open();
-                cmd = new MySqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "delete from `local_store_project_23`.`customers` WHERE `id`= @ID;";
-                cmd.Parameters.AddWithValue("@ID", currentId);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                ReLoadDGV();
-            }
-        }
-
         private void customerLNTB_Leave(object sender, EventArgs e)
         {
             if(customerLNTB.Text.Length > 0)
@@ -221,14 +209,36 @@ namespace Asztali_alkalmazas.UI.UserControls
                 MessageBox.Show("Nem változtattál semmilyen adaton.");
             }
         }
+        private void customerDeleteBT_Click(object sender, EventArgs e)
+        {
+            DialogResult torli;
+            torli = MessageBox.Show("Biztos törli az adott elemet?", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (torli == DialogResult.Yes)
+            {
+                conn.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "delete from `local_store_project_23`.`customers` WHERE `id`= @ID;";
+                cmd.Parameters.AddWithValue("@ID", currentId);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                ReLoadDGV();
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             CustomersDGV.DataSource = GetCustomerOrder();
+            CustomersDGV.Columns[0].HeaderText = "Keresztnév";
+            CustomersDGV.Columns[1].HeaderText = "Vezetéknév";
+            CustomersDGV.Columns[2].HeaderText = "Rendelés dátuma";
+            CustomersDGV.Columns[3].HeaderText = "Rendelés azonosítója";
+            CustomersDGV.Columns[4].HeaderText = "Végösszeg (HUF)";
         }
 
         private void customerDGVReload_Click(object sender, EventArgs e)
         {
             ReLoadDGV();
         }
+        //------------ Gombok funkciói vége ------------
     }
 }

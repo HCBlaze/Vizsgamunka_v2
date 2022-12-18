@@ -61,9 +61,11 @@
             // 
             this.CustomersDGV.AllowUserToAddRows = false;
             this.CustomersDGV.AllowUserToDeleteRows = false;
+            this.CustomersDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CustomersDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CustomersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomersDGV.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CustomersDGV.Location = new System.Drawing.Point(0, 455);
             this.CustomersDGV.Name = "CustomersDGV";
             this.CustomersDGV.ReadOnly = true;
@@ -75,7 +77,7 @@
             // 
             this.customerPhone.Location = new System.Drawing.Point(1046, 145);
             this.customerPhone.Name = "customerPhone";
-            this.customerPhone.Size = new System.Drawing.Size(194, 22);
+            this.customerPhone.Size = new System.Drawing.Size(194, 20);
             this.customerPhone.TabIndex = 3;
             this.customerPhone.Leave += new System.EventHandler(this.customerPhone_Leave);
             // 
@@ -83,7 +85,7 @@
             // 
             this.customerFNTB.Location = new System.Drawing.Point(670, 145);
             this.customerFNTB.Name = "customerFNTB";
-            this.customerFNTB.Size = new System.Drawing.Size(194, 22);
+            this.customerFNTB.Size = new System.Drawing.Size(194, 20);
             this.customerFNTB.TabIndex = 2;
             this.customerFNTB.Leave += new System.EventHandler(this.customerFNTB_Leave);
             // 
@@ -91,7 +93,7 @@
             // 
             this.customerLNTB.Location = new System.Drawing.Point(277, 145);
             this.customerLNTB.Name = "customerLNTB";
-            this.customerLNTB.Size = new System.Drawing.Size(194, 22);
+            this.customerLNTB.Size = new System.Drawing.Size(194, 20);
             this.customerLNTB.TabIndex = 1;
             this.customerLNTB.Leave += new System.EventHandler(this.customerLNTB_Leave);
             // 
@@ -167,6 +169,7 @@
             // 
             // getCustomerOrderBT
             // 
+            this.getCustomerOrderBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.getCustomerOrderBT.Enabled = false;
             this.getCustomerOrderBT.Font = new System.Drawing.Font("Akashi_hun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getCustomerOrderBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -180,6 +183,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;

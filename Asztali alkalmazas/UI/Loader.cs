@@ -17,7 +17,10 @@ namespace Asztali_alkalmazas.UI
         {
             InitializeComponent();
         }
-
+        private void Loader_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             panelSlide.Left += 2;
@@ -30,11 +33,6 @@ namespace Asztali_alkalmazas.UI
             {
                 move = 2;
             }
-        }
-
-        private void Loader_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
         }
     }
 }

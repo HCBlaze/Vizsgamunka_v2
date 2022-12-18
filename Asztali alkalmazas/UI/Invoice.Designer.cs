@@ -485,6 +485,7 @@
             // Invoice
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(821, 1128);
             this.Controls.Add(this.panelPrint);
             this.Name = "Invoice";

@@ -46,7 +46,10 @@ namespace Asztali_alkalmazas.UI.UserControls
         AdminControl_UC hibakezeles = new AdminControl_UC();
         List<KeyValuePair<int,string>> SupplierIdandName = new List<KeyValuePair<int,string>>();
         List<KeyValuePair<int,string>> Products = new List<KeyValuePair<int,string>>();
-
+        private void Prodcut_UC_Load(object sender, EventArgs e)
+        {
+            getSuppliers();
+        }
         private void getID()
         {
             try
@@ -98,9 +101,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                     string hiba = ex.Message.ToString();
                     hibakezeles.ErrorLogs(hiba);
                 }
-            }
-            
-            
+            }   
         }
         private void setNewProduct()
         {
@@ -151,14 +152,8 @@ namespace Asztali_alkalmazas.UI.UserControls
                     tabControl1.SelectedIndex = 0;
                     getSuppliers();
                     break;
-
             }
         }
-        private void Prodcut_UC_Load(object sender, EventArgs e)
-        {
-            getSuppliers();
-        }
-
         private void suppliersCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             for (int i = 0; i < SupplierIdandName.Count; i++)
@@ -171,7 +166,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             label4.Visible = true;
             productDetailsGB.Visible = true;
         }
-
         private void productNameTB_Leave(object sender, EventArgs e)
         {
             if(productNameTB.Text.Length > 0)
@@ -180,7 +174,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setSupplierId(Convert.ToInt32(productSupplierIdLL.Text));
             }          
         }
-
         private void productUnitPriceTB_Leave(object sender, EventArgs e)
         {
             if(productUnitPriceTB.Text.Length > 0)
@@ -188,7 +181,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setUnitPrice(decimal.Parse(productUnitPriceTB.Text));
             }
         }
-
         private void productPackageTB_Leave(object sender, EventArgs e)
         {
             if(productPackageTB.Text.Length > 0)
@@ -196,7 +188,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setPackage(productPackageTB.Text);
             }
         }
-
         private void productStockTB_Leave(object sender, EventArgs e)
         {
             if(productStockTB.Text.Length > 0)
@@ -204,7 +195,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setStock(int.Parse(productStockTB.Text));
             }
         }
-
         private void newProductBT_Click(object sender, EventArgs e)
         {
             setNewProduct();
@@ -212,7 +202,6 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         //-------------------------------------------------------------------New Product section end-------------------------------------------------------------------
         //-------------------------------------------------------------------Product update and delete section start --------------------------------------------------
-
         public void deleteProductUpdateTB()
         {
             productUpdateNDeleteDGV.ClearSelection();
@@ -281,7 +270,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 ReLoadDGV(GetProductsList());
             }
         }
-
         private void productUpdateBT_Click(object sender, EventArgs e)
         {
             if (uj.ProductName != productUpdateName.Text || uj.UnitPrice != decimal.Parse(productUpdatePrice.Text) || uj.Package != productUpdatePackage.Text || uj.Stock != int.Parse(productUpdateStock.Text))
@@ -305,7 +293,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
-
         private void productUpdateName_Leave(object sender, EventArgs e)
         {
             if(productNameTB.Text.Length > 0)
@@ -314,7 +301,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             label17.Visible = true;
         }
-
         private void productUpdatePrice_Leave(object sender, EventArgs e)
         {
             if (productUpdatePrice.Text.Length > 0)
@@ -323,7 +309,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             label17.Visible = false;
         }
-
         private void productUpdatePackage_Leave(object sender, EventArgs e)
         {
             if (productUpdatePackage.Text.Length > 0)
@@ -400,7 +385,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
-
         private void productsCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(productsCB.SelectedIndex >= 0)
@@ -470,10 +454,8 @@ namespace Asztali_alkalmazas.UI.UserControls
                 selectedProdcutId.Text = "";
                 selectedProductStock.Text = "";
                 selectedProductPackage.Text = "";
-            }
-            
+            }    
         }
-
         private void selectedProductStockUpdateBT_Click(object sender, EventArgs e)
         {
             int newStock;
@@ -504,13 +486,11 @@ namespace Asztali_alkalmazas.UI.UserControls
                     prodcutUpdateStock(newStock, msg);
                 }
             }            
-
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             selectedProductStockUpdateBT.Enabled = true;
         }
-
         private void productAddOrRemoveBT_Click(object sender, EventArgs e)
         {
             if(productAddOrRemoveBT.Text == "Készlet feltöltése")
@@ -524,7 +504,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 selectedProductStockUpdateBT.Text = "Készlet eltávolítása";
             }
         }
-
         //-------------------------------------------------------------------Product stock update section end -------------------------------------------------------
     }
 }

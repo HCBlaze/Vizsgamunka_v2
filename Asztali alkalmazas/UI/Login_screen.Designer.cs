@@ -66,23 +66,31 @@
             // 
             // Exit
             // 
+            this.Exit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Exit.Location = new System.Drawing.Point(140, 518);
+            this.Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.Exit.Location = new System.Drawing.Point(133, 518);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(120, 50);
+            this.Exit.Size = new System.Drawing.Size(143, 50);
             this.Exit.TabIndex = 4;
-            this.Exit.Text = "Exit";
+            this.Exit.Text = "Kilépés";
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // LogIn
             // 
+            this.LogIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.LogIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.LogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
             this.LogIn.Location = new System.Drawing.Point(12, 429);
             this.LogIn.Name = "LogIn";
             this.LogIn.Size = new System.Drawing.Size(376, 60);
             this.LogIn.TabIndex = 3;
-            this.LogIn.Text = "Log In";
+            this.LogIn.Text = "Bejelentkezés";
             this.LogIn.UseVisualStyleBackColor = true;
             this.LogIn.Click += new System.EventHandler(this.LogIn_Click);
             // 
@@ -143,7 +151,7 @@
             // Login_screen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(400, 580);
             this.Controls.Add(this.Show_Password);
             this.Controls.Add(this.Password_Textbox);
