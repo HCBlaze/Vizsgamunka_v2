@@ -43,6 +43,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             uj.setId(cID);
         }
         Customer uj = new Customer();
+        Customer actual;
         AdminControl_UC hibakezeles = new AdminControl_UC();
 
         private void getID()
@@ -149,6 +150,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                     }
                 customerUpdateBT.Enabled = true;
                 getCustomerOrderBT.Enabled = true;
+                actual = new Customer(Convert.ToInt32(currentId), customerFNTB.Text, customerLNTB.Text, customerPhone.Text);
             }
             catch (Exception ex)
             {
@@ -190,7 +192,7 @@ namespace Asztali_alkalmazas.UI.UserControls
 
         private void customerUpdateBT_Click(object sender, EventArgs e)
         {
-            if(uj.First_name != customerFNTB.Text || uj.Last_name != customerLNTB.Text || uj.Phone != customerPhone.Text)
+            if(actual.First_name != customerFNTB.Text || actual.Last_name != customerLNTB.Text || actual.Phone != customerPhone.Text)
             {
                 uj.setFirstname(customerFNTB.Text);
                 uj.setLastname(customerLNTB.Text);

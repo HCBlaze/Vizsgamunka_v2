@@ -43,6 +43,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             uj.setId(sID);
         }
         Supplier uj = new Supplier();
+        Supplier actual;
         AdminControl_UC hibakezeles = new AdminControl_UC();
         private void Supplier_UC_Load(object sender, EventArgs e)
         {
@@ -136,6 +137,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         //------------ Saját függvények ------------
         //------------ Gomb műveletekre végzett események ------------
+
         private void suppliersDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -151,6 +153,8 @@ namespace Asztali_alkalmazas.UI.UserControls
                 }
                 supplierUpdateBT.Enabled = true;
                 getSupplierProductsBT.Enabled = true;
+                actual = new Supplier(Convert.ToInt32(currentId),supplierCompanyNameTB.Text,supplierContactNameTB.Text,supplierCityTB.Text,supplierPhoneTB.Text);
+                MessageBox.Show(actual.Id.ToString() + "-" + actual.CompanyName + "-" + actual.ContactName + "-" + actual.City + "-" + actual.Phone);
             }
             catch (Exception ex)
             {
@@ -177,7 +181,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         private void supplierCompanyNameTB_Leave(object sender, EventArgs e)
         {
-            if(supplierCompanyNameTB.Text.Length > 0)
+            if (supplierCompanyNameTB.Text.Length > 0)
             {
                 uj.setCompanyName(supplierCompanyNameTB.Text);
             }
@@ -205,7 +209,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         private void supplierUpdateBT_Click(object sender, EventArgs e)
         {
-            if (uj.CompanyName != supplierCompanyNameTB.Text || uj.ContactName != supplierContactNameTB.Text || uj.City != supplierCityTB.Text || uj.Phone != supplierPhoneTB.Text)
+            if (actual.CompanyName != supplierCompanyNameTB.Text || actual.ContactName != supplierContactNameTB.Text || actual.City != supplierCityTB.Text || actual.Phone != supplierPhoneTB.Text)
             {
                 uj.setCompanyName(supplierCompanyNameTB.Text);
                 uj.setContactName(supplierContactNameTB.Text);

@@ -20,6 +20,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         int pID;
         string connstring;
         string currentId;
+        int newSupplierID;
         MySqlCommand cmd;
         MySqlDataReader dr;
         public Prodcut_UC()
@@ -43,6 +44,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         //------------------------------------------------------------------------------New Product section start-------------------------------------------------------------------
         Product uj = new Product();
+        Product actual;
         AdminControl_UC hibakezeles = new AdminControl_UC();
         List<KeyValuePair<int,string>> SupplierIdandName = new List<KeyValuePair<int,string>>();
         List<KeyValuePair<int,string>> Products = new List<KeyValuePair<int,string>>();
@@ -93,6 +95,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                     for (int i = 0; i < SupplierIdandName.Count; i++)
                     {
                         suppliersCB.Items.Add(SupplierIdandName[i].Value);
+                        updateSuppliersCB.Items.Add(SupplierIdandName[i].Value);
                     }
                 }
                 catch (Exception ex)
@@ -143,6 +146,12 @@ namespace Asztali_alkalmazas.UI.UserControls
                 case 1:
                     tabControl1.SelectedIndex = 1;
                     ReLoadDGV(GetProductsList());
+                    productUpdateNDeleteDGV.Columns[0].HeaderText = "ID";
+                    productUpdateNDeleteDGV.Columns[1].HeaderText = "Termék megnevezése";
+                    productUpdateNDeleteDGV.Columns[2].HeaderText = "Beszállító";
+                    productUpdateNDeleteDGV.Columns[3].HeaderText = "Egységár (HUF)";
+                    productUpdateNDeleteDGV.Columns[4].HeaderText = "Kiszerelés";
+                    productUpdateNDeleteDGV.Columns[5].HeaderText = "Készlet";
                     break;
                 case 2:
                     tabControl1.SelectedIndex = 2;
@@ -206,6 +215,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         {
             productUpdateNDeleteDGV.ClearSelection();
             productUpdateName.Clear();
+            updateSuppliersCB.SelectedValue= string.Empty;
             productUpdatePrice.Clear();
             productUpdatePackage.Clear();
             productUpdateStock.Clear();
@@ -228,9 +238,17 @@ namespace Asztali_alkalmazas.UI.UserControls
             deleteProductUpdateTB();
             productUpdateNDeleteDGV.DataSource = null;
             productUpdateNDeleteDGV.DataSource = data;
+            productUpdateNDeleteDGV.Columns[0].HeaderText = "ID";
+            productUpdateNDeleteDGV.Columns[1].HeaderText = "Termék megnevezése";
+            productUpdateNDeleteDGV.Columns[2].HeaderText = "Beszállító";
+            productUpdateNDeleteDGV.Columns[3].HeaderText = "Egységár (HUF)";
+            productUpdateNDeleteDGV.Columns[4].HeaderText = "Kiszerelés";
+            productUpdateNDeleteDGV.Columns[5].HeaderText = "Készlet";
         }
         private void productUpdateNDeleteDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string currentSupplier = "";
+            
             try
             {
                 if (productUpdateNDeleteDGV.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -238,7 +256,21 @@ namespace Asztali_alkalmazas.UI.UserControls
                     productUpdateNDeleteDGV.CurrentRow.Selected = true;
                     currentId = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
                     productUpdateName.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Termeknev"].FormattedValue.ToString();
-                    label16.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Beszallito"].FormattedValue.ToString();
+                    currentSupplier = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Beszallito"].FormattedValue.ToString();
+                    foreach(string a in updateSuppliersCB.Items)
+                    {
+                        if(currentSupplier == a)
+                        {
+                            updateSuppliersCB.SelectedItem = a;
+                            for(int i = 0; i < SupplierIdandName.Count; i++)
+                            {
+                                if(a == SupplierIdandName[i].Value)
+                                {
+                                    newSupplierID = SupplierIdandName[i].Key;
+                                }
+                            }
+                        }
+                    }
                     productUpdatePrice.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Egysegar"].FormattedValue.ToString();
                     productUpdatePackage.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Kiszereles"].FormattedValue.ToString();
                     productUpdateStock.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Keszlet"].FormattedValue.ToString();
@@ -246,6 +278,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 productUpdateGB.Visible = true;
                 productUpdateBT.Visible = true;
                 productDeleteBT.Visible = true;
+                actual = new Product(Convert.ToInt32(currentId), productUpdateName.Text, newSupplierID, Convert.ToDecimal(productUpdatePrice.Text), productUpdatePackage.Text, Convert.ToInt32(productUpdateStock.Text));
             }
             catch (Exception ex)
             {
@@ -272,7 +305,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         private void productUpdateBT_Click(object sender, EventArgs e)
         {
-            if (uj.ProductName != productUpdateName.Text || uj.UnitPrice != decimal.Parse(productUpdatePrice.Text) || uj.Package != productUpdatePackage.Text || uj.Stock != int.Parse(productUpdateStock.Text))
+            if (actual.ProductName != productUpdateName.Text ||actual.SupplierId != newSupplierID ||actual.UnitPrice != decimal.Parse(productUpdatePrice.Text) || actual.Package != productUpdatePackage.Text || actual.Stock != int.Parse(productUpdateStock.Text))
             {
                 uj.setProductName(productUpdateName.Text);
                 uj.setUnitPrice(decimal.Parse(productUpdatePrice.Text));
@@ -281,7 +314,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 conn.Open();
                 cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "UPDATE `local_store_project_23`.`products` SET `ProductName`='" + uj.ProductName + "', UnitPrice = '" + uj.UnitPrice + "', Package = '" + uj.Package + "' ,Stock = '" + uj.Stock + "', updated_at = '" + DateTime.Now.ToString(format) + "' WHERE `id`= @ID;";
+                cmd.CommandText = "UPDATE `local_store_project_23`.`products` SET `ProductName`='" + uj.ProductName + "', SupplierId = '"+uj.SupplierId+"', UnitPrice = '" + uj.UnitPrice + "', Package = '" + uj.Package + "' ,Stock = '" + uj.Stock + "', updated_at = '" + DateTime.Now.ToString(format) + "' WHERE `id`= @ID;";
                 cmd.Parameters.AddWithValue("@ID", currentId);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -295,10 +328,22 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         private void productUpdateName_Leave(object sender, EventArgs e)
         {
-            if(productNameTB.Text.Length > 0)
+            if(productUpdateName.Text.Length > 0)
             {
-                uj.setProductName(productNameTB.Text);
+                uj.setProductName(productUpdateName.Text);
             }
+            
+        }
+        private void updateSuppliersCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < SupplierIdandName.Count; i++)
+            {
+                if (updateSuppliersCB.SelectedItem.ToString() == SupplierIdandName[i].Value)
+                {
+                    newSupplierID = SupplierIdandName[i].Key;
+                }
+            }
+            uj.setSupplierId(newSupplierID);
             label17.Visible = true;
         }
         private void productUpdatePrice_Leave(object sender, EventArgs e)

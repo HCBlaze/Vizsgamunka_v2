@@ -52,9 +52,9 @@
             this.productDeleteBT = new System.Windows.Forms.Button();
             this.productUpdateBT = new System.Windows.Forms.Button();
             this.productUpdateGB = new System.Windows.Forms.GroupBox();
+            this.updateSuppliersCB = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.productUpdateStock = new System.Windows.Forms.TextBox();
             this.productUpdatePackage = new System.Windows.Forms.TextBox();
             this.productUpdatePrice = new System.Windows.Forms.TextBox();
@@ -242,9 +242,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(106, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 19);
+            this.label6.Size = new System.Drawing.Size(129, 19);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Egység ár:";
+            this.label6.Text = "Egység ár(HUF):";
             // 
             // label5
             // 
@@ -391,9 +391,9 @@
             // 
             // productUpdateGB
             // 
+            this.productUpdateGB.Controls.Add(this.updateSuppliersCB);
+            this.productUpdateGB.Controls.Add(this.label24);
             this.productUpdateGB.Controls.Add(this.label17);
-            this.productUpdateGB.Controls.Add(this.label16);
-            this.productUpdateGB.Controls.Add(this.label15);
             this.productUpdateGB.Controls.Add(this.productUpdateStock);
             this.productUpdateGB.Controls.Add(this.productUpdatePackage);
             this.productUpdateGB.Controls.Add(this.productUpdatePrice);
@@ -412,66 +412,68 @@
             this.productUpdateGB.Text = "Termékek adatainak szerkeztése";
             this.productUpdateGB.Visible = false;
             // 
+            // updateSuppliersCB
+            // 
+            this.updateSuppliersCB.FormattingEnabled = true;
+            this.updateSuppliersCB.Location = new System.Drawing.Point(21, 183);
+            this.updateSuppliersCB.Name = "updateSuppliersCB";
+            this.updateSuppliersCB.Size = new System.Drawing.Size(512, 31);
+            this.updateSuppliersCB.TabIndex = 16;
+            this.updateSuppliersCB.SelectedIndexChanged += new System.EventHandler(this.updateSuppliersCB_SelectedIndexChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label24.Location = new System.Drawing.Point(17, 140);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(82, 19);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "Beszállító:";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label17.Location = new System.Drawing.Point(144, 308);
+            this.label17.Location = new System.Drawing.Point(190, 325);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(251, 16);
             this.label17.TabIndex = 14;
             this.label17.Text = "Új ár megadásánál nem kell veszzőt tenni.";
             this.label17.Visible = false;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label16.Location = new System.Drawing.Point(379, 47);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 16);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "label16";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(276, 43);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 23);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "Beszállító:";
-            // 
             // productUpdateStock
             // 
-            this.productUpdateStock.Location = new System.Drawing.Point(126, 520);
+            this.productUpdateStock.Location = new System.Drawing.Point(21, 517);
             this.productUpdateStock.Name = "productUpdateStock";
-            this.productUpdateStock.Size = new System.Drawing.Size(315, 31);
+            this.productUpdateStock.Size = new System.Drawing.Size(512, 31);
             this.productUpdateStock.TabIndex = 4;
+            this.productUpdateStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.productUpdateStock.Leave += new System.EventHandler(this.productUpdateStock_Leave);
             // 
             // productUpdatePackage
             // 
-            this.productUpdatePackage.Location = new System.Drawing.Point(126, 393);
+            this.productUpdatePackage.Location = new System.Drawing.Point(21, 419);
             this.productUpdatePackage.Name = "productUpdatePackage";
-            this.productUpdatePackage.Size = new System.Drawing.Size(315, 31);
+            this.productUpdatePackage.Size = new System.Drawing.Size(512, 31);
             this.productUpdatePackage.TabIndex = 3;
+            this.productUpdatePackage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.productUpdatePackage.Leave += new System.EventHandler(this.productUpdatePackage_Leave);
             // 
             // productUpdatePrice
             // 
-            this.productUpdatePrice.Location = new System.Drawing.Point(126, 268);
+            this.productUpdatePrice.Location = new System.Drawing.Point(21, 281);
             this.productUpdatePrice.Name = "productUpdatePrice";
-            this.productUpdatePrice.Size = new System.Drawing.Size(315, 31);
+            this.productUpdatePrice.Size = new System.Drawing.Size(512, 31);
             this.productUpdatePrice.TabIndex = 2;
+            this.productUpdatePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.productUpdatePrice.Leave += new System.EventHandler(this.productUpdatePrice_Leave);
             // 
             // productUpdateName
             // 
-            this.productUpdateName.Location = new System.Drawing.Point(126, 149);
+            this.productUpdateName.Location = new System.Drawing.Point(21, 85);
             this.productUpdateName.Name = "productUpdateName";
-            this.productUpdateName.Size = new System.Drawing.Size(315, 31);
+            this.productUpdateName.Size = new System.Drawing.Size(512, 31);
             this.productUpdateName.TabIndex = 1;
             this.productUpdateName.Leave += new System.EventHandler(this.productUpdateName_Leave);
             // 
@@ -480,7 +482,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(39, 339);
+            this.label13.Location = new System.Drawing.Point(17, 376);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(110, 19);
             this.label13.TabIndex = 6;
@@ -491,18 +493,18 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(39, 226);
+            this.label14.Location = new System.Drawing.Point(17, 238);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 19);
+            this.label14.Size = new System.Drawing.Size(133, 19);
             this.label14.TabIndex = 5;
-            this.label14.Text = "Egység ár:";
+            this.label14.Text = "Egység ár (HUF):";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(39, 472);
+            this.label12.Location = new System.Drawing.Point(17, 474);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 19);
             this.label12.TabIndex = 7;
@@ -512,7 +514,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(39, 94);
+            this.label11.Location = new System.Drawing.Point(17, 42);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(183, 19);
             this.label11.TabIndex = 0;
@@ -899,8 +901,6 @@
         private System.Windows.Forms.TextBox productUpdatePackage;
         private System.Windows.Forms.TextBox productUpdatePrice;
         private System.Windows.Forms.TextBox productUpdateName;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button productUpdateDGVReload;
@@ -927,5 +927,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label selectProductSupplierId;
+        private System.Windows.Forms.ComboBox updateSuppliersCB;
+        private System.Windows.Forms.Label label24;
     }
 }
