@@ -10,6 +10,7 @@
 - Visual Studio 2022
 - PhStorm
 - MySQL Workbench
+- MS Office
 - Laragon
 - Pichon
 - DevToys
@@ -61,20 +62,20 @@ https://drive.google.com/drive/folders/1BQWhsgn9oQfvIUHINSO070bKsUlLN8hx?usp=sha
 
 - Az alkalmazás úgy írtam meg hogy helyi gépen kell futatni egy mysql adatbázist aminek a felhasználóneve root kell hogy legyen és nem lehet jelszava.
 
-	Paraméterek:
+		Paraméterek:
 
-	server=localhost
-	port=3306
-	database=local_store_project_23
-	user=root
+		server=localhost
+		port=3306
+		database=local_store_project_23
+		user=root
 
-	ha más beállításokat használunk az alakalmazás nem fog működni.
+		ha más beállításokat használunk az alakalmazás nem fog működni.
 
-	Az adatbázist nem kell létrehozni, a mellékelt .sql fájlt be importálva létrehozza az adatbázist, a táblákat és a teszt adatokat is!
+		Az adatbázist nem kell létrehozni, a mellékelt .sql fájlt be importálva létrehozza az adatbázist, a táblákat és a teszt adatokat is!
 
 
 - Telepítő (.exe) futtatása
-
+- Ahhoz hogy a program minden funkciója működjön MS Office -ra és egy .pdf megtekintő programra is szükség lesz.
 ---
 
 Készítette:
