@@ -41,6 +41,7 @@
             this.showDeletedBT = new System.Windows.Forms.Button();
             this.FelhasznalokDGV = new System.Windows.Forms.DataGridView();
             this.editUserGB = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.getIsDeletedNoRB = new System.Windows.Forms.RadioButton();
             this.getIsDeletedYesRB = new System.Windows.Forms.RadioButton();
@@ -64,6 +65,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.newUserGB = new System.Windows.Forms.GroupBox();
+            this.showPWD1 = new System.Windows.Forms.Button();
             this.userDeletedGB = new System.Windows.Forms.GroupBox();
             this.isDeletedNoRB = new System.Windows.Forms.RadioButton();
             this.isDeletedYesRB = new System.Windows.Forms.RadioButton();
@@ -87,8 +89,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button7 = new System.Windows.Forms.Button();
-            this.showPWD1 = new System.Windows.Forms.Button();
             this.adminOperationGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FelhasznalokDGV)).BeginInit();
             this.editUserGB.SuspendLayout();
@@ -141,6 +141,7 @@
             this.dataImportBT.TabIndex = 4;
             this.dataImportBT.Text = "Adatbázis importálása";
             this.dataImportBT.UseVisualStyleBackColor = true;
+            this.dataImportBT.Visible = false;
             // 
             // dataExportBT
             // 
@@ -280,6 +281,17 @@
             this.editUserGB.TabStop = false;
             this.editUserGB.Text = "Felhasználó szerkeztése";
             this.editUserGB.Visible = false;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.showPWD;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.Location = new System.Drawing.Point(409, 282);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(34, 23);
+            this.button7.TabIndex = 56;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.showPWD2_Click);
             // 
             // groupBox7
             // 
@@ -587,6 +599,17 @@
             this.newUserGB.Text = "Új felhasználó létrehozása";
             this.newUserGB.Visible = false;
             // 
+            // showPWD1
+            // 
+            this.showPWD1.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.showPWD;
+            this.showPWD1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showPWD1.Location = new System.Drawing.Point(428, 283);
+            this.showPWD1.Name = "showPWD1";
+            this.showPWD1.Size = new System.Drawing.Size(34, 23);
+            this.showPWD1.TabIndex = 57;
+            this.showPWD1.UseVisualStyleBackColor = true;
+            this.showPWD1.Click += new System.EventHandler(this.showPWD1_Click);
+            // 
             // userDeletedGB
             // 
             this.userDeletedGB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -850,28 +873,6 @@
             this.label2.Size = new System.Drawing.Size(387, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "Új felhasználó";
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.showPWD;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Location = new System.Drawing.Point(409, 282);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(34, 23);
-            this.button7.TabIndex = 56;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.showPWD2_Click);
-            // 
-            // showPWD1
-            // 
-            this.showPWD1.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.showPWD;
-            this.showPWD1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.showPWD1.Location = new System.Drawing.Point(428, 283);
-            this.showPWD1.Name = "showPWD1";
-            this.showPWD1.Size = new System.Drawing.Size(34, 23);
-            this.showPWD1.TabIndex = 57;
-            this.showPWD1.UseVisualStyleBackColor = true;
-            this.showPWD1.Click += new System.EventHandler(this.showPWD1_Click);
             // 
             // AdminControl_UC
             // 
