@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.selectedDateOrdersDGV = new System.Windows.Forms.DataGridView();
             this.orderStartDate = new System.Windows.Forms.DateTimePicker();
             this.orderEndDate = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +56,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.ordersStatusCheckBT = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.selectedDateOrdersDGV)).BeginInit();
             this.selectedOrderDetailsGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selectedOrderProductsDGV)).BeginInit();
@@ -71,6 +74,7 @@
             this.selectedDateOrdersDGV.Location = new System.Drawing.Point(16, 361);
             this.selectedDateOrdersDGV.Name = "selectedDateOrdersDGV";
             this.selectedDateOrdersDGV.ReadOnly = true;
+            this.selectedDateOrdersDGV.RowHeadersWidth = 51;
             this.selectedDateOrdersDGV.Size = new System.Drawing.Size(1416, 475);
             this.selectedDateOrdersDGV.TabIndex = 0;
             this.selectedDateOrdersDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selectedDateOrdersDGV_CellClick);
@@ -81,7 +85,7 @@
             this.orderStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.orderStartDate.Location = new System.Drawing.Point(643, 14);
             this.orderStartDate.Name = "orderStartDate";
-            this.orderStartDate.Size = new System.Drawing.Size(108, 20);
+            this.orderStartDate.Size = new System.Drawing.Size(108, 22);
             this.orderStartDate.TabIndex = 1;
             this.orderStartDate.ValueChanged += new System.EventHandler(this.orderStartDate_ValueChanged);
             // 
@@ -91,7 +95,7 @@
             this.orderEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.orderEndDate.Location = new System.Drawing.Point(801, 14);
             this.orderEndDate.Name = "orderEndDate";
-            this.orderEndDate.Size = new System.Drawing.Size(108, 20);
+            this.orderEndDate.Size = new System.Drawing.Size(108, 22);
             this.orderEndDate.TabIndex = 2;
             this.orderEndDate.ValueChanged += new System.EventHandler(this.orderEndDate_ValueChanged);
             // 
@@ -128,7 +132,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(765, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 29);
+            this.label1.Size = new System.Drawing.Size(25, 36);
             this.label1.TabIndex = 5;
             this.label1.Text = "-";
             // 
@@ -139,7 +143,7 @@
             this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 41);
+            this.label2.Size = new System.Drawing.Size(283, 51);
             this.label2.TabIndex = 6;
             this.label2.Text = "Rendelések:";
             // 
@@ -174,7 +178,7 @@
             this.labelOrderStatus.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelOrderStatus.Location = new System.Drawing.Point(808, 186);
             this.labelOrderStatus.Name = "labelOrderStatus";
-            this.labelOrderStatus.Size = new System.Drawing.Size(69, 23);
+            this.labelOrderStatus.Size = new System.Drawing.Size(84, 28);
             this.labelOrderStatus.TabIndex = 11;
             this.labelOrderStatus.Text = "label7";
             // 
@@ -185,7 +189,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(783, 138);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 18);
+            this.label9.Size = new System.Drawing.Size(178, 23);
             this.label9.TabIndex = 10;
             this.label9.Text = "Rendelés státusza:";
             // 
@@ -196,7 +200,7 @@
             this.labelTotalAmount.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelTotalAmount.Location = new System.Drawing.Point(595, 214);
             this.labelTotalAmount.Name = "labelTotalAmount";
-            this.labelTotalAmount.Size = new System.Drawing.Size(69, 23);
+            this.labelTotalAmount.Size = new System.Drawing.Size(84, 28);
             this.labelTotalAmount.TabIndex = 9;
             this.labelTotalAmount.Text = "label7";
             // 
@@ -207,7 +211,7 @@
             this.labelOrderCustomerName.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelOrderCustomerName.Location = new System.Drawing.Point(595, 114);
             this.labelOrderCustomerName.Name = "labelOrderCustomerName";
-            this.labelOrderCustomerName.Size = new System.Drawing.Size(69, 23);
+            this.labelOrderCustomerName.Size = new System.Drawing.Size(84, 28);
             this.labelOrderCustomerName.TabIndex = 8;
             this.labelOrderCustomerName.Text = "label7";
             // 
@@ -218,7 +222,7 @@
             this.labelOrderNumber.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelOrderNumber.Location = new System.Drawing.Point(127, 214);
             this.labelOrderNumber.Name = "labelOrderNumber";
-            this.labelOrderNumber.Size = new System.Drawing.Size(69, 23);
+            this.labelOrderNumber.Size = new System.Drawing.Size(84, 28);
             this.labelOrderNumber.TabIndex = 7;
             this.labelOrderNumber.Text = "label7";
             // 
@@ -229,7 +233,7 @@
             this.labelOrderDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelOrderDate.Location = new System.Drawing.Point(121, 114);
             this.labelOrderDate.Name = "labelOrderDate";
-            this.labelOrderDate.Size = new System.Drawing.Size(69, 23);
+            this.labelOrderDate.Size = new System.Drawing.Size(84, 28);
             this.labelOrderDate.TabIndex = 6;
             this.labelOrderDate.Text = "label7";
             // 
@@ -243,6 +247,7 @@
             this.selectedOrderProductsDGV.Location = new System.Drawing.Point(984, 77);
             this.selectedOrderProductsDGV.Name = "selectedOrderProductsDGV";
             this.selectedOrderProductsDGV.ReadOnly = true;
+            this.selectedOrderProductsDGV.RowHeadersWidth = 51;
             this.selectedOrderProductsDGV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.selectedOrderProductsDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.selectedOrderProductsDGV.Size = new System.Drawing.Size(412, 160);
@@ -255,7 +260,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(1091, 33);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 18);
+            this.label6.Size = new System.Drawing.Size(224, 23);
             this.label6.TabIndex = 4;
             this.label6.Text = "Megvásárolt termékek:";
             // 
@@ -266,7 +271,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(590, 170);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 18);
+            this.label5.Size = new System.Drawing.Size(115, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Végösszeg:";
             // 
@@ -277,7 +282,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(590, 66);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 18);
+            this.label4.Size = new System.Drawing.Size(136, 23);
             this.label4.TabIndex = 2;
             this.label4.Text = "Vásárló neve:";
             // 
@@ -288,7 +293,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(93, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 18);
+            this.label3.Size = new System.Drawing.Size(192, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Rendelés azonosító:";
             // 
@@ -299,7 +304,7 @@
             this.label22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label22.Location = new System.Drawing.Point(93, 77);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(123, 18);
+            this.label22.Size = new System.Drawing.Size(151, 23);
             this.label22.TabIndex = 0;
             this.label22.Text = "Rendelés ideje:";
             // 
@@ -310,7 +315,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(240, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(383, 18);
+            this.label7.Size = new System.Drawing.Size(476, 23);
             this.label7.TabIndex = 10;
             this.label7.Text = "Add meg milyen intervallumban keresel rendelést:";
             // 
@@ -351,7 +356,7 @@
             "Kész"});
             this.ordersStatusCB.Location = new System.Drawing.Point(392, 50);
             this.ordersStatusCB.Name = "ordersStatusCB";
-            this.ordersStatusCB.Size = new System.Drawing.Size(142, 21);
+            this.ordersStatusCB.Size = new System.Drawing.Size(142, 24);
             this.ordersStatusCB.TabIndex = 12;
             this.ordersStatusCB.SelectedIndexChanged += new System.EventHandler(this.ordersStatusCB_SelectedIndexChanged);
             // 
@@ -362,7 +367,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(240, 50);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 18);
+            this.label8.Size = new System.Drawing.Size(178, 23);
             this.label8.TabIndex = 13;
             this.label8.Text = "Rendelés státusza:";
             // 
@@ -394,12 +399,32 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // ordersStatusCheckBT
+            // 
+            this.ordersStatusCheckBT.FlatAppearance.BorderSize = 0;
+            this.ordersStatusCheckBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordersStatusCheckBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordersStatusCheckBT.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ordersStatusCheckBT.ForeColor = System.Drawing.Color.Orange;
+            this.ordersStatusCheckBT.Location = new System.Drawing.Point(610, 46);
+            this.ordersStatusCheckBT.Name = "ordersStatusCheckBT";
+            this.ordersStatusCheckBT.Size = new System.Drawing.Size(362, 32);
+            this.ordersStatusCheckBT.TabIndex = 16;
+            this.ordersStatusCheckBT.Text = "Rendelés összekészitése";
+            this.ordersStatusCheckBT.UseVisualStyleBackColor = true;
+            this.ordersStatusCheckBT.Click += new System.EventHandler(this.ordersStatusCheckBT_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Order_UC
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.Controls.Add(this.ordersStatusCheckBT);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
@@ -456,5 +481,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ordersStatusCheckBT;
+        private System.Windows.Forms.Timer timer1;
     }
 }

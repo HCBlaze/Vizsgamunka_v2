@@ -23,7 +23,7 @@ namespace Asztali_alkalmazas.UI
         {
             InitializeComponent();
 
-            createInvoiceDate = DateTime.Now.ToString("yyyy/MM/dd");
+            createInvoiceDate = DateTime.Now.ToString("yyyy/MM/dd. HH:mm");
         }
         //------------ From betöltésekor megfelelő adatok feltöltése ------------
         private void Invoice_Load(object sender, EventArgs e)

@@ -128,7 +128,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1470, 854);
+            this.panel1.Size = new System.Drawing.Size(1454, 848);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -139,9 +139,9 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel6.Controls.Add(this.understockDGV);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Location = new System.Drawing.Point(395, 531);
+            this.panel6.Location = new System.Drawing.Point(395, 525);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(776, 293);
+            this.panel6.Size = new System.Drawing.Size(760, 293);
             this.panel6.TabIndex = 21;
             // 
             // understockDGV
@@ -177,11 +177,12 @@
             this.understockDGV.Name = "understockDGV";
             this.understockDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.understockDGV.RowHeadersVisible = false;
+            this.understockDGV.RowHeadersWidth = 51;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.understockDGV.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.understockDGV.RowTemplate.Height = 35;
             this.understockDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.understockDGV.Size = new System.Drawing.Size(757, 221);
+            this.understockDGV.Size = new System.Drawing.Size(741, 221);
             this.understockDGV.TabIndex = 3;
             // 
             // label17
@@ -192,7 +193,7 @@
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label17.Location = new System.Drawing.Point(0, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(545, 25);
+            this.label17.Size = new System.Drawing.Size(704, 33);
             this.label17.TabIndex = 2;
             this.label17.Text = "Rendelésre váró termékek (6 csomagnál kevesebb):";
             // 
@@ -214,7 +215,7 @@
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.labelCustomerCount);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(1177, 532);
+            this.panel5.Location = new System.Drawing.Point(1161, 526);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(275, 292);
             this.panel5.TabIndex = 20;
@@ -266,7 +267,7 @@
             this.labelUsersCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelUsersCount.Location = new System.Drawing.Point(130, 253);
             this.labelUsersCount.Name = "labelUsersCount";
-            this.labelUsersCount.Size = new System.Drawing.Size(64, 21);
+            this.labelUsersCount.Size = new System.Drawing.Size(76, 23);
             this.labelUsersCount.TabIndex = 8;
             this.labelUsersCount.Text = "100000";
             // 
@@ -277,7 +278,7 @@
             this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Location = new System.Drawing.Point(101, 223);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(159, 22);
+            this.label11.Size = new System.Drawing.Size(204, 28);
             this.label11.TabIndex = 7;
             this.label11.Text = "Dolgozók száma";
             // 
@@ -288,7 +289,7 @@
             this.labelProductsCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelProductsCount.Location = new System.Drawing.Point(133, 193);
             this.labelProductsCount.Name = "labelProductsCount";
-            this.labelProductsCount.Size = new System.Drawing.Size(64, 21);
+            this.labelProductsCount.Size = new System.Drawing.Size(76, 23);
             this.labelProductsCount.TabIndex = 6;
             this.labelProductsCount.Text = "100000";
             // 
@@ -299,7 +300,7 @@
             this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Location = new System.Drawing.Point(106, 163);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(160, 22);
+            this.label9.Size = new System.Drawing.Size(207, 28);
             this.label9.TabIndex = 5;
             this.label9.Text = "Termékek száma";
             // 
@@ -310,7 +311,7 @@
             this.labelSupplierCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelSupplierCount.Location = new System.Drawing.Point(133, 133);
             this.labelSupplierCount.Name = "labelSupplierCount";
-            this.labelSupplierCount.Size = new System.Drawing.Size(64, 21);
+            this.labelSupplierCount.Size = new System.Drawing.Size(76, 23);
             this.labelSupplierCount.TabIndex = 4;
             this.labelSupplierCount.Text = "100000";
             // 
@@ -321,7 +322,7 @@
             this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label10.Location = new System.Drawing.Point(106, 103);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(166, 22);
+            this.label10.Size = new System.Drawing.Size(213, 28);
             this.label10.TabIndex = 3;
             this.label10.Text = "Beszállítók száma";
             // 
@@ -332,7 +333,7 @@
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 25);
+            this.label8.Size = new System.Drawing.Size(136, 33);
             this.label8.TabIndex = 2;
             this.label8.Text = "Összesen";
             // 
@@ -343,7 +344,7 @@
             this.labelCustomerCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelCustomerCount.Location = new System.Drawing.Point(133, 73);
             this.labelCustomerCount.Name = "labelCustomerCount";
-            this.labelCustomerCount.Size = new System.Drawing.Size(64, 21);
+            this.labelCustomerCount.Size = new System.Drawing.Size(76, 23);
             this.labelCustomerCount.TabIndex = 1;
             this.labelCustomerCount.Text = "100000";
             // 
@@ -354,7 +355,7 @@
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label6.Location = new System.Drawing.Point(106, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 22);
+            this.label6.Size = new System.Drawing.Size(193, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "Vásárlók száma";
             // 
@@ -395,7 +396,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.topProductsChart.Series.Add(series1);
-            this.topProductsChart.Size = new System.Drawing.Size(376, 622);
+            this.topProductsChart.Size = new System.Drawing.Size(376, 616);
             this.topProductsChart.TabIndex = 22;
             this.topProductsChart.Text = "chart2";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -448,7 +449,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.GrossRevenueChart.Series.Add(series2);
-            this.GrossRevenueChart.Size = new System.Drawing.Size(1057, 323);
+            this.GrossRevenueChart.Size = new System.Drawing.Size(1041, 317);
             this.GrossRevenueChart.TabIndex = 21;
             this.GrossRevenueChart.Text = "chart1";
             title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -469,7 +470,7 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(869, 108);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(583, 88);
+            this.panel4.Size = new System.Drawing.Size(567, 88);
             this.panel4.TabIndex = 20;
             // 
             // pictureBox3
@@ -489,7 +490,7 @@
             this.labelTotalProfit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelTotalProfit.Location = new System.Drawing.Point(294, 46);
             this.labelTotalProfit.Name = "labelTotalProfit";
-            this.labelTotalProfit.Size = new System.Drawing.Size(64, 21);
+            this.labelTotalProfit.Size = new System.Drawing.Size(76, 23);
             this.labelTotalProfit.TabIndex = 1;
             this.labelTotalProfit.Text = "100000";
             // 
@@ -500,7 +501,7 @@
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Location = new System.Drawing.Point(249, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 22);
+            this.label7.Size = new System.Drawing.Size(144, 28);
             this.label7.TabIndex = 0;
             this.label7.Text = "Teljes profit";
             // 
@@ -533,7 +534,7 @@
             this.labelTotalRevenue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelTotalRevenue.Location = new System.Drawing.Point(297, 46);
             this.labelTotalRevenue.Name = "labelTotalRevenue";
-            this.labelTotalRevenue.Size = new System.Drawing.Size(64, 21);
+            this.labelTotalRevenue.Size = new System.Drawing.Size(76, 23);
             this.labelTotalRevenue.TabIndex = 1;
             this.labelTotalRevenue.Text = "100000";
             // 
@@ -544,7 +545,7 @@
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label5.Location = new System.Drawing.Point(229, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 22);
+            this.label5.Size = new System.Drawing.Size(174, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "Teljes bevétel";
             // 
@@ -577,7 +578,7 @@
             this.labelOrdersCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelOrdersCount.Location = new System.Drawing.Point(180, 46);
             this.labelOrdersCount.Name = "labelOrdersCount";
-            this.labelOrdersCount.Size = new System.Drawing.Size(64, 21);
+            this.labelOrdersCount.Size = new System.Drawing.Size(76, 23);
             this.labelOrdersCount.TabIndex = 1;
             this.labelOrdersCount.Text = "100000";
             // 
@@ -588,7 +589,7 @@
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(87, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 19);
+            this.label3.Size = new System.Drawing.Size(229, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "Megrendelések száma";
             // 
@@ -603,7 +604,7 @@
             this.okCustomBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okCustomBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.okCustomBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.okCustomBT.Location = new System.Drawing.Point(804, 33);
+            this.okCustomBT.Location = new System.Drawing.Point(788, 33);
             this.okCustomBT.Name = "okCustomBT";
             this.okCustomBT.Size = new System.Drawing.Size(43, 30);
             this.okCustomBT.TabIndex = 18;
@@ -618,7 +619,7 @@
             this.customBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.customBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.customBT.Location = new System.Drawing.Point(847, 33);
+            this.customBT.Location = new System.Drawing.Point(831, 33);
             this.customBT.Name = "customBT";
             this.customBT.Size = new System.Drawing.Size(120, 30);
             this.customBT.TabIndex = 17;
@@ -633,7 +634,7 @@
             this.todayBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.todayBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.todayBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.todayBT.Location = new System.Drawing.Point(967, 33);
+            this.todayBT.Location = new System.Drawing.Point(951, 33);
             this.todayBT.Name = "todayBT";
             this.todayBT.Size = new System.Drawing.Size(120, 30);
             this.todayBT.TabIndex = 16;
@@ -648,7 +649,7 @@
             this.last7DaysBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.last7DaysBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.last7DaysBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.last7DaysBT.Location = new System.Drawing.Point(1087, 33);
+            this.last7DaysBT.Location = new System.Drawing.Point(1071, 33);
             this.last7DaysBT.Name = "last7DaysBT";
             this.last7DaysBT.Size = new System.Drawing.Size(120, 30);
             this.last7DaysBT.TabIndex = 15;
@@ -663,7 +664,7 @@
             this.last30daysBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.last30daysBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.last30daysBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.last30daysBT.Location = new System.Drawing.Point(1207, 33);
+            this.last30daysBT.Location = new System.Drawing.Point(1191, 33);
             this.last30daysBT.Name = "last30daysBT";
             this.last30daysBT.Size = new System.Drawing.Size(120, 30);
             this.last30daysBT.TabIndex = 14;
@@ -678,7 +679,7 @@
             this.thisMonthBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thisMonthBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.thisMonthBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.thisMonthBT.Location = new System.Drawing.Point(1327, 33);
+            this.thisMonthBT.Location = new System.Drawing.Point(1311, 33);
             this.thisMonthBT.Name = "thisMonthBT";
             this.thisMonthBT.Size = new System.Drawing.Size(120, 30);
             this.thisMonthBT.TabIndex = 13;
@@ -692,9 +693,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(610, 29);
+            this.label1.Location = new System.Drawing.Point(594, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 29);
+            this.label1.Size = new System.Drawing.Size(25, 36);
             this.label1.TabIndex = 12;
             this.label1.Text = "-";
             // 
@@ -704,7 +705,7 @@
             this.labelEndDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelEndDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelEndDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelEndDate.Location = new System.Drawing.Point(646, 33);
+            this.labelEndDate.Location = new System.Drawing.Point(630, 33);
             this.labelEndDate.Name = "labelEndDate";
             this.labelEndDate.Size = new System.Drawing.Size(108, 26);
             this.labelEndDate.TabIndex = 11;
@@ -718,7 +719,7 @@
             this.labelStartDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelStartDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelStartDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelStartDate.Location = new System.Drawing.Point(488, 33);
+            this.labelStartDate.Location = new System.Drawing.Point(472, 33);
             this.labelStartDate.Name = "labelStartDate";
             this.labelStartDate.Size = new System.Drawing.Size(108, 26);
             this.labelStartDate.TabIndex = 10;
@@ -732,9 +733,9 @@
             this.dtpEndDate.CustomFormat = "yyyy.MM.dd";
             this.dtpEndDate.Enabled = false;
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(646, 33);
+            this.dtpEndDate.Location = new System.Drawing.Point(630, 33);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(108, 20);
+            this.dtpEndDate.Size = new System.Drawing.Size(108, 22);
             this.dtpEndDate.TabIndex = 9;
             this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
             // 
@@ -744,9 +745,9 @@
             this.dtpStartDate.CustomFormat = "yyyy.MM.dd";
             this.dtpStartDate.Enabled = false;
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(488, 33);
+            this.dtpStartDate.Location = new System.Drawing.Point(472, 33);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(108, 20);
+            this.dtpStartDate.Size = new System.Drawing.Size(108, 22);
             this.dtpStartDate.TabIndex = 8;
             this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
             // 
@@ -757,7 +758,7 @@
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(24, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 41);
+            this.label2.Size = new System.Drawing.Size(256, 51);
             this.label2.TabIndex = 7;
             this.label2.Text = "Dashboard";
             // 
@@ -767,7 +768,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.Controls.Add(this.panel1);
             this.Name = "HomeScreen_UC";
-            this.Size = new System.Drawing.Size(1470, 854);
+            this.Size = new System.Drawing.Size(1454, 848);
             this.Load += new System.EventHandler(this.HomeScreen_UC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -91,9 +91,10 @@ namespace Asztali_alkalmazas.Classes
             return _id;
         }
 
-        public void setOrderStatus(int i)
+        public string setOrderStatus(int i)
         {
             OrderStatus = _setOrderStatus(i);
+            return OrderStatus;
         }
         private string _setOrderStatus(int i)
         {
