@@ -19,7 +19,9 @@ namespace Asztali_alkalmazas.UI.UserControls
         string phone;
         string connstring;
         string currentId;
+        string customerId;
         string status;
+        int newOrderDB;
         MySqlCommand cmd;
         MySqlDataReader dr;
 
@@ -40,11 +42,14 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
+        Order actual;
         AdminControl_UC hibakezeles = new AdminControl_UC(); //Hibák logolása
 
         //------------ UserControl betöltése és adatok elhelyezése és megadása ------------
         private void Order_UC_Load(object sender, EventArgs e)
         {
+            NewOrderMonitor.Start();
+
             labelStartDate.Location = orderStartDate.Location;
             labelEndDate.Location = orderEndDate.Location;
             labelStartDate.Text = orderStartDate.Text;
@@ -129,7 +134,40 @@ namespace Asztali_alkalmazas.UI.UserControls
             return getInvoiceProducts;
         }
         //------------ DataGridView különféle adattáblák vége ------------
-        
+        private int getNewOrderNumber()
+        {
+            conn.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT count(OrderStatus) FROM local_store_project_23.orders where OrderStatus = 'New';";
+            newOrderDB = Convert.ToInt32(cmd.ExecuteScalar());
+            conn.Close();
+            return newOrderDB;
+        }
+        private void setNewStatus(string currentId, int status)
+        {
+            conn.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "UPDATE local_store_project_23.orders SET OrderStatus = @status WHERE id = @currentId;";
+            cmd.Parameters.AddWithValue("@status", actual.setOrderStatus(status));
+            cmd.Parameters.AddWithValue("@currentid", currentId);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        private System.Data.DataTable getNewOrders()
+        {
+            System.Data.DataTable getNewOrders = new System.Data.DataTable();
+            conn.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT orders.id as ID, orders.OrderDate as 'Rendeles datuma', orders.OrderNumber as 'Rendeles azonosito', orders.CustomerId as 'Vasarlo azonosito', orders.TotalAmount as 'Vegosszeg(Ft)', orders.OrderStatus FROM local_store_project_23.orders where orders.OrderStatus = 'New' order by id asc;";
+            dr = cmd.ExecuteReader();
+            getNewOrders.Load(dr);
+            conn.Close();
+            return getNewOrders;
+        }
         private string getSelectedOrderCustomerName(string customerId)
         {
             string fullName = "";
@@ -159,6 +197,9 @@ namespace Asztali_alkalmazas.UI.UserControls
             iV.customerTotalAmount = labelTotalAmount.Text;
             iV.dtInvoiceProduct = getInvoiceProducts(currentId);
             iV.ShowDialog();
+
+            setNewStatus(currentId, 3);
+            selectedDateOrdersDGV.DataSource = GetOrdersList();
         }
         private void labelStartDate_Click(object sender, EventArgs e) //labelre kattintva datetimepickerren kattintás esemény meghívása
         {
@@ -209,7 +250,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         private void selectedDateOrdersDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string customerId;
+            
             try
             {
                 if (selectedDateOrdersDGV.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -237,6 +278,15 @@ namespace Asztali_alkalmazas.UI.UserControls
             selectedOrderProductsDGV.Columns[0].HeaderText = "Termék megnevezése";
             selectedOrderProductsDGV.Columns[1].HeaderText = "Kiszerelés";
             selectedOrderProductsDGV.Columns[2].HeaderText = "Mennyiség";
+
+            string[] ideig = labelTotalAmount.Text.Split(' ');
+            string totalAmount = ideig[0];
+            actual = new Order(Convert.ToInt32(currentId), Convert.ToDateTime(labelOrderDate.Text), labelOrderNumber.Text, Convert.ToInt32(customerId), Convert.ToDecimal(totalAmount), labelOrderStatus.Text);
+
+            if(actual.OrderStatus == "New")
+            {
+                ordersStatusCheckBT.Enabled = true;
+            }
         }
         private void ordersStatusCB_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -253,6 +303,32 @@ namespace Asztali_alkalmazas.UI.UserControls
                 status = "Finished";
            }
         }
+        private void ordersStatusCheckBT_Click(object sender, EventArgs e)
+        {
+            DialogResult setStatus;
+            setStatus = MessageBox.Show("Biztos a kiválasztott rendelést akarod összekészíteni?", "Project 23", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if(setStatus == DialogResult.Yes)
+            {
+                setNewStatus(currentId, 2);
+                selectedDateOrdersDGV.DataSource = GetOrdersList();
+            }
+        }
+        private void NewOrderMonitor_Tick(object sender, EventArgs e)
+        {
+            getNewOrderNumber();
+
+            if (newOrderDB > 0)
+            {
+                DialogResult newOrder;
+                newOrder = MessageBox.Show("Érkezett új megrendelés!", "Project 23", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (newOrder == DialogResult.OK)
+                {
+                    selectedDateOrdersDGV.DataSource = getNewOrders();
+                    NewOrderMonitor.Stop();
+                }
+            }
+        }
         //------------ Gombok és események vége ------------
+
     }
 }

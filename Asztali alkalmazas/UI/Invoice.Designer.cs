@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice));
             this.panelPrint = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -68,6 +68,8 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panelPrint.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceDGV)).BeginInit();
@@ -77,13 +79,14 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPrint
             // 
+            this.panelPrint.Controls.Add(this.flowLayoutPanel1);
             this.panelPrint.Controls.Add(this.panel2);
-            this.panelPrint.Controls.Add(this.invoiceCustomerDetailsGB);
-            this.panelPrint.Controls.Add(this.groupBox2);
             this.panelPrint.Controls.Add(this.panel1);
             this.panelPrint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrint.Location = new System.Drawing.Point(0, 0);
@@ -93,12 +96,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.labelDiscount);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.invoiceCreateDate);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.invoiceTotalAmount);
-            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.invoiceDGV);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -112,7 +110,7 @@
             this.labelDiscount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelDiscount.AutoSize = true;
             this.labelDiscount.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelDiscount.Location = new System.Drawing.Point(220, 616);
+            this.labelDiscount.Location = new System.Drawing.Point(262, 39);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(51, 18);
             this.labelDiscount.TabIndex = 16;
@@ -124,7 +122,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(12, 616);
+            this.label15.Location = new System.Drawing.Point(54, 39);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(202, 18);
             this.label15.TabIndex = 15;
@@ -135,7 +133,7 @@
             this.invoiceCreateDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.invoiceCreateDate.AutoSize = true;
             this.invoiceCreateDate.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.invoiceCreateDate.Location = new System.Drawing.Point(222, 725);
+            this.invoiceCreateDate.Location = new System.Drawing.Point(242, 134);
             this.invoiceCreateDate.Name = "invoiceCreateDate";
             this.invoiceCreateDate.Size = new System.Drawing.Size(144, 21);
             this.invoiceCreateDate.TabIndex = 14;
@@ -146,7 +144,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label16.Location = new System.Drawing.Point(12, 725);
+            this.label16.Location = new System.Drawing.Point(32, 136);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(204, 18);
             this.label16.TabIndex = 13;
@@ -159,7 +157,7 @@
             this.invoiceTotalAmount.BackColor = System.Drawing.Color.Transparent;
             this.invoiceTotalAmount.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.invoiceTotalAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.invoiceTotalAmount.Location = new System.Drawing.Point(489, 662);
+            this.invoiceTotalAmount.Location = new System.Drawing.Point(449, 78);
             this.invoiceTotalAmount.Name = "invoiceTotalAmount";
             this.invoiceTotalAmount.Size = new System.Drawing.Size(135, 28);
             this.invoiceTotalAmount.TabIndex = 3;
@@ -172,7 +170,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(155, 662);
+            this.label14.Location = new System.Drawing.Point(115, 78);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(328, 28);
             this.label14.TabIndex = 2;
@@ -182,40 +180,40 @@
             // 
             this.invoiceDGV.AllowUserToAddRows = false;
             this.invoiceDGV.AllowUserToDeleteRows = false;
-            this.invoiceDGV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.invoiceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.invoiceDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.invoiceDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.invoiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.invoiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.invoiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.invoiceDGV.Location = new System.Drawing.Point(0, 48);
+            this.invoiceDGV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.invoiceDGV.Location = new System.Drawing.Point(0, 42);
             this.invoiceDGV.Name = "invoiceDGV";
             this.invoiceDGV.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.invoiceDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.invoiceDGV.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.invoiceDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.invoiceDGV.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.invoiceDGV.Size = new System.Drawing.Size(821, 543);
             this.invoiceDGV.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.invoiceOrderNumber);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(821, 42);
@@ -245,7 +243,9 @@
             // 
             // invoiceCustomerDetailsGB
             // 
-            this.invoiceCustomerDetailsGB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.invoiceCustomerDetailsGB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.invoiceCustomerDetailsGB.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.invoiceCustomerDetailsGB.Controls.Add(this.invoiceOrderDate);
             this.invoiceCustomerDetailsGB.Controls.Add(this.invoiceCustomerPhone);
@@ -253,9 +253,10 @@
             this.invoiceCustomerDetailsGB.Controls.Add(this.invoiceCustomerName);
             this.invoiceCustomerDetailsGB.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.invoiceCustomerDetailsGB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.invoiceCustomerDetailsGB.Location = new System.Drawing.Point(498, 158);
+            this.invoiceCustomerDetailsGB.Location = new System.Drawing.Point(522, 40);
+            this.invoiceCustomerDetailsGB.Margin = new System.Windows.Forms.Padding(150, 40, 3, 3);
             this.invoiceCustomerDetailsGB.Name = "invoiceCustomerDetailsGB";
-            this.invoiceCustomerDetailsGB.Size = new System.Drawing.Size(286, 163);
+            this.invoiceCustomerDetailsGB.Size = new System.Drawing.Size(286, 165);
             this.invoiceCustomerDetailsGB.TabIndex = 6;
             this.invoiceCustomerDetailsGB.TabStop = false;
             this.invoiceCustomerDetailsGB.Text = "Vevő:";
@@ -301,7 +302,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
@@ -314,7 +314,8 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(12, 124);
+            this.groupBox2.Location = new System.Drawing.Point(16, 19);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(16, 19, 3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(353, 186);
             this.groupBox2.TabIndex = 7;
@@ -423,11 +424,11 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(821, 101);
@@ -482,10 +483,33 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.groupBox2);
+            this.flowLayoutPanel1.Controls.Add(this.invoiceCustomerDetailsGB);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 101);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(821, 241);
+            this.flowLayoutPanel1.TabIndex = 13;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.invoiceCreateDate);
+            this.panel4.Controls.Add(this.labelDiscount);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.invoiceTotalAmount);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 585);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(821, 189);
+            this.panel4.TabIndex = 17;
+            // 
             // Invoice
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(821, 1128);
             this.Controls.Add(this.panelPrint);
             this.Name = "Invoice";
@@ -494,7 +518,6 @@
             this.Load += new System.EventHandler(this.Invoice_Load);
             this.panelPrint.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceDGV)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -506,6 +529,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -547,5 +573,7 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label labelDiscount;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel4;
     }
 }

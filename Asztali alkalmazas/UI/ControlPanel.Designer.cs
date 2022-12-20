@@ -88,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(175, 1440);
+            this.panel1.Size = new System.Drawing.Size(175, 983);
             this.panel1.TabIndex = 0;
             // 
             // panelSlide
@@ -117,13 +117,12 @@
             // 
             // ExitBT
             // 
-            this.ExitBT.AutoSize = true;
             this.ExitBT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ExitBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ExitBT.FlatAppearance.BorderSize = 0;
             this.ExitBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_exit_sign_50px;
-            this.ExitBT.Location = new System.Drawing.Point(0, 1361);
+            this.ExitBT.Location = new System.Drawing.Point(0, 904);
             this.ExitBT.Name = "ExitBT";
             this.ExitBT.Size = new System.Drawing.Size(175, 79);
             this.ExitBT.TabIndex = 7;
@@ -252,7 +251,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(175, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2381, 58);
+            this.panel3.Size = new System.Drawing.Size(1480, 58);
             this.panel3.TabIndex = 1;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -264,7 +263,7 @@
             this.maxBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maxBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_toggle_full_screen_50px;
             this.maxBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.maxBT.Location = new System.Drawing.Point(2243, 0);
+            this.maxBT.Location = new System.Drawing.Point(1342, 0);
             this.maxBT.Margin = new System.Windows.Forms.Padding(5);
             this.maxBT.Name = "maxBT";
             this.maxBT.Padding = new System.Windows.Forms.Padding(5);
@@ -283,7 +282,7 @@
             this.minBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_minimize_window_50px;
             this.minBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.minBT.Location = new System.Drawing.Point(2177, 0);
+            this.minBT.Location = new System.Drawing.Point(1276, 0);
             this.minBT.Margin = new System.Windows.Forms.Padding(5);
             this.minBT.Name = "minBT";
             this.minBT.Padding = new System.Windows.Forms.Padding(5);
@@ -302,7 +301,7 @@
             this.closeBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_shutdown_50px;
             this.closeBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.closeBT.Location = new System.Drawing.Point(2309, 0);
+            this.closeBT.Location = new System.Drawing.Point(1408, 0);
             this.closeBT.Margin = new System.Windows.Forms.Padding(5);
             this.closeBT.Name = "closeBT";
             this.closeBT.Padding = new System.Windows.Forms.Padding(5);
@@ -350,7 +349,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(175, 58);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2381, 105);
+            this.panel4.Size = new System.Drawing.Size(1480, 105);
             this.panel4.TabIndex = 2;
             // 
             // panelSlide2
@@ -368,7 +367,7 @@
             this.kijelentkezBT.FlatAppearance.BorderSize = 0;
             this.kijelentkezBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kijelentkezBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_Logout_50px;
-            this.kijelentkezBT.Location = new System.Drawing.Point(2249, 0);
+            this.kijelentkezBT.Location = new System.Drawing.Point(1348, 0);
             this.kijelentkezBT.Name = "kijelentkezBT";
             this.kijelentkezBT.Size = new System.Drawing.Size(125, 132);
             this.kijelentkezBT.TabIndex = 23;
@@ -384,7 +383,7 @@
             this.userProfilBT.FlatAppearance.BorderSize = 0;
             this.userProfilBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userProfilBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_profile_50px;
-            this.userProfilBT.Location = new System.Drawing.Point(2176, 19);
+            this.userProfilBT.Location = new System.Drawing.Point(1275, 19);
             this.userProfilBT.Name = "userProfilBT";
             this.userProfilBT.Size = new System.Drawing.Size(60, 86);
             this.userProfilBT.TabIndex = 3;
@@ -454,7 +453,7 @@
             this.adminBT.FlatAppearance.BorderSize = 0;
             this.adminBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_system_administrator_male_50px;
-            this.adminBT.Location = new System.Drawing.Point(2029, 19);
+            this.adminBT.Location = new System.Drawing.Point(1128, 19);
             this.adminBT.Name = "adminBT";
             this.adminBT.Size = new System.Drawing.Size(134, 86);
             this.adminBT.TabIndex = 25;
@@ -470,11 +469,12 @@
             // 
             // homeScreen_UC1
             // 
+            this.homeScreen_UC1.AutoScroll = true;
             this.homeScreen_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.homeScreen_UC1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.homeScreen_UC1.Location = new System.Drawing.Point(309, 262);
+            this.homeScreen_UC1.Location = new System.Drawing.Point(279, 238);
             this.homeScreen_UC1.Name = "homeScreen_UC1";
-            this.homeScreen_UC1.Size = new System.Drawing.Size(1470, 854);
+            this.homeScreen_UC1.Size = new System.Drawing.Size(1454, 858);
             this.homeScreen_UC1.TabIndex = 9;
             // 
             // order_UC1
@@ -537,17 +537,16 @@
             this.userProfil_UC1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.userProfil_UC1.Location = new System.Drawing.Point(175, 163);
             this.userProfil_UC1.Name = "userProfil_UC1";
-            this.userProfil_UC1.Size = new System.Drawing.Size(2381, 1277);
+            this.userProfil_UC1.Size = new System.Drawing.Size(1480, 820);
             this.userProfil_UC1.TabIndex = 3;
             this.userProfil_UC1.Visible = false;
             // 
             // ControlPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(1480, 920);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1654, 1005);
+            this.ClientSize = new System.Drawing.Size(1655, 983);
             this.Controls.Add(this.homeScreen_UC1);
             this.Controls.Add(this.order_UC1);
             this.Controls.Add(this.prodcut_UC1);
@@ -567,7 +566,6 @@
             this.Text = "ControlPanel";
             this.Load += new System.EventHandler(this.ControlPanel_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

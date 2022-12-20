@@ -81,19 +81,20 @@ namespace Asztali_alkalmazas.Classes
             return _id;
         }
 
-        public void setTotalAmount(int id)
+        public void setTotalAmount(int amount)
         {
-            TotalAmount = _setTotalAmout(id);
+            TotalAmount = _setTotalAmout(amount);
         }
-        private decimal _setTotalAmout(decimal i)
+        private decimal _setTotalAmout(decimal amount)
         {
-            decimal _id = i;
+            decimal _id = amount;
             return _id;
         }
 
-        public void setOrderStatus(int i)
+        public string setOrderStatus(int i)
         {
             OrderStatus = _setOrderStatus(i);
+            return OrderStatus;
         }
         private string _setOrderStatus(int i)
         {

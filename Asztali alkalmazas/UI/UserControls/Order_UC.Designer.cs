@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.selectedDateOrdersDGV = new System.Windows.Forms.DataGridView();
             this.orderStartDate = new System.Windows.Forms.DateTimePicker();
             this.orderEndDate = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +56,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.ordersStatusCheckBT = new System.Windows.Forms.Button();
+            this.NewOrderMonitor = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.selectedDateOrdersDGV)).BeginInit();
             this.selectedOrderDetailsGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selectedOrderProductsDGV)).BeginInit();
@@ -394,12 +397,34 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // ordersStatusCheckBT
+            // 
+            this.ordersStatusCheckBT.Enabled = false;
+            this.ordersStatusCheckBT.FlatAppearance.BorderSize = 0;
+            this.ordersStatusCheckBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordersStatusCheckBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordersStatusCheckBT.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ordersStatusCheckBT.ForeColor = System.Drawing.Color.Orange;
+            this.ordersStatusCheckBT.Location = new System.Drawing.Point(609, 46);
+            this.ordersStatusCheckBT.Name = "ordersStatusCheckBT";
+            this.ordersStatusCheckBT.Size = new System.Drawing.Size(363, 32);
+            this.ordersStatusCheckBT.TabIndex = 16;
+            this.ordersStatusCheckBT.Text = "Rendelés összekészitése";
+            this.ordersStatusCheckBT.UseVisualStyleBackColor = true;
+            this.ordersStatusCheckBT.Click += new System.EventHandler(this.ordersStatusCheckBT_Click);
+            // 
+            // NewOrderMonitor
+            // 
+            this.NewOrderMonitor.Interval = 60000;
+            this.NewOrderMonitor.Tick += new System.EventHandler(this.NewOrderMonitor_Tick);
+            // 
             // Order_UC
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
+            this.Controls.Add(this.ordersStatusCheckBT);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
@@ -456,5 +481,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ordersStatusCheckBT;
+        private System.Windows.Forms.Timer NewOrderMonitor;
     }
 }
