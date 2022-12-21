@@ -25,6 +25,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         MySqlCommand cmd;
         MySqlDataReader dr;
 
+
         public Order_UC()
         {
             InitializeComponent();
@@ -57,6 +58,7 @@ namespace Asztali_alkalmazas.UI.UserControls
 
             selectedOrderProductsDGV.Font = new System.Drawing.Font("Century Gothic", 11, FontStyle.Bold);
 
+            selectedDateOrdersDGV.DataSource = getNewOrders();
             selectedDateOrdersDGV.DataSource = GetOrdersList();
             selectedDateOrdersDGV.Columns[0].HeaderText = "ID";
             selectedDateOrdersDGV.Columns[1].HeaderText = "Rendelés dátuma";
@@ -155,7 +157,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-
         private System.Data.DataTable getNewOrders()
         {
             System.Data.DataTable getNewOrders = new System.Data.DataTable();
@@ -186,6 +187,18 @@ namespace Asztali_alkalmazas.UI.UserControls
             conn.Close();
             return fullName;
         }
+        private System.Data.DataTable getNewOrders()
+        {
+            System.Data.DataTable getNewOrders = new System.Data.DataTable();
+            conn.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT orders.id as ID, orders.OrderDate as 'Rendeles datuma', orders.OrderNumber as 'Rendeles azonosito', orders.CustomerId as 'Vasarlo azonosito', orders.TotalAmount as 'Vegosszeg(Ft)', orders.OrderStatus FROM local_store_project_23.orders where orders.OrderStatus = 'New' order by id asc;";
+            dr = cmd.ExecuteReader();
+            getNewOrders.Load(dr);
+            conn.Close();
+            return getNewOrders;
+        }
         //------------ Gombok és események ------------
         private void generateInvoice_Click(object sender, EventArgs e) //Számla generálása
         {
@@ -197,7 +210,6 @@ namespace Asztali_alkalmazas.UI.UserControls
             iV.customerTotalAmount = labelTotalAmount.Text;
             iV.dtInvoiceProduct = getInvoiceProducts(currentId);
             iV.ShowDialog();
-
             setNewStatus(currentId, 3);
             selectedDateOrdersDGV.DataSource = GetOrdersList();
         }
@@ -222,8 +234,11 @@ namespace Asztali_alkalmazas.UI.UserControls
         {
             labelEndDate.Text = orderEndDate.Text;
         }
-
-
+        private void ordersStatusCheckBT_Click(object sender, EventArgs e)
+        {
+            setNewStatus(currentId,2);
+            selectedDateOrdersDGV.DataSource = GetOrdersList();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -263,8 +278,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                     labelOrderCustomerName.Text = getSelectedOrderCustomerName(customerId);
                     labelTotalAmount.Text = selectedDateOrdersDGV.Rows[e.RowIndex].Cells["Vegosszeg(Ft)"].FormattedValue.ToString()+" Ft";
                     labelOrderStatus.Text = selectedDateOrdersDGV.Rows[e.RowIndex].Cells["OrderStatus"].FormattedValue.ToString();
-                    
-                    
                 }
                 selectedOrderDetailsGB.Visible = true;
             }
@@ -303,6 +316,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 status = "Finished";
            }
         }
+<<<<<<< HEAD
         private void ordersStatusCheckBT_Click(object sender, EventArgs e)
         {
             DialogResult setStatus;
