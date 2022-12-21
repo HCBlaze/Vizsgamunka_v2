@@ -101,6 +101,7 @@ namespace Asztali_alkalmazas.UI
             customer_UC1.Visible = false;
             prodcut_UC1.Visible = false;
             order_UC1.Visible = false;
+            purchase_UC1.Visible = false;
             panelSlide.Height = mainBT.Height;
             panelSlide.Top = mainBT.Top;
             panelSlide.Visible = true;
@@ -126,6 +127,7 @@ namespace Asztali_alkalmazas.UI
             prodcut_UC1.Visible = false;
             order_UC1.Visible = false;
             homeScreen_UC1.Visible = false;
+            purchase_UC1.Visible = false;
             panelSlide.Height = CustomerBT.Height;
             panelSlide.Top = CustomerBT.Top;
             panelSlide.Visible = true;
@@ -144,6 +146,7 @@ namespace Asztali_alkalmazas.UI
             panelSlide.Visible = false;
             order_UC1.Visible = false;
             homeScreen_UC1.Visible = false;
+            purchase_UC1.Visible = false;
             panelSlide2.Width = adminBT.Width;
             panelSlide2.Left = adminBT.Left;
             panelSlide2.Visible = true;
@@ -160,6 +163,7 @@ namespace Asztali_alkalmazas.UI
             prodcut_UC1.Visible = false;
             order_UC1.Visible = false;
             homeScreen_UC1.Visible = false;
+            purchase_UC1.Visible = false;
             panelSlide.Height = supplierBT.Height;
             panelSlide.Top = supplierBT.Top;
             panelSlide.Visible = true;
@@ -177,6 +181,7 @@ namespace Asztali_alkalmazas.UI
             supplier_UC1.Visible = false;
             order_UC1.Visible = false;
             homeScreen_UC1.Visible = false;
+            purchase_UC1.Visible = false;
             panelSlide.Height = raktarBT.Height;
             panelSlide.Top = raktarBT.Top;
             panelSlide.Visible = true;
@@ -194,6 +199,7 @@ namespace Asztali_alkalmazas.UI
             supplier_UC1.Visible = false;
             prodcut_UC1.Visible = false;
             homeScreen_UC1.Visible = false;
+            purchase_UC1.Visible = false;
             panelSlide.Height = ordersBT.Height;
             panelSlide.Top = ordersBT.Top;
             panelSlide.Visible = true;
@@ -201,6 +207,23 @@ namespace Asztali_alkalmazas.UI
             order_UC1.Location = adminControl_UC1.Location;
             order_UC1.Dock = DockStyle.Fill;
             order_UC1.Visible = true;
+        }
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            adminControl_UC1.Visible = false;
+            userProfil_UC1.Visible = false;
+            customer_UC1.Visible = false;
+            supplier_UC1.Visible = false;
+            prodcut_UC1.Visible = false;
+            homeScreen_UC1.Visible = false;
+            order_UC1.Visible = false;
+            panelSlide.Height = btnPurchase.Height;
+            panelSlide.Top = btnPurchase.Top;
+            panelSlide.Visible = true;
+            panelSlide2.Visible = false;
+            purchase_UC1.Location = adminControl_UC1.Location;
+            purchase_UC1.Dock = DockStyle.Fill;
+            purchase_UC1.Visible = true;
         }
         private void ExitBT_Click(object sender, EventArgs e)
         {
@@ -225,6 +248,7 @@ namespace Asztali_alkalmazas.UI
             prodcut_UC1.Visible = false;
             order_UC1.Visible = false;
             homeScreen_UC1.Visible = false;
+            purchase_UC1.Visible = false;
             panelSlide2.Width = userProfilBT.Width;
             panelSlide2.Left = userProfilBT.Left;
             panelSlide2.Visible = true;
@@ -401,6 +425,8 @@ namespace Asztali_alkalmazas.UI
             DateTime currentTime = DateTime.Now;
             label6.Text = currentTime.ToString();
         }
+
+
         //------------------------------------------------------------------------- Pontos idő vége -------------------------------------------------------------------------
     }
 }

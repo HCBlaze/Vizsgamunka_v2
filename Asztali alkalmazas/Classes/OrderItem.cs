@@ -41,7 +41,7 @@ namespace Asztali_alkalmazas.Classes
 
         public void setOrderId(int id)
         {
-            Id = _setOrderId(id);
+            OrderId = _setOrderId(id);
         }
         private int _setOrderId(int i)
         {
@@ -51,7 +51,7 @@ namespace Asztali_alkalmazas.Classes
 
         public void setProductId(int id)
         {
-            Id = _setProductId(id);
+            ProductId = _setProductId(id);
         }
         private int _setProductId(int i)
         {

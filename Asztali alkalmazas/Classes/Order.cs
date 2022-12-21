@@ -73,7 +73,7 @@ namespace Asztali_alkalmazas.Classes
 
         public void setCustomerId(int id)
         {
-            Id = _setCustomerId(id);
+            CustomerId = _setCustomerId(id);
         }
         private int _setCustomerId(int i)
         {
@@ -81,7 +81,7 @@ namespace Asztali_alkalmazas.Classes
             return _id;
         }
 
-        public void setTotalAmount(int amount)
+        public void setTotalAmount(decimal amount)
         {
             TotalAmount = _setTotalAmout(amount);
         }

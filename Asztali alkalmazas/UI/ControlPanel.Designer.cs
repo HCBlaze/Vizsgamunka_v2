@@ -59,6 +59,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.adminBT = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnPurchase = new System.Windows.Forms.Button();
+            this.purchase_UC1 = new Asztali_alkalmazas.UI.UserControls.Purchase_UC();
             this.homeScreen_UC1 = new Asztali_alkalmazas.UI.UserControls.HomeScreen_UC();
             this.order_UC1 = new Asztali_alkalmazas.UI.UserControls.Order_UC();
             this.prodcut_UC1 = new Asztali_alkalmazas.UI.UserControls.Prodcut_UC();
@@ -77,6 +79,7 @@
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.btnPurchase);
             this.panel1.Controls.Add(this.panelSlide);
             this.panel1.Controls.Add(this.ordersBT);
             this.panel1.Controls.Add(this.ExitBT);
@@ -88,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(175, 983);
+            this.panel1.Size = new System.Drawing.Size(175, 2117);
             this.panel1.TabIndex = 0;
             // 
             // panelSlide
@@ -122,7 +125,7 @@
             this.ExitBT.FlatAppearance.BorderSize = 0;
             this.ExitBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_exit_sign_50px;
-            this.ExitBT.Location = new System.Drawing.Point(0, 904);
+            this.ExitBT.Location = new System.Drawing.Point(0, 2038);
             this.ExitBT.Name = "ExitBT";
             this.ExitBT.Size = new System.Drawing.Size(175, 79);
             this.ExitBT.TabIndex = 7;
@@ -214,7 +217,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(2, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 19);
+            this.label2.Size = new System.Drawing.Size(202, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "for small businesses";
             // 
@@ -224,7 +227,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(2, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 19);
+            this.label1.Size = new System.Drawing.Size(125, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "ERP Solution";
             // 
@@ -251,7 +254,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(175, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1480, 58);
+            this.panel3.Size = new System.Drawing.Size(2381, 58);
             this.panel3.TabIndex = 1;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -263,7 +266,7 @@
             this.maxBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maxBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_toggle_full_screen_50px;
             this.maxBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.maxBT.Location = new System.Drawing.Point(1342, 0);
+            this.maxBT.Location = new System.Drawing.Point(2243, 0);
             this.maxBT.Margin = new System.Windows.Forms.Padding(5);
             this.maxBT.Name = "maxBT";
             this.maxBT.Padding = new System.Windows.Forms.Padding(5);
@@ -282,7 +285,7 @@
             this.minBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_minimize_window_50px;
             this.minBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.minBT.Location = new System.Drawing.Point(1276, 0);
+            this.minBT.Location = new System.Drawing.Point(2177, 0);
             this.minBT.Margin = new System.Windows.Forms.Padding(5);
             this.minBT.Name = "minBT";
             this.minBT.Padding = new System.Windows.Forms.Padding(5);
@@ -301,7 +304,7 @@
             this.closeBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_shutdown_50px;
             this.closeBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.closeBT.Location = new System.Drawing.Point(1408, 0);
+            this.closeBT.Location = new System.Drawing.Point(2309, 0);
             this.closeBT.Margin = new System.Windows.Forms.Padding(5);
             this.closeBT.Name = "closeBT";
             this.closeBT.Padding = new System.Windows.Forms.Padding(5);
@@ -320,7 +323,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(151, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 18);
+            this.label6.Size = new System.Drawing.Size(72, 23);
             this.label6.TabIndex = 16;
             this.label6.Text = "label6";
             // 
@@ -331,7 +334,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(16, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 18);
+            this.label7.Size = new System.Drawing.Size(150, 23);
             this.label7.TabIndex = 15;
             this.label7.Text = "Dátum és idő:";
             // 
@@ -349,7 +352,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(175, 58);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1480, 105);
+            this.panel4.Size = new System.Drawing.Size(2381, 105);
             this.panel4.TabIndex = 2;
             // 
             // panelSlide2
@@ -367,7 +370,7 @@
             this.kijelentkezBT.FlatAppearance.BorderSize = 0;
             this.kijelentkezBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kijelentkezBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_Logout_50px;
-            this.kijelentkezBT.Location = new System.Drawing.Point(1348, 0);
+            this.kijelentkezBT.Location = new System.Drawing.Point(2249, 0);
             this.kijelentkezBT.Name = "kijelentkezBT";
             this.kijelentkezBT.Size = new System.Drawing.Size(125, 132);
             this.kijelentkezBT.TabIndex = 23;
@@ -383,7 +386,7 @@
             this.userProfilBT.FlatAppearance.BorderSize = 0;
             this.userProfilBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userProfilBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_profile_50px;
-            this.userProfilBT.Location = new System.Drawing.Point(1275, 19);
+            this.userProfilBT.Location = new System.Drawing.Point(2176, 19);
             this.userProfilBT.Name = "userProfilBT";
             this.userProfilBT.Size = new System.Drawing.Size(60, 86);
             this.userProfilBT.TabIndex = 3;
@@ -411,7 +414,7 @@
             this.adminLL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.adminLL.Location = new System.Drawing.Point(287, 76);
             this.adminLL.Name = "adminLL";
-            this.adminLL.Size = new System.Drawing.Size(48, 16);
+            this.adminLL.Size = new System.Drawing.Size(60, 19);
             this.adminLL.TabIndex = 21;
             this.adminLL.Text = "label6";
             // 
@@ -422,7 +425,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label5.Location = new System.Drawing.Point(162, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 19);
+            this.label5.Size = new System.Drawing.Size(138, 23);
             this.label5.TabIndex = 20;
             this.label5.Text = "Jogosultság: ";
             // 
@@ -432,7 +435,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(287, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 19;
             this.label3.Text = "label3";
             // 
@@ -443,7 +446,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label4.Location = new System.Drawing.Point(162, 34);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 19);
+            this.label4.Size = new System.Drawing.Size(130, 23);
             this.label4.TabIndex = 18;
             this.label4.Text = "Felhasználó:";
             // 
@@ -453,7 +456,7 @@
             this.adminBT.FlatAppearance.BorderSize = 0;
             this.adminBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_system_administrator_male_50px;
-            this.adminBT.Location = new System.Drawing.Point(1128, 19);
+            this.adminBT.Location = new System.Drawing.Point(2029, 19);
             this.adminBT.Name = "adminBT";
             this.adminBT.Size = new System.Drawing.Size(134, 86);
             this.adminBT.TabIndex = 25;
@@ -467,12 +470,38 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnPurchase
+            // 
+            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_purchase_order_50px;
+            this.btnPurchase.Location = new System.Drawing.Point(0, 735);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(175, 109);
+            this.btnPurchase.TabIndex = 10;
+            this.btnPurchase.Text = "Vásárlás";
+            this.btnPurchase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPurchase.UseVisualStyleBackColor = true;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
+            // 
+            // purchase_UC1
+            // 
+            this.purchase_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(43)))));
+            this.purchase_UC1.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.purchase_UC1.Location = new System.Drawing.Point(1045, 1259);
+            this.purchase_UC1.Name = "purchase_UC1";
+            this.purchase_UC1.Size = new System.Drawing.Size(1454, 858);
+            this.purchase_UC1.TabIndex = 10;
+            this.purchase_UC1.Visible = false;
+            // 
             // homeScreen_UC1
             // 
             this.homeScreen_UC1.AutoScroll = true;
             this.homeScreen_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.homeScreen_UC1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.homeScreen_UC1.Location = new System.Drawing.Point(279, 238);
+            this.homeScreen_UC1.Location = new System.Drawing.Point(279, 562);
             this.homeScreen_UC1.Name = "homeScreen_UC1";
             this.homeScreen_UC1.Size = new System.Drawing.Size(1454, 858);
             this.homeScreen_UC1.TabIndex = 9;
@@ -482,7 +511,7 @@
             this.order_UC1.AllowDrop = true;
             this.order_UC1.AutoScroll = true;
             this.order_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.order_UC1.Location = new System.Drawing.Point(758, 299);
+            this.order_UC1.Location = new System.Drawing.Point(758, 623);
             this.order_UC1.Name = "order_UC1";
             this.order_UC1.Size = new System.Drawing.Size(1454, 848);
             this.order_UC1.TabIndex = 8;
@@ -494,7 +523,7 @@
             this.prodcut_UC1.AutoScrollMargin = new System.Drawing.Size(1, 1);
             this.prodcut_UC1.AutoScrollMinSize = new System.Drawing.Size(500, 350);
             this.prodcut_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.prodcut_UC1.Location = new System.Drawing.Point(216, 592);
+            this.prodcut_UC1.Location = new System.Drawing.Point(216, 916);
             this.prodcut_UC1.Name = "prodcut_UC1";
             this.prodcut_UC1.Size = new System.Drawing.Size(1454, 848);
             this.prodcut_UC1.TabIndex = 7;
@@ -503,7 +532,7 @@
             // supplier_UC1
             // 
             this.supplier_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.supplier_UC1.Location = new System.Drawing.Point(1102, 450);
+            this.supplier_UC1.Location = new System.Drawing.Point(1102, 774);
             this.supplier_UC1.Name = "supplier_UC1";
             this.supplier_UC1.Size = new System.Drawing.Size(1454, 848);
             this.supplier_UC1.TabIndex = 6;
@@ -512,7 +541,7 @@
             // customer_UC1
             // 
             this.customer_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.customer_UC1.Location = new System.Drawing.Point(859, 238);
+            this.customer_UC1.Location = new System.Drawing.Point(859, 562);
             this.customer_UC1.Margin = new System.Windows.Forms.Padding(4);
             this.customer_UC1.Name = "customer_UC1";
             this.customer_UC1.Size = new System.Drawing.Size(1454, 848);
@@ -523,7 +552,7 @@
             // 
             this.adminControl_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.adminControl_UC1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.adminControl_UC1.Location = new System.Drawing.Point(388, 262);
+            this.adminControl_UC1.Location = new System.Drawing.Point(388, 586);
             this.adminControl_UC1.Name = "adminControl_UC1";
             this.adminControl_UC1.Size = new System.Drawing.Size(1454, 848);
             this.adminControl_UC1.TabIndex = 4;
@@ -537,16 +566,18 @@
             this.userProfil_UC1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.userProfil_UC1.Location = new System.Drawing.Point(175, 163);
             this.userProfil_UC1.Name = "userProfil_UC1";
-            this.userProfil_UC1.Size = new System.Drawing.Size(1480, 820);
+            this.userProfil_UC1.Size = new System.Drawing.Size(2381, 1954);
             this.userProfil_UC1.TabIndex = 3;
             this.userProfil_UC1.Visible = false;
             // 
             // ControlPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(1480, 920);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1655, 983);
+            this.ClientSize = new System.Drawing.Size(1676, 1004);
+            this.Controls.Add(this.purchase_UC1);
             this.Controls.Add(this.homeScreen_UC1);
             this.Controls.Add(this.order_UC1);
             this.Controls.Add(this.prodcut_UC1);
@@ -616,5 +647,7 @@
         private UserControls.Prodcut_UC prodcut_UC1;
         private UserControls.Order_UC order_UC1;
         private UserControls.HomeScreen_UC homeScreen_UC1;
+        private System.Windows.Forms.Button btnPurchase;
+        private UserControls.Purchase_UC purchase_UC1;
     }
 }
