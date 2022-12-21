@@ -127,7 +127,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1454, 848);
+            this.panel1.Size = new System.Drawing.Size(1470, 854);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -138,9 +138,9 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel6.Controls.Add(this.understockDGV);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Location = new System.Drawing.Point(395, 525);
+            this.panel6.Location = new System.Drawing.Point(395, 531);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(760, 293);
+            this.panel6.Size = new System.Drawing.Size(776, 293);
             this.panel6.TabIndex = 21;
             // 
             // understockDGV
@@ -181,7 +181,7 @@
             this.understockDGV.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.understockDGV.RowTemplate.Height = 35;
             this.understockDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.understockDGV.Size = new System.Drawing.Size(741, 221);
+            this.understockDGV.Size = new System.Drawing.Size(757, 221);
             this.understockDGV.TabIndex = 3;
             // 
             // label17
@@ -214,7 +214,7 @@
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.labelCustomerCount);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(1161, 526);
+            this.panel5.Location = new System.Drawing.Point(1177, 532);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(275, 292);
             this.panel5.TabIndex = 20;
@@ -395,7 +395,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.topProductsChart.Series.Add(series1);
-            this.topProductsChart.Size = new System.Drawing.Size(376, 616);
+            this.topProductsChart.Size = new System.Drawing.Size(376, 622);
             this.topProductsChart.TabIndex = 22;
             this.topProductsChart.Text = "chart2";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -448,7 +448,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.GrossRevenueChart.Series.Add(series2);
-            this.GrossRevenueChart.Size = new System.Drawing.Size(1041, 317);
+            this.GrossRevenueChart.Size = new System.Drawing.Size(1057, 323);
             this.GrossRevenueChart.TabIndex = 21;
             this.GrossRevenueChart.Text = "chart1";
             title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -469,7 +469,7 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(869, 108);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(567, 88);
+            this.panel4.Size = new System.Drawing.Size(583, 88);
             this.panel4.TabIndex = 20;
             // 
             // pictureBox3
@@ -603,7 +603,7 @@
             this.okCustomBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okCustomBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.okCustomBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.okCustomBT.Location = new System.Drawing.Point(788, 33);
+            this.okCustomBT.Location = new System.Drawing.Point(804, 33);
             this.okCustomBT.Name = "okCustomBT";
             this.okCustomBT.Size = new System.Drawing.Size(43, 30);
             this.okCustomBT.TabIndex = 18;
@@ -618,7 +618,7 @@
             this.customBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.customBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.customBT.Location = new System.Drawing.Point(831, 33);
+            this.customBT.Location = new System.Drawing.Point(847, 33);
             this.customBT.Name = "customBT";
             this.customBT.Size = new System.Drawing.Size(120, 30);
             this.customBT.TabIndex = 17;
@@ -633,7 +633,7 @@
             this.todayBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.todayBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.todayBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.todayBT.Location = new System.Drawing.Point(951, 33);
+            this.todayBT.Location = new System.Drawing.Point(967, 33);
             this.todayBT.Name = "todayBT";
             this.todayBT.Size = new System.Drawing.Size(120, 30);
             this.todayBT.TabIndex = 16;
@@ -648,7 +648,7 @@
             this.last7DaysBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.last7DaysBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.last7DaysBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.last7DaysBT.Location = new System.Drawing.Point(1071, 33);
+            this.last7DaysBT.Location = new System.Drawing.Point(1087, 33);
             this.last7DaysBT.Name = "last7DaysBT";
             this.last7DaysBT.Size = new System.Drawing.Size(120, 30);
             this.last7DaysBT.TabIndex = 15;
@@ -663,7 +663,7 @@
             this.last30daysBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.last30daysBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.last30daysBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.last30daysBT.Location = new System.Drawing.Point(1191, 33);
+            this.last30daysBT.Location = new System.Drawing.Point(1207, 33);
             this.last30daysBT.Name = "last30daysBT";
             this.last30daysBT.Size = new System.Drawing.Size(120, 30);
             this.last30daysBT.TabIndex = 14;
@@ -678,7 +678,7 @@
             this.thisMonthBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thisMonthBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.thisMonthBT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.thisMonthBT.Location = new System.Drawing.Point(1311, 33);
+            this.thisMonthBT.Location = new System.Drawing.Point(1327, 33);
             this.thisMonthBT.Name = "thisMonthBT";
             this.thisMonthBT.Size = new System.Drawing.Size(120, 30);
             this.thisMonthBT.TabIndex = 13;
@@ -692,7 +692,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(594, 29);
+            this.label1.Location = new System.Drawing.Point(610, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 36);
             this.label1.TabIndex = 12;
@@ -704,7 +704,7 @@
             this.labelEndDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelEndDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelEndDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelEndDate.Location = new System.Drawing.Point(630, 33);
+            this.labelEndDate.Location = new System.Drawing.Point(646, 33);
             this.labelEndDate.Name = "labelEndDate";
             this.labelEndDate.Size = new System.Drawing.Size(108, 26);
             this.labelEndDate.TabIndex = 11;
@@ -718,7 +718,7 @@
             this.labelStartDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelStartDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelStartDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelStartDate.Location = new System.Drawing.Point(472, 33);
+            this.labelStartDate.Location = new System.Drawing.Point(488, 33);
             this.labelStartDate.Name = "labelStartDate";
             this.labelStartDate.Size = new System.Drawing.Size(108, 26);
             this.labelStartDate.TabIndex = 10;
@@ -732,7 +732,7 @@
             this.dtpEndDate.CustomFormat = "yyyy.MM.dd";
             this.dtpEndDate.Enabled = false;
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(630, 33);
+            this.dtpEndDate.Location = new System.Drawing.Point(646, 33);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(108, 22);
             this.dtpEndDate.TabIndex = 9;
@@ -744,7 +744,7 @@
             this.dtpStartDate.CustomFormat = "yyyy.MM.dd";
             this.dtpStartDate.Enabled = false;
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(472, 33);
+            this.dtpStartDate.Location = new System.Drawing.Point(488, 33);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(108, 22);
             this.dtpStartDate.TabIndex = 8;
@@ -768,7 +768,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.Controls.Add(this.panel1);
             this.Name = "HomeScreen_UC";
-            this.Size = new System.Drawing.Size(1454, 848);
+            this.Size = new System.Drawing.Size(1470, 854);
             this.Load += new System.EventHandler(this.HomeScreen_UC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

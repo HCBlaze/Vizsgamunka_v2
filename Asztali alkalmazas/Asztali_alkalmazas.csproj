@@ -22,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -163,6 +162,12 @@
     <Compile Include="UI\UserControls\Prodcut_UC.Designer.cs">
       <DependentUpon>Prodcut_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserControls\Purchase_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\Purchase_UC.Designer.cs">
+      <DependentUpon>Purchase_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserControls\Supplier_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\Prodcut_UC.resx">
       <DependentUpon>Prodcut_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\Purchase_UC.resx">
+      <DependentUpon>Purchase_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\Supplier_UC.resx">
       <DependentUpon>Supplier_UC.cs</DependentUpon>
