@@ -17,14 +17,14 @@ namespace Asztali_alkalmazas.UI.UserControls
     public partial class Purchase_UC : UserControl
     {
         MySqlConnection conn;
-        string connstring;
-        int customerCurrentId;
-        int productCurrentId;
-        int orderCurrentId;
-        decimal vegosszeg;
-        string OrderNumber;
-        string deleteOrderItem;
-        DateTime lastOrderDate;
+        private string connstring;
+        private int customerCurrentId;
+        private int productCurrentId;
+        private int orderCurrentId;
+        private decimal vegosszeg;
+        private string OrderNumber;
+        private string deleteOrderItem;
+        private DateTime lastOrderDate;
         MySqlCommand cmd;
         MySqlDataReader dr;
         public Purchase_UC()
@@ -44,15 +44,15 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
-        Product ujTermek;
-        OrderItem ujRendeltTermek;
-        Order ujRendeles;
+        private Product ujTermek;
+        private OrderItem ujRendeltTermek;
+        private Order ujRendeles;
         AdminControl_UC hibakezeles = new AdminControl_UC(); //Hibák logolása
-        List<KeyValuePair<int, string>> CustomerIdAndName = new List<KeyValuePair<int, string>>();
-        List<KeyValuePair<int, string>> ProductIdAndName = new List<KeyValuePair<int, string>>();
-        List<Product> OsszesTermek = new List<Product>();
-        List<OrderItem> RendeltTermekek = new List<OrderItem>();
-        List<decimal> VegosszegList = new List<decimal>();
+        private List<KeyValuePair<int, string>> CustomerIdAndName = new List<KeyValuePair<int, string>>();
+        private List<KeyValuePair<int, string>> ProductIdAndName = new List<KeyValuePair<int, string>>();
+        private List<Product> OsszesTermek = new List<Product>();
+        private List<OrderItem> RendeltTermekek = new List<OrderItem>();
+        private List<decimal> VegosszegList = new List<decimal>();
 
         private void getCustomers()
         {
@@ -287,101 +287,135 @@ namespace Asztali_alkalmazas.UI.UserControls
         //------------ Gombok és funkciók ------------
         private void cbCustomers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < CustomerIdAndName.Count; i++)
+            try
             {
-                if(cbCustomers.SelectedItem.ToString() == CustomerIdAndName[i].Value)
+                for (int i = 0; i < CustomerIdAndName.Count; i++)
                 {
-                    customerCurrentId = CustomerIdAndName[i].Key;
+                    if (cbCustomers.SelectedItem.ToString() == CustomerIdAndName[i].Value)
+                    {
+                        customerCurrentId = CustomerIdAndName[i].Key;
+                    }
                 }
+                getCustomerDetails(customerCurrentId);
+                gbCart.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                cbProducts.Visible = true;
+                mennyisegNum.Visible = true;
+                btnAddCart.Visible = true;
+                btnDeleteCartItem.Visible = true;
+                btnPurchaseFinish.Visible = true;
             }
-            getCustomerDetails(customerCurrentId);
-            gbCart.Visible = true;
-            label3.Visible = true;
-            label4.Visible = true;
-            cbProducts.Visible = true;
-            mennyisegNum.Visible = true;
-            btnAddCart.Visible = true;
-            btnDeleteCartItem.Visible=true;
-            btnPurchaseFinish.Visible = true;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hiba!" + ex.Message);
+                string hiba = ex.Message.ToString();
+                hibakezeles.ErrorLogs(hiba);
+            }
         }
         private void cbProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             label7.Visible = true;
             lblcurrentProdStock.Visible = true;
             mennyisegNum.Enabled= true;
-            for (int i = 0; i < ProductIdAndName.Count; i++)
+            try
             {
-                if (cbProducts.SelectedItem.ToString() == ProductIdAndName[i].Value)
+                for (int i = 0; i < ProductIdAndName.Count; i++)
                 {
-                    productCurrentId = ProductIdAndName[i].Key;
-                    foreach(var item in OsszesTermek)
+                    if (cbProducts.SelectedItem.ToString() == ProductIdAndName[i].Value)
                     {
-                        if(productCurrentId == item.Id)
+                        productCurrentId = ProductIdAndName[i].Key;
+                        foreach (var item in OsszesTermek)
                         {
-                            lblcurrentProdStock.Text = item.Stock.ToString();
-                            mennyisegNum.Maximum = item.Stock;
-                        }       
+                            if (productCurrentId == item.Id)
+                            {
+                                lblcurrentProdStock.Text = item.Stock.ToString();
+                                mennyisegNum.Maximum = item.Stock;
+                            }
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hiba!" + ex.Message);
+                string hiba = ex.Message.ToString();
+                hibakezeles.ErrorLogs(hiba);
+            }          
         }
         private void btnAddCart_Click(object sender, EventArgs e)
         {
             decimal price = 0;
-            
-            foreach(var item in OsszesTermek)
+            try
             {
-                if(item.ProductName == cbProducts.SelectedItem.ToString())
+                foreach (var item in OsszesTermek)
                 {
-                    string[] adat = { item.ProductName, item.Package, item.UnitPrice.ToString(), mennyisegNum.Value.ToString() };
-                    dgvOrderItems.Rows.Add(adat);
-                    price = Convert.ToDecimal(adat[2]) * Convert.ToInt32(adat[3]);
-                    VegosszegList.Add(price);
-                    ujRendeltTermek = new OrderItem();
-                    ujRendeltTermek.setOrderId(2);
-                    ujRendeltTermek.setProductId(productCurrentId);
-                    ujRendeltTermek.setUnitPrice(item.UnitPrice);
-                    ujRendeltTermek.setQuantity(Convert.ToInt32(mennyisegNum.Value));
-                    RendeltTermekek.Add(ujRendeltTermek);
+                    if (item.ProductName == cbProducts.SelectedItem.ToString())
+                    {
+                        string[] adat = { item.ProductName, item.Package, item.UnitPrice.ToString(), mennyisegNum.Value.ToString() };
+                        dgvOrderItems.Rows.Add(adat);
+                        price = Convert.ToDecimal(adat[2]) * Convert.ToInt32(adat[3]);
+                        VegosszegList.Add(price);
+                        ujRendeltTermek = new OrderItem();
+                        ujRendeltTermek.setOrderId(2);
+                        ujRendeltTermek.setProductId(productCurrentId);
+                        ujRendeltTermek.setUnitPrice(item.UnitPrice);
+                        ujRendeltTermek.setQuantity(Convert.ToInt32(mennyisegNum.Value));
+                        RendeltTermekek.Add(ujRendeltTermek);
+                    }
                 }
+                vegosszeg = VegosszegList.Sum();
+                lblTotalAmount.Text = vegosszeg.ToString() + " HUF";
+                cbProducts.SelectedIndex = 0;
+                mennyisegNum.Value = 0;
             }
-            vegosszeg = VegosszegList.Sum();
-            lblTotalAmount.Text = vegosszeg.ToString() + " HUF";
-            this.cbProducts.SelectedIndex = 0;
-            mennyisegNum.Value = 0;
-            
+            catch (Exception ex )
+            {
+                MessageBox.Show("Hiba!" + ex.Message);
+                string hiba = ex.Message.ToString();
+                hibakezeles.ErrorLogs(hiba);
+            }            
         }
 
         private void btnPurchaseFinish_Click(object sender, EventArgs e)
         {
-            string[] ideig = lblTotalAmount.Text.Split(' ');
-            string totalAmount = ideig[0];
-            int reCalculateStock = 0;
-            setNewOrder(DateTime.Now, customerCurrentId, totalAmount, DateTime.Now, DateTime.Now);
-            foreach(var item in RendeltTermekek)
+            try
             {
-                item.setOrderId(getCurrentOrderId());
-                setNewOrderItems(item.OrderId, item.ProductId, item.UnitPrice, item.Quantity, DateTime.Now, DateTime.Now);
-                foreach(var stock in OsszesTermek)
+                string[] ideig = lblTotalAmount.Text.Split(' ');
+                string totalAmount = ideig[0];
+                int reCalculateStock = 0;
+                setNewOrder(DateTime.Now, customerCurrentId, totalAmount, DateTime.Now, DateTime.Now);
+                foreach (var item in RendeltTermekek)
                 {
-                    if(item.ProductId == stock.Id)
+                    item.setOrderId(getCurrentOrderId());
+                    setNewOrderItems(item.OrderId, item.ProductId, item.UnitPrice, item.Quantity, DateTime.Now, DateTime.Now);
+                    foreach (var stock in OsszesTermek)
                     {
-                        reCalculateStock = stock.Stock - item.Quantity;
+                        if (item.ProductId == stock.Id)
+                        {
+                            reCalculateStock = stock.Stock - item.Quantity;
+                        }
                     }
+                    setUpdateStock(item.ProductId, reCalculateStock, DateTime.Now);
                 }
-                setUpdateStock(item.ProductId, reCalculateStock,DateTime.Now);
+                MessageBox.Show("A rendelésed megkaptuk, a következő rendelés számon tudod átvenni a rendelésed!\n" + OrderNumber);
+                OsszesTermek.Clear();
+                RendeltTermekek.Clear();
+                getAllProducts();
+                dgvOrderItems.RowCount = 0;
+                gbCart.Visible = false;
+                cbCustomers.Text = " ";
+                cbProducts.Text = " ";
+                VegosszegList.Clear();
+                vegosszeg = 0;
+                lblTotalAmount.Text = "";
             }
-            MessageBox.Show("A rendelésed megkaptuk, a következő rendelés számon tudod átvenni a rendelésed!\n" + OrderNumber);
-            OsszesTermek.Clear();
-            getAllProducts();
-            dgvOrderItems.RowCount = 0;
-            gbCart.Visible = false;
-            cbCustomers.Text = " ";
-            cbProducts.Text= " ";
-            VegosszegList.Clear();
-            vegosszeg = 0;
-            lblTotalAmount.Text = "";
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hiba!" + ex.Message);
+                string hiba = ex.Message.ToString();
+                hibakezeles.ErrorLogs(hiba);
+            }            
         }
         private void dgvOrderItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -404,45 +438,51 @@ namespace Asztali_alkalmazas.UI.UserControls
                 string hiba = ex.Message.ToString();
                 hibakezeles.ErrorLogs(hiba);
             }
-
         }
 
         private void btnDeleteCartItem_Click(object sender, EventArgs e)
         {
-            string[] ideig = deleteOrderItem.Split(';');
-            int deletedProdId = 0;
-            for (int j = ProductIdAndName.Count -1; j >= 0; j--)
+            try
             {
-                if (ideig[0] == ProductIdAndName[j].Value)
+                string[] ideig = deleteOrderItem.Split(';');
+                int deletedProdId = 0;
+                for (int j = ProductIdAndName.Count - 1; j >= 0; j--)
                 {
-                    deletedProdId = ProductIdAndName[j].Key;
-                }
-            }
-            MessageBox.Show(deletedProdId.ToString());
-
-            for (int i = RendeltTermekek.Count -1; i >= 0; i--)
-            {
-                if (RendeltTermekek[i].ProductId == deletedProdId)
-                {
-
-                    decimal deleteItemPrice = RendeltTermekek[i].UnitPrice * RendeltTermekek[i].Quantity;
-                    MessageBox.Show(deleteItemPrice.ToString());
-                    for (int k = VegosszegList.Count - 1; k >= 0; k--)
+                    if (ideig[0] == ProductIdAndName[j].Value)
                     {
-                        if (VegosszegList[k] == deleteItemPrice)
-                        {
-                            VegosszegList.RemoveAt(k);
-                        }
+                        deletedProdId = ProductIdAndName[j].Key;
                     }
-                    vegosszeg = VegosszegList.Sum();
-                    lblTotalAmount.Text = vegosszeg.ToString() + " HUF";
-                    RendeltTermekek.RemoveAt(i);
+                }
+                for (int i = RendeltTermekek.Count - 1; i >= 0; i--)
+                {
+                    if (RendeltTermekek[i].ProductId == deletedProdId)
+                    {
+
+                        decimal deleteItemPrice = RendeltTermekek[i].UnitPrice * RendeltTermekek[i].Quantity;
+                        MessageBox.Show(deleteItemPrice.ToString());
+                        for (int k = VegosszegList.Count - 1; k >= 0; k--)
+                        {
+                            if (VegosszegList[k] == deleteItemPrice)
+                            {
+                                VegosszegList.RemoveAt(k);
+                            }
+                        }
+                        vegosszeg = VegosszegList.Sum();
+                        lblTotalAmount.Text = vegosszeg.ToString() + " HUF";
+                        RendeltTermekek.RemoveAt(i);
+                    }
+                }
+                foreach (DataGridViewRow row in dgvOrderItems.SelectedRows)
+                {
+                    dgvOrderItems.Rows.Remove(row);
                 }
             }
-            foreach (DataGridViewRow row in dgvOrderItems.SelectedRows)
+            catch (Exception ex)
             {
-                dgvOrderItems.Rows.Remove(row);
-            }
+                MessageBox.Show("Hiba!" + ex.Message);
+                string hiba = ex.Message.ToString();
+                hibakezeles.ErrorLogs(hiba);
+            }            
         }
     }
 }

@@ -35,7 +35,6 @@
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTotalAmount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblcurrentProdStock = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.gbCart.SuspendLayout();
             this.gbCustomerDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
@@ -127,16 +127,6 @@
             this.lblLastName.Size = new System.Drawing.Size(64, 21);
             this.lblLastName.TabIndex = 2;
             this.lblLastName.Text = "label7";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFirstName.Location = new System.Drawing.Point(234, 58);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(64, 21);
-            this.lblFirstName.TabIndex = 1;
-            this.lblFirstName.Text = "label7";
             // 
             // label6
             // 
@@ -320,6 +310,16 @@
             this.lblcurrentProdStock.Text = "stock";
             this.lblcurrentProdStock.Visible = false;
             // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFirstName.Location = new System.Drawing.Point(234, 58);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(64, 21);
+            this.lblFirstName.TabIndex = 1;
+            this.lblFirstName.Text = "label7";
+            // 
             // Purchase_UC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -369,7 +369,6 @@
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAddCart;
         private System.Windows.Forms.Button btnDeleteCartItem;
@@ -377,5 +376,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblcurrentProdStock;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblFirstName;
     }
 }
