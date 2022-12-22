@@ -60,21 +60,11 @@ https://drive.google.com/drive/folders/1BQWhsgn9oQfvIUHINSO070bKsUlLN8hx?usp=sha
 ```	
 - Mappában mellékelt fontok telepítése
 
-- Az alkalmazás úgy írtam meg hogy helyi gépen kell futatni egy mysql adatbázist aminek a felhasználóneve root kell hogy legyen és nem lehet jelszava.
-
-		Paraméterek:
-
-		server=localhost
-		port=3306
-		database=local_store_project_23
-		user=root
-
-		ha más beállításokat használunk az alakalmazás nem fog működni.
-
-		Az adatbázist nem kell létrehozni, a mellékelt .sql fájlt be importálva létrehozza az adatbázist, a táblákat és a teszt adatokat is!
-
-
+- Az alkalmazás úgy írtam meg hogy helyi gépen kell futatni egy mysql adatbázist.
+- Az adatbázist nem kell létrehozni, a mellékelt .sql fájlt be importálva létrehozza az adatbázist, a táblákat és a teszt adatokat is!
 - Telepítő (.exe) futtatása
+- A telepítés után be kell állítani a helyi mysql adatokat. A program könytárában van egy connectionString.txt fájl itt kell a megfelelő adatokat átírni.
+- Ezután indíthatjuk a programot.
 - Ahhoz hogy a program minden funkciója működjön MS Office -ra és egy .pdf megtekintő programra is szükség lesz.
 ---
 
