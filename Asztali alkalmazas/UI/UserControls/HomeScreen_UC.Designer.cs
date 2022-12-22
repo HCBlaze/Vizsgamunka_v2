@@ -192,7 +192,7 @@
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label17.Location = new System.Drawing.Point(0, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(704, 33);
+            this.label17.Size = new System.Drawing.Size(545, 25);
             this.label17.TabIndex = 2;
             this.label17.Text = "Rendelésre váró termékek (6 csomagnál kevesebb):";
             // 
@@ -266,7 +266,7 @@
             this.labelUsersCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelUsersCount.Location = new System.Drawing.Point(130, 253);
             this.labelUsersCount.Name = "labelUsersCount";
-            this.labelUsersCount.Size = new System.Drawing.Size(76, 23);
+            this.labelUsersCount.Size = new System.Drawing.Size(64, 21);
             this.labelUsersCount.TabIndex = 8;
             this.labelUsersCount.Text = "100000";
             // 
@@ -277,7 +277,7 @@
             this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Location = new System.Drawing.Point(101, 223);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(204, 28);
+            this.label11.Size = new System.Drawing.Size(159, 22);
             this.label11.TabIndex = 7;
             this.label11.Text = "Dolgozók száma";
             // 
@@ -288,7 +288,7 @@
             this.labelProductsCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelProductsCount.Location = new System.Drawing.Point(133, 193);
             this.labelProductsCount.Name = "labelProductsCount";
-            this.labelProductsCount.Size = new System.Drawing.Size(76, 23);
+            this.labelProductsCount.Size = new System.Drawing.Size(64, 21);
             this.labelProductsCount.TabIndex = 6;
             this.labelProductsCount.Text = "100000";
             // 
@@ -299,7 +299,7 @@
             this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Location = new System.Drawing.Point(106, 163);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(207, 28);
+            this.label9.Size = new System.Drawing.Size(160, 22);
             this.label9.TabIndex = 5;
             this.label9.Text = "Termékek száma";
             // 
@@ -310,7 +310,7 @@
             this.labelSupplierCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelSupplierCount.Location = new System.Drawing.Point(133, 133);
             this.labelSupplierCount.Name = "labelSupplierCount";
-            this.labelSupplierCount.Size = new System.Drawing.Size(76, 23);
+            this.labelSupplierCount.Size = new System.Drawing.Size(64, 21);
             this.labelSupplierCount.TabIndex = 4;
             this.labelSupplierCount.Text = "100000";
             // 
@@ -321,7 +321,7 @@
             this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label10.Location = new System.Drawing.Point(106, 103);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(213, 28);
+            this.label10.Size = new System.Drawing.Size(166, 22);
             this.label10.TabIndex = 3;
             this.label10.Text = "Beszállítók száma";
             // 
@@ -332,7 +332,7 @@
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 33);
+            this.label8.Size = new System.Drawing.Size(106, 25);
             this.label8.TabIndex = 2;
             this.label8.Text = "Összesen";
             // 
@@ -343,7 +343,7 @@
             this.labelCustomerCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelCustomerCount.Location = new System.Drawing.Point(133, 73);
             this.labelCustomerCount.Name = "labelCustomerCount";
-            this.labelCustomerCount.Size = new System.Drawing.Size(76, 23);
+            this.labelCustomerCount.Size = new System.Drawing.Size(64, 21);
             this.labelCustomerCount.TabIndex = 1;
             this.labelCustomerCount.Text = "100000";
             // 
@@ -354,7 +354,7 @@
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label6.Location = new System.Drawing.Point(106, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 28);
+            this.label6.Size = new System.Drawing.Size(152, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "Vásárlók száma";
             // 
@@ -489,7 +489,7 @@
             this.labelTotalProfit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelTotalProfit.Location = new System.Drawing.Point(294, 46);
             this.labelTotalProfit.Name = "labelTotalProfit";
-            this.labelTotalProfit.Size = new System.Drawing.Size(76, 23);
+            this.labelTotalProfit.Size = new System.Drawing.Size(64, 21);
             this.labelTotalProfit.TabIndex = 1;
             this.labelTotalProfit.Text = "100000";
             // 
@@ -500,7 +500,7 @@
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Location = new System.Drawing.Point(249, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 28);
+            this.label7.Size = new System.Drawing.Size(109, 22);
             this.label7.TabIndex = 0;
             this.label7.Text = "Teljes profit";
             // 
@@ -533,7 +533,7 @@
             this.labelTotalRevenue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelTotalRevenue.Location = new System.Drawing.Point(297, 46);
             this.labelTotalRevenue.Name = "labelTotalRevenue";
-            this.labelTotalRevenue.Size = new System.Drawing.Size(76, 23);
+            this.labelTotalRevenue.Size = new System.Drawing.Size(64, 21);
             this.labelTotalRevenue.TabIndex = 1;
             this.labelTotalRevenue.Text = "100000";
             // 
@@ -544,7 +544,7 @@
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label5.Location = new System.Drawing.Point(229, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 28);
+            this.label5.Size = new System.Drawing.Size(132, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Teljes bevétel";
             // 
@@ -577,7 +577,7 @@
             this.labelOrdersCount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelOrdersCount.Location = new System.Drawing.Point(180, 46);
             this.labelOrdersCount.Name = "labelOrdersCount";
-            this.labelOrdersCount.Size = new System.Drawing.Size(76, 23);
+            this.labelOrdersCount.Size = new System.Drawing.Size(64, 21);
             this.labelOrdersCount.TabIndex = 1;
             this.labelOrdersCount.Text = "100000";
             // 
@@ -588,7 +588,7 @@
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(87, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 23);
+            this.label3.Size = new System.Drawing.Size(184, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "Megrendelések száma";
             // 
@@ -694,7 +694,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(610, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 36);
+            this.label1.Size = new System.Drawing.Size(21, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "-";
             // 
@@ -734,7 +734,7 @@
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEndDate.Location = new System.Drawing.Point(646, 33);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(108, 22);
+            this.dtpEndDate.Size = new System.Drawing.Size(108, 20);
             this.dtpEndDate.TabIndex = 9;
             this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
             // 
@@ -746,7 +746,7 @@
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpStartDate.Location = new System.Drawing.Point(488, 33);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(108, 22);
+            this.dtpStartDate.Size = new System.Drawing.Size(108, 20);
             this.dtpStartDate.TabIndex = 8;
             this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
             // 
@@ -757,7 +757,7 @@
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(24, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 51);
+            this.label2.Size = new System.Drawing.Size(204, 41);
             this.label2.TabIndex = 7;
             this.label2.Text = "Dashboard";
             // 

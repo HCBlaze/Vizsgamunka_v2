@@ -17,7 +17,6 @@ namespace Asztali_alkalmazas.UI.UserControls
     public partial class Purchase_UC : UserControl
     {
         MySqlConnection conn;
-        private string connstring;
         private int customerCurrentId;
         private int productCurrentId;
         private int orderCurrentId;
@@ -30,11 +29,10 @@ namespace Asztali_alkalmazas.UI.UserControls
         public Purchase_UC()
         {
             InitializeComponent();
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
             try
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
 
             }
@@ -44,9 +42,10 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
-        private Product ujTermek;
-        private OrderItem ujRendeltTermek;
-        private Order ujRendeles;
+        Product ujTermek;
+        OrderItem ujRendeltTermek;
+        Order ujRendeles;
+        DbConnection db = new DbConnection();
         AdminControl_UC hibakezeles = new AdminControl_UC(); //Hibák logolása
         private List<KeyValuePair<int, string>> CustomerIdAndName = new List<KeyValuePair<int, string>>();
         private List<KeyValuePair<int, string>> ProductIdAndName = new List<KeyValuePair<int, string>>();
@@ -152,8 +151,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    lblLastName.Text = dr[0].ToString();
-                    lblFirstName.Text = dr[1].ToString();
+                    lblFullName.Text = dr[0].ToString() + " "+dr[1].ToString();
                     lblPhoneNumber.Text = dr[2].ToString();
                 }
                 conn.Close();

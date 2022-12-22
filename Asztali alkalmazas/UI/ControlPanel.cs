@@ -1,5 +1,4 @@
-﻿using Asztali_alkalmazas.UI.UserControls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,28 +12,28 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using MySql.Data.MySqlClient;
 using System.Drawing.Text;
 using Asztali_alkalmazas.Classes;
+using Asztali_alkalmazas.UI.UserControls;
 
 namespace Asztali_alkalmazas.UI
 {
     public partial class ControlPanel : Form
     {
         MySqlConnection conn;
-        string connstring;
         MySqlCommand cmd;
         MySqlDataReader dr;
         public ControlPanel()
         {
             InitializeComponent();
+            
             panelSlide.Height = mainBT.Height;
             panelSlide.Top = mainBT.Top;
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
             try
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
 
             }
@@ -44,7 +43,7 @@ namespace Asztali_alkalmazas.UI
             }
             conn.Close();
         }
-
+        DbConnection db = new DbConnection();
         private Point _mouseLoc; // Kezdő egérhelyzet felvétele
         private string picSrc;
         private string username;

@@ -18,7 +18,6 @@ namespace Asztali_alkalmazas.UI.UserControls
         MySqlConnection conn;
         string format = "yyyy-MM-dd HH:mm:ss";
         int pID;
-        string connstring;
         string currentId;
         int newSupplierID;
         MySqlCommand cmd;
@@ -26,11 +25,10 @@ namespace Asztali_alkalmazas.UI.UserControls
         public Prodcut_UC()
         {
             InitializeComponent();
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
             try
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
 
             }
@@ -43,6 +41,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             uj.setId(pID);
         }
         //------------------------------------------------------------------------------New Product section start-------------------------------------------------------------------
+        DbConnection db = new DbConnection();
         Product uj = new Product();
         Product actual;
         AdminControl_UC hibakezeles = new AdminControl_UC();

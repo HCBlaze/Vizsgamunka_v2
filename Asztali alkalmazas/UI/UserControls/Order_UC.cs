@@ -17,22 +17,21 @@ namespace Asztali_alkalmazas.UI.UserControls
     {
         MySqlConnection conn;
         string phone;
-        string connstring;
         string currentId;
         string customerId;
         string status;
         int newOrderDB;
         MySqlCommand cmd;
         MySqlDataReader dr;
-
+        
         public Order_UC()
         {
             InitializeComponent();
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
+            
             try
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
 
             }
@@ -42,6 +41,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
+        DbConnection db = new DbConnection();
         Order actual;
         AdminControl_UC hibakezeles = new AdminControl_UC(); //Hibák logolása
 

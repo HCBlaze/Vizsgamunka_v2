@@ -19,25 +19,24 @@ namespace Asztali_alkalmazas.UI
     public partial class Login_screen : Form
     {
         MySqlConnection conn;
-        string connstring;
         MySqlCommand cmd;
         MySqlDataReader dr;
         public Login_screen()
         {
             Thread trd = new Thread(new ThreadStart(FormRun));
             trd.Start();
-            Thread.Sleep(5000);           
+            Thread.Sleep(5000);
             InitializeComponent();
             trd.Abort();
             Password_Textbox.PasswordChar = '*';
             Password_Textbox.MaxLength = 15;
             Password_Textbox.Multiline = false;
             Username_Textbox.Multiline = false;
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
             try
             {
+                
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
             }
             catch (MySqlException ex)
@@ -45,8 +44,10 @@ namespace Asztali_alkalmazas.UI
                 MessageBox.Show(ex.Message);
 
             }
-            conn.Close();    
+            conn.Close();
+            setConnStr();
         }
+        DbConnection db = new DbConnection();
         PasswordCrypt uj = new PasswordCrypt();
         private Point _mouseLoc;
         private void FormRun()
@@ -130,7 +131,14 @@ namespace Asztali_alkalmazas.UI
         {
             Application.Exit();
         }
-        
+        public void setConnStr()
+        {
+            string fajl = "connectionString.txt";
+            StreamWriter iras = new StreamWriter(fajl, false, Encoding.UTF8);
+            iras.WriteLine("server = localhost; port = 3306; database = local_store_project_23; user = root;");
+            iras.Close();
+        }
+
         private void writeLogin(string username,string permission) //Belépési adatokat kiírjuk.
         {
             string login = "succesLoginData.txt";

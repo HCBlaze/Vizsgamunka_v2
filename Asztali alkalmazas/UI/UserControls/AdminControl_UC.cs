@@ -16,7 +16,6 @@ namespace Asztali_alkalmazas.UI.UserControls
     public partial class AdminControl_UC : UserControl
     {
         MySqlConnection conn;
-        string connstring;
         string format = "yyyy-MM-dd";
         string createNUpdateFormat = "yyyy-MM-dd HH:mm:ss";
         int id;
@@ -27,11 +26,10 @@ namespace Asztali_alkalmazas.UI.UserControls
         public AdminControl_UC()
         {
             InitializeComponent();
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
             try
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
 
             }
@@ -43,6 +41,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             getID();//Az adatbázisban következő ID-t adja az új felhasználónak           
             uj.setId(id);
         }
+        DbConnection db = new DbConnection();
         Users uj = new Users();
         PasswordCrypt pwd = new PasswordCrypt();
         private void addNewUserBT_Click(object sender, EventArgs e)

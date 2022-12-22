@@ -18,7 +18,6 @@ namespace Asztali_alkalmazas.UI.UserControls
         MySqlConnection conn;
         string format = "yyyy-MM-dd HH:mm:ss";
         int sID;
-        string connstring;
         string currentId;
         MySqlCommand cmd;
         MySqlDataReader dr;
@@ -26,11 +25,10 @@ namespace Asztali_alkalmazas.UI.UserControls
         public Supplier_UC()
         {
             InitializeComponent();
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
             try
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
 
             }
@@ -42,6 +40,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             getID();//Az adatbázisban következő ID-t adja az új felhasználónak           
             uj.setId(sID);
         }
+        DbConnection db = new DbConnection();
         Supplier uj = new Supplier();
         Supplier actual;
         AdminControl_UC hibakezeles = new AdminControl_UC();

@@ -18,17 +18,15 @@ namespace Asztali_alkalmazas.UI.UserControls
     public partial class UserProfil_UC : UserControl
     {
         MySqlConnection conn;
-        string connstring;
         MySqlCommand cmd;
         MySqlDataReader dr;
         public UserProfil_UC()
         {
             InitializeComponent();
-            connstring = "server=localhost;port=3306;database=local_store_project_23;user=root;";
             try
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+                conn.ConnectionString = db.getConnectionString();
                 conn.Open();
 
             }
@@ -43,6 +41,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         private string pwd;
         string format = "yyyy-MM-dd";
         string createNUpdateFormat = "yyyy-MM-dd HH:mm:ss";
+        DbConnection db = new DbConnection();
         Users ujUser = new Users();
         PasswordCrypt uj = new PasswordCrypt();
         //Alapvető ablak UserControl műveletek
