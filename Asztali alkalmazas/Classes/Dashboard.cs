@@ -85,7 +85,7 @@ namespace Asztali_alkalmazas.Classes
                 {
                     cmd.Connection = conn;
                     
-                    cmd.CommandText = "SELECT date(OrderDate), sum(TotalAmount) FROM local_store_project_23.orders where OrderDate between @fromDate and @toDate group by date(orders.OrderDate);";
+                    cmd.CommandText = "SELECT OrderDate, sum(TotalAmount) FROM local_store_project_23.orders where OrderDate between @fromDate and @toDate group by orders.OrderDate  ;";
                     cmd.Parameters.Add("@fromDate", MySql.Data.MySqlClient.MySqlDbType.DateTime).Value = startDate;
                     cmd.Parameters.Add("@toDate", MySql.Data.MySqlClient.MySqlDbType.DateTime).Value = endDate;
                     var resultList = new List<KeyValuePair<DateTime, decimal>>();
@@ -96,13 +96,12 @@ namespace Asztali_alkalmazas.Classes
                         TotalRevenue += Convert.ToDecimal(rd[1]);
                     }
                     TotalProfit = TotalRevenue * 0.27m; //27% -a a bruttó bevételnek
-                    Console.WriteLine(TotalProfit);
                     rd.Close();
 
                     if (numberDays <= 1)
                     {
                         GrossRevenueList = (from orderList in resultList
-                                            group orderList by orderList.Key.ToString("hh tt")
+                                            group orderList by orderList.Key.ToString("HH:mm")
                                            into order
                                             select new RevenueByDate
                                             {

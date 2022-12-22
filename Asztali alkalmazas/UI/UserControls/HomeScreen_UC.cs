@@ -18,8 +18,8 @@ namespace Asztali_alkalmazas.UI.UserControls
         public HomeScreen_UC()
         {
             InitializeComponent();
-            dtpStartDate.Value = Convert.ToDateTime("2022.11.03");
-            dtpEndDate.Value = Convert.ToDateTime("2022.11.07");
+            dtpStartDate.Value = DateTime.Today.AddDays(-7);
+            dtpEndDate.Value = DateTime.Now;
             last7DaysBT.Select();
             setButtonColors(last7DaysBT);
             model = new Dashboard();

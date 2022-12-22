@@ -65,7 +65,7 @@
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(24, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 41);
+            this.label2.Size = new System.Drawing.Size(215, 51);
             this.label2.TabIndex = 8;
             this.label2.Text = "Vásárlás:";
             // 
@@ -102,9 +102,9 @@
             // 
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(226, 110);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(235, 110);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(54, 18);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(64, 21);
             this.lblPhoneNumber.TabIndex = 4;
             this.lblPhoneNumber.Text = "label7";
             // 
@@ -114,7 +114,7 @@
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.Location = new System.Drawing.Point(130, 110);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 18);
+            this.label9.Size = new System.Drawing.Size(108, 22);
             this.label9.TabIndex = 3;
             this.label9.Text = "Mobilszám:";
             // 
@@ -124,7 +124,7 @@
             this.lblLastName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblLastName.Location = new System.Drawing.Point(171, 58);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(54, 18);
+            this.lblLastName.Size = new System.Drawing.Size(64, 21);
             this.lblLastName.TabIndex = 2;
             this.lblLastName.Text = "label7";
             // 
@@ -132,9 +132,9 @@
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFirstName.Location = new System.Drawing.Point(226, 58);
+            this.lblFirstName.Location = new System.Drawing.Point(234, 58);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(54, 18);
+            this.lblFirstName.Size = new System.Drawing.Size(64, 21);
             this.lblFirstName.TabIndex = 1;
             this.lblFirstName.Text = "label7";
             // 
@@ -144,7 +144,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.Location = new System.Drawing.Point(130, 57);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 18);
+            this.label6.Size = new System.Drawing.Size(50, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "Név:";
             // 
@@ -153,11 +153,10 @@
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblTotalAmount.ForeColor = System.Drawing.Color.Silver;
-            this.lblTotalAmount.Location = new System.Drawing.Point(211, 709);
+            this.lblTotalAmount.Location = new System.Drawing.Point(220, 709);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(24, 30);
+            this.lblTotalAmount.Size = new System.Drawing.Size(0, 38);
             this.lblTotalAmount.TabIndex = 17;
-            this.lblTotalAmount.Text = "s";
             // 
             // label5
             // 
@@ -166,7 +165,7 @@
             this.label5.ForeColor = System.Drawing.Color.Silver;
             this.label5.Location = new System.Drawing.Point(89, 709);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 30);
+            this.label5.Size = new System.Drawing.Size(159, 38);
             this.label5.TabIndex = 16;
             this.label5.Text = "Összesen:";
             // 
@@ -193,7 +192,7 @@
             this.cbCustomers.FormattingEnabled = true;
             this.cbCustomers.Location = new System.Drawing.Point(31, 161);
             this.cbCustomers.Name = "cbCustomers";
-            this.cbCustomers.Size = new System.Drawing.Size(357, 35);
+            this.cbCustomers.Size = new System.Drawing.Size(357, 41);
             this.cbCustomers.TabIndex = 1;
             this.cbCustomers.SelectedIndexChanged += new System.EventHandler(this.cbCustomers_SelectedIndexChanged);
             // 
@@ -203,7 +202,7 @@
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.Location = new System.Drawing.Point(16, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 27);
+            this.label1.Size = new System.Drawing.Size(273, 34);
             this.label1.TabIndex = 11;
             this.label1.Text = "Vásárló választása:";
             // 
@@ -213,7 +212,7 @@
             this.label3.ForeColor = System.Drawing.Color.Silver;
             this.label3.Location = new System.Drawing.Point(16, 286);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 27);
+            this.label3.Size = new System.Drawing.Size(270, 34);
             this.label3.TabIndex = 13;
             this.label3.Text = "Termék választása:";
             this.label3.Visible = false;
@@ -223,7 +222,7 @@
             this.cbProducts.FormattingEnabled = true;
             this.cbProducts.Location = new System.Drawing.Point(31, 349);
             this.cbProducts.Name = "cbProducts";
-            this.cbProducts.Size = new System.Drawing.Size(357, 35);
+            this.cbProducts.Size = new System.Drawing.Size(357, 41);
             this.cbProducts.TabIndex = 2;
             this.cbProducts.Visible = false;
             this.cbProducts.SelectedIndexChanged += new System.EventHandler(this.cbProducts_SelectedIndexChanged);
@@ -234,7 +233,7 @@
             this.label4.ForeColor = System.Drawing.Color.Silver;
             this.label4.Location = new System.Drawing.Point(430, 286);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 27);
+            this.label4.Size = new System.Drawing.Size(171, 34);
             this.label4.TabIndex = 14;
             this.label4.Text = "Mennyiség:";
             this.label4.Visible = false;
@@ -244,7 +243,7 @@
             this.mennyisegNum.Enabled = false;
             this.mennyisegNum.Location = new System.Drawing.Point(435, 349);
             this.mennyisegNum.Name = "mennyisegNum";
-            this.mennyisegNum.Size = new System.Drawing.Size(120, 34);
+            this.mennyisegNum.Size = new System.Drawing.Size(120, 41);
             this.mennyisegNum.TabIndex = 3;
             this.toolTip1.SetToolTip(this.mennyisegNum, "Ha többet írsz be mint a max mennyiség autómatikusan az összes készleten lévő ter" +
         "méket megkapod");
@@ -304,7 +303,7 @@
             this.label7.ForeColor = System.Drawing.Color.Silver;
             this.label7.Location = new System.Drawing.Point(435, 314);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 27);
+            this.label7.Size = new System.Drawing.Size(82, 34);
             this.label7.TabIndex = 22;
             this.label7.Text = "Max:";
             this.label7.Visible = false;
@@ -316,7 +315,7 @@
             this.lblcurrentProdStock.ForeColor = System.Drawing.Color.Silver;
             this.lblcurrentProdStock.Location = new System.Drawing.Point(494, 317);
             this.lblcurrentProdStock.Name = "lblcurrentProdStock";
-            this.lblcurrentProdStock.Size = new System.Drawing.Size(59, 23);
+            this.lblcurrentProdStock.Size = new System.Drawing.Size(73, 29);
             this.lblcurrentProdStock.TabIndex = 19;
             this.lblcurrentProdStock.Text = "stock";
             this.lblcurrentProdStock.Visible = false;

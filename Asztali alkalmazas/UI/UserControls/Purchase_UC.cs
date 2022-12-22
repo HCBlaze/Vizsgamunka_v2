@@ -349,6 +349,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             lblTotalAmount.Text = vegosszeg.ToString() + " HUF";
             this.cbProducts.SelectedIndex = 0;
             mennyisegNum.Value = 0;
+            
         }
 
         private void btnPurchaseFinish_Click(object sender, EventArgs e)
@@ -373,11 +374,13 @@ namespace Asztali_alkalmazas.UI.UserControls
             MessageBox.Show("A rendelésed megkaptuk, a következő rendelés számon tudod átvenni a rendelésed!\n" + OrderNumber);
             OsszesTermek.Clear();
             getAllProducts();
-            dgvOrderItems.DataSource = null;
-            gbCart.Visible = true;
+            dgvOrderItems.RowCount = 0;
+            gbCart.Visible = false;
             cbCustomers.Text = " ";
             cbProducts.Text= " ";
-
+            VegosszegList.Clear();
+            vegosszeg = 0;
+            lblTotalAmount.Text = "";
 
         }
         private void dgvOrderItems_CellClick(object sender, DataGridViewCellEventArgs e)
