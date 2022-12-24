@@ -15,8 +15,23 @@ namespace Asztali_alkalmazas.Classes
 
         public string getConnectionString()
         {
+            setConnStr();
             string connStr = _getConnection();
             return connStr;
+        }
+        private void setConnStr()
+        {
+            if (!File.Exists("connectionString.txt"))
+            {
+                string fajl = "connectionString.txt";
+                StreamWriter iras = new StreamWriter(fajl, false, Encoding.UTF8);
+                iras.WriteLine("server = localhost; port = 3306; database = local_store_project_23; user = root;");
+                iras.Close();
+            }
+            else
+            {
+                Console.WriteLine("Létezik");
+            }
         }
         private string _getConnection()
         {
@@ -30,7 +45,7 @@ namespace Asztali_alkalmazas.Classes
             olvas.Close();
             return connStr;
         }
-        public DbConnection()
+            public DbConnection()
         {
             _connectionString = getConnectionString();
         }

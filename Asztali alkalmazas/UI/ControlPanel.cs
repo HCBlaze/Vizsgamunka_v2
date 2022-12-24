@@ -39,10 +39,18 @@ namespace Asztali_alkalmazas.UI
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                DialogResult Error;
+                Error = MessageBox.Show("Nem megfelelő authentikációs adatok.\n Ellenőrizd a connectionString.txt fájlt!", "Project 23", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Error == DialogResult.OK)
+                {
+                    string hiba = ex.Message.ToString();
+                    hibakezeles.ErrorLogs(hiba);
+                    Application.Exit();
+                }
             }
             conn.Close();
         }
+        AdminControl_UC hibakezeles = new AdminControl_UC();
         DbConnection db = new DbConnection();
         private Point _mouseLoc; // Kezdő egérhelyzet felvétele
         private string picSrc;

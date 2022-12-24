@@ -32,7 +32,14 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                DialogResult Error;
+                Error = MessageBox.Show("Nem megfelelő authentikációs adatok.\n Ellenőrizd a connectionString.txt fájlt!", "Project 23", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Error == DialogResult.OK)
+                {
+                    string hiba = ex.Message.ToString();
+                    hibakezeles.ErrorLogs(hiba);
+                    Application.Exit();
+                }
             }
             conn.Close();
         }
@@ -44,6 +51,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         DbConnection db = new DbConnection();
         Users ujUser = new Users();
         PasswordCrypt uj = new PasswordCrypt();
+        AdminControl_UC hibakezeles = new AdminControl_UC();
         //Alapvető ablak UserControl műveletek
         private void passwordChangeBT_Click(object sender, EventArgs e)
         {

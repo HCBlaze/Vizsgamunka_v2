@@ -36,9 +36,14 @@ namespace Asztali_alkalmazas.UI.UserControls
                 conn.Open();
 
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                DialogResult Error;
+                Error = MessageBox.Show("Nem megfelelő authentikációs adatok.\n Ellenőrizd a connectionString.txt fájlt!", "Project 23", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Error == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
             }
             conn.Close();
         }

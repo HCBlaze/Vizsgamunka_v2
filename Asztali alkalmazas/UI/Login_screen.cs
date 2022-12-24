@@ -13,6 +13,7 @@ using Asztali_alkalmazas.Classes;
 using Asztali_alkalmazas.UI;
 using Google.Protobuf;
 using System.Threading;
+using Asztali_alkalmazas.UI.UserControls;
 
 namespace Asztali_alkalmazas.UI
 {
@@ -41,14 +42,20 @@ namespace Asztali_alkalmazas.UI
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
-
+                DialogResult Error;
+                Error = MessageBox.Show("Nem megfelelő authentikációs adatok.\n Ellenőrizd a connectionString.txt fájlt!", "Project 23", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Error == DialogResult.OK)
+                {
+                    string hiba = ex.Message.ToString();
+                    hibakezeles.ErrorLogs(hiba);
+                    Application.Exit();
+                }
             }
             conn.Close();
-            setConnStr();
         }
         DbConnection db = new DbConnection();
         PasswordCrypt uj = new PasswordCrypt();
+        AdminControl_UC hibakezeles = new AdminControl_UC(); //Hibák logolása
         private Point _mouseLoc;
         private void FormRun()
         {
@@ -75,70 +82,73 @@ namespace Asztali_alkalmazas.UI
 
         private void LogIn_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string user = Username_Textbox.Text;
-            string password = uj.titkosPWD(Password_Textbox.Text); 
-
-            cmd = new MySqlCommand();
-
-            cmd.Connection = conn;
-            cmd.CommandText = "SELECT Username FROM local_store_project_23.users where Username ='" + user + "';";
-            object result = cmd.ExecuteScalar();
-            if (result == null)
+            try
             {
-                MessageBox.Show("Hibás felhasználónév!");
-                Username_Textbox.Clear();
-                Password_Textbox.Clear();
-                Username_Textbox.Focus();
-                conn.Close();
-            }
-            else
-            {
-                cmd.CommandText = "SELECT id, Username,Password,Permission,Deleted FROM local_store_project_23.users where Username='" + user + "';"; 
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
+                conn.Open();
+                string user = Username_Textbox.Text;
+                string password = uj.titkosPWD(Password_Textbox.Text);
+
+                cmd = new MySqlCommand();
+
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT Username FROM local_store_project_23.users where Username ='" + user + "';";
+                object result = cmd.ExecuteScalar();
+                if (result == null)
                 {
-                    int torolt = Convert.ToInt32(dr["Deleted"]);
-                    if (torolt == 0 && password == dr["Password"].ToString() && user == dr["Username"].ToString())
+                    MessageBox.Show("Hibás felhasználónév!");
+                    Username_Textbox.Clear();
+                    Password_Textbox.Clear();
+                    Username_Textbox.Focus();
+                    conn.Close();
+                }
+                else
+                {
+                    cmd.CommandText = "SELECT id, Username,Password,Permission,Deleted FROM local_store_project_23.users where Username='" + user + "';";
+                    dr = cmd.ExecuteReader();
+                    if (dr.Read())
                     {
-                        MessageBox.Show("Betudott Lépni");
-                        writeLogin(user, dr["Permission"].ToString());
-                        ControlPanel CP = new ControlPanel();
-                        CP.Show();
-                        CP.BringToFront();
-                        this.Hide();
-                        conn.Close();
-                    }
-                    else if (torolt == 1)
-                    {
-                        MessageBox.Show("Törölt felhasználó.");
-                        Username_Textbox.Clear();
-                        Password_Textbox.Clear();
-                        Username_Textbox.Focus();
-                        conn.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hibás jelszó.");
-                        Password_Textbox.Clear();
-                        conn.Close();
+                        int torolt = Convert.ToInt32(dr["Deleted"]);
+                        if (torolt == 0 && password == dr["Password"].ToString() && user == dr["Username"].ToString())
+                        {
+                            MessageBox.Show("Betudott Lépni");
+                            writeLogin(user, dr["Permission"].ToString());
+                            ControlPanel CP = new ControlPanel();
+                            CP.Show();
+                            CP.BringToFront();
+                            this.Hide();
+                            conn.Close();
+                        }
+                        else if (torolt == 1)
+                        {
+                            MessageBox.Show("Törölt felhasználó.");
+                            Username_Textbox.Clear();
+                            Password_Textbox.Clear();
+                            Username_Textbox.Focus();
+                            conn.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hibás jelszó.");
+                            Password_Textbox.Clear();
+                            conn.Close();
+                        }
                     }
                 }
+                conn.Close();
             }
-            conn.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hiba!" + ex.Message);
+                string hiba = ex.Message.ToString();
+                hibakezeles.ErrorLogs(hiba);
+            }
+            
+            
         }
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        public void setConnStr()
-        {
-            string fajl = "connectionString.txt";
-            StreamWriter iras = new StreamWriter(fajl, false, Encoding.UTF8);
-            iras.WriteLine("server = localhost; port = 3306; database = local_store_project_23; user = root;");
-            iras.Close();
-        }
-
         private void writeLogin(string username,string permission) //Belépési adatokat kiírjuk.
         {
             string login = "succesLoginData.txt";
