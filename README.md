@@ -23,19 +23,20 @@
 
 ### Indítás weboldal
 
-Projekt lemásolása (Clone)
+A projektet a C: meghajtóra kell másolni mivel csak így fogja tudni kezelni a képeket az alkalmazás. Másold ki az alábbi parancsot és létrejön a mappaszerkezet
+
+```bash
+cd c:
+mkdir laragon\www\Vizsgamunka_23_v2\Vizsgamunka_v2\
+
+```
+
+Projekt lemásolása (Clone)(A fent létrehozott mappába kell lemásolni!!!)
 
 ```bash
 git@github.com:HCBlaze/Vizsgamunka_v2.git
 
 ```
-Navigálás a webes alkalmazás mappába
-
-```bash
-cd Webes alkalmazss
-
-```
-
 NPM feltelepítése 
 
 ```bash
