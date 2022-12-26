@@ -27,16 +27,27 @@ A projektet a C: meghajtóra kell másolni mivel csak így fogja tudni kezelni a
 
 ```bash
 cd c:
+
+```
+
+```bash
 mkdir laragon\www\Vizsgamunka_23_v2\Vizsgamunka_v2\
 
 ```
 
-Projekt lemásolása (Clone)(A fent létrehozott mappába kell lemásolni!!!)
+Projekt lemásolása (Clone) (A fent létrehozott mappába kell lemásolni!!!)
 
 ```bash
 git@github.com:HCBlaze/Vizsgamunka_v2.git
 
 ```
+
+Ezután elnavigálunk a Webes alklamazás mappába
+```bash
+cd "Webes alkalmazas"
+
+```
+
 NPM feltelepítése 
 
 ```bash
