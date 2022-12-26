@@ -22,6 +22,7 @@ class OrderController extends Controller
         $order->OrderNumber = $request->get('OrderNumber');
         $order->CustomerId = $request->get('CustomerId');
         $order->TotalAmount = $request->get('TotalAmount');
+        $order->OrderStatus = $request->get('OrderStatus');
 
         $order->save();
 
@@ -34,6 +35,7 @@ class OrderController extends Controller
         $order->OrderNumber = $request->get('OrderNumber');
         $order->CustomerId = $request->get('CustomerId');
         $order->TotalAmount = $request->get('TotalAmount');
+        $order->OrderStatus = $request->get('OrderStatus');
 
         $order->save();
 

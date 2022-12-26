@@ -23,6 +23,7 @@ class ProductController extends Controller
         $product->UnitPrice = $request->get('UnitPrice');
         $product->Package = $request->get('Package');
         $product->Stock = $request->get('Stock');
+        $product->ImageSrc = $request->get('ImageSrc');
 
         $product->save();
 
@@ -36,6 +37,7 @@ class ProductController extends Controller
         $product->UnitPrice = $request->get('UnitPrice');
         $product->Package = $request->get('Package');
         $product->Stock = $request->get('Stock');
+        $product->ImageSrc = $request->get('ImageSrc');
 
         $product->save();
 

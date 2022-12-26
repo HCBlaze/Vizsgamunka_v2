@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->decimal("UnitPrice");
             $table->string("Package");
             $table->integer("stock");
+            $table->string("ImageSrc");
             $table->timestamps();
         });
     }

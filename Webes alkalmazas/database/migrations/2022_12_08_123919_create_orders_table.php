@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string("OrderNumber");
             $table->foreignId("CustomerId")->constrained("Customers");
             $table->decimal("TotalAmount");
+            $table->string("OrderStatus");
 
             $table->timestamps();
         });
