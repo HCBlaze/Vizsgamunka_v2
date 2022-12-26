@@ -121,8 +121,98 @@
   <data name="Akashi_hun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\Akashi_hun.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ariel_38mos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\ariel_38mos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacardi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\bacardi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bailesy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\bailesy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ballantines_finest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\ballantines_finest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ballantines_passion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\ballantines_passion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bb_edes_feher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\bb_edes_feher.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bordseve_margarin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\bordseve_margarin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borsodi_6x05l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\borsodi_6x05l.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="captainmorgan_gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\captainmorgan_gold.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="casli_banancsoki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\casli_banancsoki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerbona_zabpehely" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\cerbona_zabpehely.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="close_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\close-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cocacola_2x175l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\cocacola_2x175l.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cocacola_6x330" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\cocacola_6x330.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coccolino_divine_petals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\coccolino_divine_petals.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coccolino_fresh_sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\coccolino_fresh_sky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coccolino_heavenly_nectar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\coccolino_heavenly_nectar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coccolino_lavish_blossom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\coccolino_lavish_blossom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coccolino_orange_rush" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\coccolino_orange_rush.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coccolino_silky_lily" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\coccolino_silky_lily.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dove_glowing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\dove_glowing.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dove_hydrating" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\dove_hydrating.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dove_nourishing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\dove_nourishing.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dove_protect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\dove_protect.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fanta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\fanta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="finnlandia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\finnlandia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gosser_6x05l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\gosser_6x05l.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gyermelyi_buzadara" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\gyermelyi_buzadara.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gyermelyi_fliszt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\gyermelyi_fliszt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gyermelyi_rliszt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\gyermelyi_rliszt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heineken_silver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\heineken_silver.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_area_chart_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_area_chart_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,11 +289,92 @@
   <data name="icons8_warehouse_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\icons8_warehouse_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="jackdaniels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\jackdaniels.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jager_2pohar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\jager_2pohar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jameson_2pohar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\jameson_2pohar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="johnnie_walker_red_label" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\johnnie_walker_red_label.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kalinka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\kalinka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kolln_aproszem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\kolln_aproszem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kolln_nagyszem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\kolln_nagyszem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kuntej_turo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\kuntej_turo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="legli_blanc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\legli_blanc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mad_feherbor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\mad_feherbor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magyar_teavaj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\magyar_teavaj.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magyar_tej" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\magyar_tej.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magyar_tejfol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\magyar_tejfol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="maximize_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\maximize-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="medve_sajt_csipos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\medve_sajt_csipos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medve_sajt_natur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\medve_sajt_natur.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medve_sajt_sonka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\medve_sajt_sonka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milka_fehercsoki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\milka_fehercsoki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milka_oreo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\milka_oreo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milka_oreo_choco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\milka_oreo_choco.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milka_tabla_karamel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\milka_tabla_karamel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="miller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\miller.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minimize_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\minimize-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mizo_trappista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\mizo_trappista.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="No_Image_Available" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\No_Image_Available.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pepsi_175L" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\pepsi_175L.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="persil_45mos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\persil_45mos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="persil_lavandel_45mos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\persil_lavandel_45mos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pick_teliszalami" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\pick_teliszalami.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngwing_com" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\pngwing.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,6 +393,18 @@
   </data>
   <data name="pngwing_com__5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\pngwing.com (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pottyos_5x51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\pottyos_5x51.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pottyos_karamell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\pottyos_karamell.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pottyos_kokusz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\pottyos_kokusz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="presidente_camambert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\presidente_camambert.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profilpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\profilpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +430,118 @@
   <data name="project_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\project_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rama_sutomargarin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\rama_sutomargarin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redbull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\redbull.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="riska_tejfol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\riska_tejfol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saga_fustli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\saga_fustli.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="showPWD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\showPWD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soproni_ipa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\soproni_ipa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\sprite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\sprite_zero.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="standrea_szarazvoros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\standrea_szarazvoros.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="staropramen_korso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\staropramen_korso.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sthubertus_05l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\sthubertus_05l.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="szarvasi_light_mozz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\szarvasi_light_mozz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_aproszemu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_aproszemu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_daralthus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_daralthus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_feherbor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_feherbor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_gyulai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_gyulai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_kakao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_kakao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_mozz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_mozz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_nagyszemu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_nagyszemu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_porcukor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_porcukor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_tarja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_tarja.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_tejfol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_tejfol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_teljes_kiorles_bliszt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_teljes_kiorles_bliszt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_vanillia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_vanillia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesco_vorosbor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tesco_vorosbor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tibi_vegyes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tibi_vegyes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tibi_vegyes_gyumolcsos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tibi_vegyes_gyumolcsos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tolle_gauda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tolle_gauda.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tolle_trapista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\tolle_trapista.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="torley_doux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\torley_doux.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="torley_doux_rose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\torley_doux_rose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="torley_rouge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\torley_rouge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unicum_kave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\unicum_kave.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unicum_silva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\unicum_silva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="venusz_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\venusz_light.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zott_joghurt_eper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\zott_joghurt_eper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zott_joghurt_ital" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\zott_joghurt_ital.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zott_joghurt_tobbfele" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\ProductsPics\zott_joghurt_tobbfele.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

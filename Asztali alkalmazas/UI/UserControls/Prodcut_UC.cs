@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Asztali_alkalmazas.Classes;
 using MySql.Data.MySqlClient;
 
@@ -20,6 +21,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         int pID;
         string currentId;
         int newSupplierID;
+        string ImageSrc;
         MySqlCommand cmd;
         MySqlDataReader dr;
         public Prodcut_UC()
@@ -119,7 +121,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 conn.Open();
                 cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO `local_store_project_23`.`products`(`ProductName`, `SupplierId`, `UnitPrice` ,`Package`, `Stock` ,created_at, updated_at)  VALUES ('" + uj.ProductName + "', '" + uj.SupplierId + "', '" + uj.UnitPrice + "' ,'" + uj.Package + "', '" + uj.Stock + "' ,'" + DateTime.Now.ToString(format) + "','" + DateTime.Now.ToString(format) + "')";
+                cmd.CommandText = "INSERT INTO `local_store_project_23`.`products`(`ProductName`, `SupplierId`, `UnitPrice` ,`Package`, `Stock`, `ImageSrc` ,created_at, updated_at)  VALUES ('" + uj.ProductName + "', '" + uj.SupplierId + "', '" + uj.UnitPrice + "' ,'" + uj.Package + "', '" + uj.Stock + "' ,'"+uj.ImageSrc+"', '" + DateTime.Now.ToString(format) + "','" + DateTime.Now.ToString(format) + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Létrehozva!");
                 conn.Close();
@@ -140,6 +142,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             productUnitPriceTB.Clear();
             productStockTB.Clear();
             productPackageTB.Clear();
+            pbProductPic.Image= null;
         }
         private void tabControl1_Click(object sender, EventArgs e)
         {
@@ -210,10 +213,29 @@ namespace Asztali_alkalmazas.UI.UserControls
                 uj.setStock(int.Parse(productStockTB.Text));
             }
         }
+        private void btnProductPic_Click(object sender, EventArgs e)
+        {
+            string newSqlImgSrc = "";
+            OpenFileDialog newProductPic = new OpenFileDialog();
+            newProductPic.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (newProductPic.ShowDialog() == DialogResult.OK)
+            {
+                pbProductPic.Image = new Bitmap(newProductPic.FileName);
+                newSqlImgSrc = newProductPic.FileName;
+                
+                if(newSqlImgSrc.Contains(@"\"))
+                {
+                    ImageSrc = newSqlImgSrc.Replace(@"\", @"\\");
+                }
+            }
+            uj.setImageSrc(ImageSrc);
+            MessageBox.Show(uj.ImageSrc);
+        }
         private void newProductBT_Click(object sender, EventArgs e)
         {
             setNewProduct();
             deleteTB();
+            suppliersCB.Text = "";
         }
         //-------------------------------------------------------------------New Product section end-------------------------------------------------------------------
         //-------------------------------------------------------------------Product update and delete section start --------------------------------------------------
@@ -232,7 +254,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             conn.Open();
             cmd = new MySqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT products.id as 'ID', ProductName as 'Termeknev', suppliers.CompanyName as 'Beszallito', UnitPrice as 'Egysegar' ,Package as 'Kiszereles', Stock as 'Keszlet' FROM local_store_project_23.suppliers, products where products.SupplierId = suppliers.id order by id asc;";
+            cmd.CommandText = "SELECT products.id as 'ID', ProductName as 'Termeknev', suppliers.CompanyName as 'Beszallito', UnitPrice as 'Egysegar' ,Package as 'Kiszereles', Stock as 'Keszlet', ImageSrc as 'Kep' FROM local_store_project_23.suppliers, products where products.SupplierId = suppliers.id order by id asc;";
             dr = cmd.ExecuteReader();
             dtProducts.Load(dr);
             conn.Close();
@@ -250,10 +272,12 @@ namespace Asztali_alkalmazas.UI.UserControls
             productUpdateNDeleteDGV.Columns[3].HeaderText = "Egységár (HUF)";
             productUpdateNDeleteDGV.Columns[4].HeaderText = "Kiszerelés";
             productUpdateNDeleteDGV.Columns[5].HeaderText = "Készlet";
+            productUpdateNDeleteDGV.Columns[6].Visible= false;
         }
         private void productUpdateNDeleteDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string currentSupplier = "";
+            string currentImageSrc = "";
             
             try
             {
@@ -280,11 +304,20 @@ namespace Asztali_alkalmazas.UI.UserControls
                     productUpdatePrice.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Egysegar"].FormattedValue.ToString();
                     productUpdatePackage.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Kiszereles"].FormattedValue.ToString();
                     productUpdateStock.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Keszlet"].FormattedValue.ToString();
+                    currentImageSrc = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Kep"].FormattedValue.ToString();
+                    if(currentImageSrc == "")
+                    {
+                        pbSelectedProductPic.Image = Properties.Resources.No_Image_Available;
+                    }
+                    else
+                    {
+                        pbSelectedProductPic.Image = new Bitmap(currentImageSrc);
+                    }
                 }
                 productUpdateGB.Visible = true;
                 productUpdateBT.Visible = true;
                 productDeleteBT.Visible = true;
-                actual = new Product(Convert.ToInt32(currentId), productUpdateName.Text, newSupplierID, Convert.ToDecimal(productUpdatePrice.Text), productUpdatePackage.Text, Convert.ToInt32(productUpdateStock.Text));
+                actual = new Product(Convert.ToInt32(currentId), productUpdateName.Text, newSupplierID, Convert.ToDecimal(productUpdatePrice.Text), productUpdatePackage.Text, Convert.ToInt32(productUpdateStock.Text), currentImageSrc);
             }
             catch (Exception ex)
             {
@@ -309,22 +342,42 @@ namespace Asztali_alkalmazas.UI.UserControls
                 ReLoadDGV(GetProductsList());
             }
         }
+        private void btnUpdateProductPic_Click(object sender, EventArgs e)
+        {
+            string newSqlImgSrc = "";
+            OpenFileDialog updateProductPic = new OpenFileDialog();
+            updateProductPic.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (updateProductPic.ShowDialog() == DialogResult.OK)
+            {
+                pbSelectedProductPic.Image = new Bitmap(updateProductPic.FileName);
+                newSqlImgSrc = updateProductPic.FileName;
+                if (newSqlImgSrc.Contains(@"\"))
+                {
+                    ImageSrc = newSqlImgSrc.Replace(@"\", @"\\");
+                }
+            }
+            uj.setImageSrc(ImageSrc);
+            pbSelectedProductPic.Image = new Bitmap(uj.ImageSrc);
+        }
         private void productUpdateBT_Click(object sender, EventArgs e)
         {
-            if (actual.ProductName != productUpdateName.Text ||actual.SupplierId != newSupplierID ||actual.UnitPrice != decimal.Parse(productUpdatePrice.Text) || actual.Package != productUpdatePackage.Text || actual.Stock != int.Parse(productUpdateStock.Text))
+            if (actual.ProductName != productUpdateName.Text ||actual.SupplierId != newSupplierID ||actual.UnitPrice != decimal.Parse(productUpdatePrice.Text) || actual.Package != productUpdatePackage.Text || actual.Stock != int.Parse(productUpdateStock.Text) || actual.ImageSrc != ImageSrc)
             {
                 uj.setProductName(productUpdateName.Text);
                 uj.setUnitPrice(decimal.Parse(productUpdatePrice.Text));
                 uj.setPackage(productUpdatePackage.Text);
                 uj.setStock(int.Parse(productUpdateStock.Text));
+                uj.setImageSrc(ImageSrc);
                 conn.Open();
                 cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "UPDATE `local_store_project_23`.`products` SET `ProductName`='" + uj.ProductName + "', SupplierId = '"+uj.SupplierId+"', UnitPrice = '" + uj.UnitPrice + "', Package = '" + uj.Package + "' ,Stock = '" + uj.Stock + "', updated_at = '" + DateTime.Now.ToString(format) + "' WHERE `id`= @ID;";
+                cmd.CommandText = "UPDATE `local_store_project_23`.`products` SET `ProductName`='" + uj.ProductName + "', SupplierId = '"+uj.SupplierId+"', UnitPrice = '" + uj.UnitPrice + "', Package = '" + uj.Package + "' ,Stock = '" + uj.Stock + "', ImageSrc = '"+uj.ImageSrc+"', updated_at = '" + DateTime.Now.ToString(format) + "' WHERE `id`= @ID;";
                 cmd.Parameters.AddWithValue("@ID", currentId);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 ReLoadDGV(GetProductsList());
+                updateSuppliersCB.Text = "";
+                pbSelectedProductPic.Image = null;
             }
             else
             {

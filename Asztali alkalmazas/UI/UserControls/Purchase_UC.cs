@@ -36,7 +36,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 conn.Open();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 DialogResult Error;
                 Error = MessageBox.Show("Nem megfelelő authentikációs adatok.\n Ellenőrizd a connectionString.txt fájlt!", "Project 23", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -127,11 +127,11 @@ namespace Asztali_alkalmazas.UI.UserControls
                     conn.Open();
                     cmd = new MySqlCommand();
                     cmd.Connection = conn;
-                    cmd.CommandText = "SELECT id, ProductName, SupplierId, UnitPrice, Package, Stock FROM local_store_project_23.products;";
+                    cmd.CommandText = "SELECT id, ProductName, SupplierId, UnitPrice, Package, Stock, ImageSrc FROM local_store_project_23.products;";
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        ujTermek = new Product(Convert.ToInt32(dr[0]), dr[1].ToString(), Convert.ToInt32(dr[2]), Convert.ToDecimal(dr[3]), dr[4].ToString(), Convert.ToInt32(dr[5]));
+                        ujTermek = new Product(Convert.ToInt32(dr[0]), dr[1].ToString(), Convert.ToInt32(dr[2]), Convert.ToDecimal(dr[3]), dr[4].ToString(), Convert.ToInt32(dr[5]), dr[6].ToString());
                         OsszesTermek.Add(ujTermek);
                     }
                     conn.Close();
@@ -369,7 +369,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 }
                 vegosszeg = VegosszegList.Sum();
                 lblTotalAmount.Text = vegosszeg.ToString() + " HUF";
-                cbProducts.SelectedIndex = 0;
+                cbProducts.Text = " ";
                 mennyisegNum.Value = 0;
             }
             catch (Exception ex )

@@ -15,6 +15,7 @@ namespace Asztali_alkalmazas.Classes
         public decimal UnitPrice { get; private set; }
         public string Package { get; private set; }
         public int Stock { get; private set; }
+        public string ImageSrc { get; private set; }
 
 
 
@@ -23,7 +24,7 @@ namespace Asztali_alkalmazas.Classes
 
         }
 
-        public Product(int id, string productname, int supplierid, decimal unitprice, string package, int stock)
+        public Product(int id, string productname, int supplierid, decimal unitprice, string package, int stock, string imagesrc)
         {
             this.Id = id;
             this.ProductName = productname;
@@ -31,6 +32,7 @@ namespace Asztali_alkalmazas.Classes
             this.UnitPrice = unitprice;
             this.Package = package;
             this.Stock = stock;
+            this.ImageSrc = imagesrc;
         }
         public void setId(int id)
         {
@@ -95,6 +97,17 @@ namespace Asztali_alkalmazas.Classes
             int _stock = stock;
 
             return _stock;
+        }
+        public void setImageSrc(string imagesrc)
+        {
+            ImageSrc = _setImageSrc(imagesrc);
+        }
+
+        private string _setImageSrc(string imagesrc)
+        {
+            string _imgsrc = imagesrc;
+
+            return _imgsrc;
         }
     }
 }

@@ -275,9 +275,6 @@
     <None Include="src\profilpic.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\profilpic1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="src\showPWD.png" />
   </ItemGroup>
   <ItemGroup>
@@ -372,6 +369,300 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\icons8_user_rights_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\cocacola_2x175l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\No_Image_Available.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\ariel_38mos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\bacardi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\bailesy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\ballantines_finest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\ballantines_passion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\bb_edes_feher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\bordseve_margarin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\borsodi_6x05l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\captainmorgan_gold.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\casli_banancsoki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\cerbona_zabpehely.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\cocacola_6x330.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\coccolino_divine_petals.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\coccolino_fresh_sky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\coccolino_heavenly_nectar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\coccolino_lavish_blossom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\coccolino_orange_rush.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\coccolino_silky_lily.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\dove_glowing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\dove_hydrating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\dove_nourishing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\dove_protect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\fanta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\finnlandia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\gosser_6x05l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\gyermelyi_buzadara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\gyermelyi_fliszt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\gyermelyi_rliszt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\heineken_silver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\jackdaniels.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\jager_2pohar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\jameson_2pohar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\johnnie_walker_red_label.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\kalinka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\kolln_aproszem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\kolln_nagyszem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\kuntej_turo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\legli_blanc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\mad_feherbor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\magyar_teavaj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\magyar_tej.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\magyar_tejfol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\medve_sajt_csipos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\medve_sajt_natur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\medve_sajt_sonka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\milka_fehercsoki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\milka_oreo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\milka_oreo_choco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\milka_tabla_karamel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\miller.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\mizo_trappista.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\pepsi_175L.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\persil_45mos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\persil_lavandel_45mos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\pick_teliszalami.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\pottyos_5x51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\pottyos_karamell.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\pottyos_kokusz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\presidente_camambert.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\rama_sutomargarin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\redbull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\riska_tejfol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\saga_fustli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\soproni_ipa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\sprite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\sprite_zero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\staropramen_korso.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\sthubertus_05l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\szarvasi_light_mozz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_aproszemu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_daralthus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_feherbor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_gyulai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_kakao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_mozz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_nagyszemu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_porcukor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_tarja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_tejfol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_teljes_kiorles_bliszt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_vanillia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tibi_vegyes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tibi_vegyes_gyumolcsos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tolle_gauda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tolle_trapista.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\torley_doux.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\torley_doux_rose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\torley_rouge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\unicum_kave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\unicum_silva.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\venusz_light.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\zott_joghurt_eper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\zott_joghurt_ital.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\zott_joghurt_tobbfele.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\standrea_szarazvoros.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\tesco_vorosbor.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
