@@ -22,6 +22,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         string currentId;
         int newSupplierID;
         string ImageSrc;
+        private const string prefix = @"C:\\laragon\\www\\Vizsgamunka_23_v2\\Vizsgamunka_v2\\Asztali alkalmazas\\src";
         MySqlCommand cmd;
         MySqlDataReader dr;
         public Prodcut_UC()
@@ -225,11 +226,12 @@ namespace Asztali_alkalmazas.UI.UserControls
                 
                 if(newSqlImgSrc.Contains(@"\"))
                 {
-                    ImageSrc = newSqlImgSrc.Replace(@"\", @"\\");
+                    string ideig = newSqlImgSrc.Replace(@"\", @"/");
+                    ImageSrc = ideig.Remove(0, 70);
                 }
             }
             uj.setImageSrc(ImageSrc);
-            MessageBox.Show(uj.ImageSrc);
+            MessageBox.Show(ImageSrc);
         }
         private void newProductBT_Click(object sender, EventArgs e)
         {
@@ -304,8 +306,9 @@ namespace Asztali_alkalmazas.UI.UserControls
                     productUpdatePrice.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Egysegar"].FormattedValue.ToString();
                     productUpdatePackage.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Kiszereles"].FormattedValue.ToString();
                     productUpdateStock.Text = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Keszlet"].FormattedValue.ToString();
-                    currentImageSrc = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Kep"].FormattedValue.ToString();
-                    if(currentImageSrc == "")
+                    string ideig = productUpdateNDeleteDGV.Rows[e.RowIndex].Cells["Kep"].FormattedValue.ToString();
+                    currentImageSrc = ideig.Insert(0, prefix);
+                    if (currentImageSrc == "")
                     {
                         pbSelectedProductPic.Image = Properties.Resources.No_Image_Available;
                     }
@@ -353,11 +356,12 @@ namespace Asztali_alkalmazas.UI.UserControls
                 newSqlImgSrc = updateProductPic.FileName;
                 if (newSqlImgSrc.Contains(@"\"))
                 {
-                    ImageSrc = newSqlImgSrc.Replace(@"\", @"\\");
+                    string ideig = newSqlImgSrc.Replace(@"\", @"/");
+                    ImageSrc = ideig.Remove(0, 70);
                 }
             }
             uj.setImageSrc(ImageSrc);
-            pbSelectedProductPic.Image = new Bitmap(uj.ImageSrc);
+            pbSelectedProductPic.Image = new Bitmap(prefix+uj.ImageSrc);
         }
         private void productUpdateBT_Click(object sender, EventArgs e)
         {
