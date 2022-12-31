@@ -20,6 +20,7 @@
 - react-router-dom
 - react-bootstrap
 - bootstrap
+- styled
 
 ### Indítás weboldal
 
@@ -47,6 +48,7 @@ Ezután elnavigálunk a Webes alklamazás mappába
 cd "Webes alkalmazas"
 
 ```
+A webes alkalmazás mappában található egy .env fájl itt kell megadni az adatbázissal kapcsolatos adatokat! (pl. jelszó)
 
 NPM feltelepítése 
 
@@ -55,14 +57,12 @@ npm install
 
 ```
 
-Szerver elindítása
+Szerver elindítása(én Laragon -t használtam)
 
-```bash
-npm start
-
-```	
+Webböngészőben padig a localhoston elérhető az oldal vagy a Vizsgamunka_23_v2.test címen.
 
 ### Asztali alkalmazás indítása
+Szükséges hogy a fent is említett mappaszerkezetben bent legyen ez a git repository (c:\laragon\www\Vizsgamunka_23_v2\Vizsgamunka_v2\) csak így találja meg a képeket a program.
 
 Alkalmazás telepítőjének letöltése(dokumentáció is itt található)
 
@@ -71,7 +71,6 @@ https://drive.google.com/drive/folders/1BQWhsgn9oQfvIUHINSO070bKsUlLN8hx?usp=sha
 
 ```	
 - Mappában mellékelt fontok telepítése
-
 - Az alkalmazás úgy írtam meg hogy helyi gépen kell futatni egy mysql adatbázist.
 - Az adatbázist nem kell létrehozni, a mellékelt .sql fájlt be importálva létrehozza az adatbázist, a táblákat és a teszt adatokat is!
 - Telepítő (.exe) futtatása
