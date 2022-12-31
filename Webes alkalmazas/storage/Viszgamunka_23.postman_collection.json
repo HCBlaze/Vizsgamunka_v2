@@ -411,7 +411,7 @@
 							"formdata": [
 								{
 									"key": "OrderDate",
-									"value": "2022-12-21 10:02:00",
+									"value": "2022.12.30 10:02:00",
 									"type": "text"
 								},
 								{
@@ -427,6 +427,11 @@
 								{
 									"key": "TotalAmount",
 									"value": "7000",
+									"type": "text"
+								},
+								{
+									"key": "OrderStatus",
+									"value": "New",
 									"type": "text"
 								}
 							]
@@ -469,6 +474,11 @@
 								{
 									"key": "TotalAmount",
 									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "OrderStatus",
+									"value": "inProgress",
 									"type": "text"
 								}
 							]
@@ -683,6 +693,11 @@
 									"key": "Stock",
 									"value": "23",
 									"type": "text"
+								},
+								{
+									"key": "ImageSrc",
+									"value": "",
+									"type": "text"
 								}
 							]
 						},
@@ -730,17 +745,22 @@
 									"key": "Stock",
 									"value": "23",
 									"type": "text"
+								},
+								{
+									"key": "ImageSrc",
+									"value": "",
+									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{URL}}products/update/5",
+							"raw": "{{URL}}products/update/1",
 							"host": [
 								"{{URL}}products"
 							],
 							"path": [
 								"update",
-								"5"
+								"1"
 							]
 						}
 					},

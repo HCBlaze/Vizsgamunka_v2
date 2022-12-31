@@ -44,7 +44,6 @@ class ProductProvider extends Component {
         let tempProducts = [...this.state.allProducts];
         const index = tempProducts.indexOf(this.getItem(id));
         const product = tempProducts[index];
-        const itemTotal = this.state.itemTotal;
         this.setState(()=>{
             return {allProducts: tempProducts,cart:[...this.state.cart,product]};
         }, ()=>{this.addTotals()});
@@ -60,20 +59,26 @@ class ProductProvider extends Component {
             return{modalOpen:false}
         });
     };
-    increment = (id) =>{
+    increment = (id,setCounter,counter) =>{
         let tempCart = [...this.state.cart];
         const selectedProduct = tempCart.find(item=>item.id === id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
+        return(
+            setCounter(counter + 1)
+    )
 
         this.setState(()=>{return {cart:[...tempCart]}},()=>{this.addTotals()});
 
     };
-    decrement = (id,count) =>{
+    decrement = (id, setCounter,counter) =>{
         let tempCart = [...this.state.cart];
         const selectedProduct = tempCart.find(item=>item.id === id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
+        return(
+            setCounter(counter - 1)
+        )
 
         this.setState(()=>{return {cart:[...tempCart]}},()=>{this.addTotals()});
     };

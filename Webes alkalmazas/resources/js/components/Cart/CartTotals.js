@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 
 
 export default function CartTotals({value}){
-    console.log({value})
     const {cartTotal,clearCart} = value;
     return(
         <React.Fragment>
