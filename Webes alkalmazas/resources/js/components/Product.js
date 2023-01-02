@@ -34,9 +34,7 @@ class Product extends Component {
                       <p className="align-self-auto mb-0">
                           {ProductName}
                       </p>
-                       <p className="align-self-auto mb-0">
-                           <h5 className="text-blue font-italic mb-0">{UnitPrice} HUF</h5>
-                       </p>
+                       <h5 className=" align-self-auto text-blue font-italic mb-0">{UnitPrice} HUF</h5>
                    </div>
                </div>
             </ProductWrapper>

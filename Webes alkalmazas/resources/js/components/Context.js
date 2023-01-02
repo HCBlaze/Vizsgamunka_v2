@@ -11,6 +11,7 @@ class ProductProvider extends Component {
         modalOpen:false,
         modalProduct: [],
         cartTotal:0,
+        customerRegOpen:false,
     };
     componentDidMount(){
         this.setProducts();
@@ -57,6 +58,16 @@ class ProductProvider extends Component {
     closeModal= () =>{
         this.setState(()=>{
             return{modalOpen:false}
+        });
+    };
+    openCustomerReg= () =>{
+        this.setState(()=>{
+            return{customerRegOpen:true}
+        });
+    };
+    closeCustomerReg= () =>{
+        this.setState(()=>{
+            return{customerRegOpen:false}
         });
     };
     increment = (id,setCounter,counter) =>{
@@ -126,6 +137,8 @@ render() {
                 decrement:this.decrement,
                 removeItem:this.removeItem,
                 clearCart:this.clearCart,
+                openCustomerReg:this.openCustomerReg,
+                closeCustomerReg:this.closeCustomerReg,
             }}>
                 {this.props.children}
             </ProductContext.Provider>

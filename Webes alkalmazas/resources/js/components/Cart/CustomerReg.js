@@ -2,32 +2,48 @@ import React, {useState,useRef} from "react";
 import axios from "axios";
 import {Alert, Button, Col, Form, Row} from "react-bootstrap";
 import {Link} from 'react-router-dom';
-
+import styled from "styled-components";
+import {ProductConsumer} from "../Context";
+import {ButtonContainer} from "../Button";
+import Moment from 'moment';
 export default function CustomerReg({value}) {
     const {cartTotal} = value
     const [success, setSuccess] = useState(false);
     const [currentId, setCurrentId] = useState(0);
     const [orderId, setOrderId] = useState("");
+    const {currentOrderNumber, setCurrentOrderNumber} = useState("");
+    const [validated, setValidated] = useState(false);
     const lastname = useRef('');
     const firstname = useRef('');
     const phone = useRef('');
-    const currentDate = new Date;
+    const currentDate = new Date();
     const getRange = (size, start = 0) => Array(size).fill(0).map((_, i) => i + start);
     const getRandomDigit = () => Math.floor(Math.random() * 10);
     const generateVerificationCode = () => getRange(6).map(getRandomDigit).join('');
     const generateOrderNumber = () => {
         const today = new Date();
         const year = today.getFullYear();
-        const month = today.getMonth() + 1;
+        var month = today.getMonth() + 1;
+        if (month < 10) {
+            month = '0' + month;
+        }
         const _orderNumber = "LS-" + year + "-" + month + "-" + generateVerificationCode();
         return (
             _orderNumber
         )
+
     }
+
     const currentOderDate = () => {
         const year = currentDate.getFullYear();
-        const month = currentDate.getMonth() + 1;
-        const day = currentDate.getUTCDate();
+        var month = currentDate.getMonth()+ 1;
+        var day = currentDate.getUTCDate();
+        if (month < 10) {
+            month = '0' + month;
+        }
+        if (day < 10) {
+            day = '0' + day;
+        }
         const Hour = currentDate.getHours();
         const minutes = currentDate.getMinutes();
         const second = currentDate.getSeconds();
@@ -37,9 +53,18 @@ export default function CustomerReg({value}) {
         )
 
     }
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
 
-    const sendCustomerForm = () => {
-        axios.post("/api/customers/create", {
+        setValidated(true);
+    };
+
+    const sendCustomerForm = async () => {
+       await axios.post("/api/customers/create", {
             First_name: firstname.current.value,
             Last_name: lastname.current.value,
             Phone: phone.current.value,
@@ -56,10 +81,10 @@ export default function CustomerReg({value}) {
 
         })
     }
-    const sendOrdersForm = () => {
-        axios.post("/api/orders/create", {
+    const sendOrdersForm = async () => {
+       await axios.post("/api/orders/create", {
             OrderDate: currentOderDate(),
-            OrderNumber: generateOrderNumber().toString(),
+            OrderNumber: generateOrderNumber(),
             CustomerId: currentId,
             TotalAmount: cartTotal,
             OrderStatus: "New"
@@ -97,34 +122,70 @@ export default function CustomerReg({value}) {
             setSuccess(false);
         }
     }
-    console.log(value);
     return(
-        <Row>
-            <Col md={4}>
-                <Form>
-                    <Form.Group className='mb-3'>
-                        <Form.Label>Vezetéknév:</Form.Label>
-                        <Form.Control type="text" ref={lastname} onChange={resetSuccess}/>
-                    </Form.Group>
-                    <Form.Group className='mb-3'>
-                        <Form.Label>Keresztnév:</Form.Label>
-                        <Form.Control type="text" ref={firstname} onChange={resetSuccess}/>
-                    </Form.Group>
-                    <Form.Group className='mb-3'>
-                        <Form.Label>Mobilszám:</Form.Label>
-                        <Form.Control type="text" ref={phone} onChange={resetSuccess}/>
-                    </Form.Group>
-
-                        <Button variant="primary" onClick={()=> {sendCustomerForm()}}>Rendelés elküldése</Button>
-                        {success && (
-                            <Alert variant='success' className='mt-5'>
-                                Rendelés leadva!
-                            </Alert>
-                        )}
-                    <Button variant="primary" onClick={()=> {sendOrdersForm()}}>Rendelés Orders</Button>
-                    <Button variant="primary" onClick={()=> {sendOrderItems()}}>Rendelés OrderItems</Button>
-                </Form>
-            </Col>
-        </Row>
+        <ProductConsumer>
+            {(value) =>{
+                const{customerRegOpen, closeCustomerReg} = value;
+                if (!customerRegOpen){
+                    return null;
+                }
+                else{
+                    return (
+                        <ModalContainer>
+                            <Form id="modal" noValidate validated={validated} onSubmit={handleSubmit}>
+                                    <div id="modal" className="col-10 mx-auto text-center p-5">
+                                        <h3>Vásárló adatai:</h3>
+                                        <Form.Group className='mb-3' controlId="validateLastName">
+                                            <Form.Label>Vezetéknév:</Form.Label>
+                                            <Form.Control type="text" placeholder="Vezetéknév" ref={lastname} onChange={resetSuccess} required/>
+                                            <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
+                                        </Form.Group>
+                                        <Form.Group className='mb-3' controlId="validateFirstName">
+                                            <Form.Label>Keresztnév:</Form.Label>
+                                            <Form.Control type="text" placeholder="Keresztnév" ref={firstname} onChange={resetSuccess} required/>
+                                            <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
+                                        </Form.Group>
+                                        <Form.Control.Feedback>Rendben!</Form.Control.Feedback>
+                                        <Form.Group className='mb-3' controlId="validatePhone">
+                                            <Form.Label>Mobilszám:</Form.Label>
+                                            <Form.Control type="text" placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess} required/>
+                                            <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
+                                        </Form.Group>
+                                        <Form.Group className='mb-3'>
+                                            <Form.Check required label="A rendelés leadása fizetési köteletettséggel jár!" feedback="Minden adatot ki kell tölteni elküldés előtt!" feedbackType="invalid" onClick={sendCustomerForm}/>
+                                        </Form.Group>
+                                        <Form.Group className='mb-3'>
+                                            <Form.Check required label="Elfogadom a vásárlói feltételeket!" feedback="Minden adatot ki kell tölteni elküldés előtt!" feedbackType="invalid" onClick={sendOrdersForm}/>
+                                        </Form.Group>
+                                        <Link to='/'>
+                                            <ButtonContainer onClick={()=>closeCustomerReg()}>
+                                                Tovább vásárolok
+                                            </ButtonContainer>
+                                        </Link>
+                                        <ButtonContainer type="submit" cart onClick={sendOrderItems}>
+                                            Rendelés véglegesítése
+                                        </ButtonContainer>
+                                    </div>
+                            </Form>
+                        </ModalContainer>
+                    );
+                }
+            }}
+        </ProductConsumer>
     )
 }
+
+const ModalContainer=styled.div`
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.3);
+display:flex;
+align-items:center;
+justify-content:center;
+#modal{
+background:var(--mainWhite);
+}
+`;

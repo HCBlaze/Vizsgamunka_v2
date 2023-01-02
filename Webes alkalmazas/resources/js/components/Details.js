@@ -48,7 +48,7 @@ class Details extends Component {
                                     <div>
                                         <Link to="/">
                                             <ButtonContainer>
-                                                termékekhez
+                                                Termékekhez
                                             </ButtonContainer>
                                         </Link>
                                         <ButtonContainer

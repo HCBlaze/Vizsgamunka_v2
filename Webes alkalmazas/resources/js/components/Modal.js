@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {ProductConsumer} from "./Context";
 import {ButtonContainer} from "./Button";
 import {Link} from 'react-router-dom';
-import img from '../../../public/ProductsPics/cocacola_2x175l.jpg'
 
 class Modal extends Component {
     render() {
@@ -29,12 +28,12 @@ class Modal extends Component {
                                        <h5 className="text-muted">Kiszerelés: {Package}</h5>
                                        <Link to='/'>
                                            <ButtonContainer onClick={()=>closeModal()}>
-                                               tovább vásárolok
+                                               Tovább vásárolok
                                            </ButtonContainer>
                                        </Link>
                                        <Link to='/cart'>
                                            <ButtonContainer cart onClick={()=>closeModal()}>
-                                               kosárhoz
+                                               Kosárhoz
                                            </ButtonContainer>
                                        </Link>
                                    </div>
