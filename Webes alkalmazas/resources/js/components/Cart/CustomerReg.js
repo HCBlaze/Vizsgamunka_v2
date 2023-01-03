@@ -6,6 +6,7 @@ import styled from "styled-components";
 import {ProductConsumer} from "../Context";
 import {ButtonContainer} from "../Button";
 import Moment from 'moment';
+import { BsXLg } from "react-icons/bs";
 export default function CustomerReg({value}) {
     const {cartTotal} = value
     const [success, setSuccess] = useState(false);
@@ -133,6 +134,7 @@ export default function CustomerReg({value}) {
                     return (
                         <ModalContainer>
                             <Form id="modal" noValidate validated={validated} onSubmit={handleSubmit}>
+                                <BsXLg className="btn-close" onClick={closeCustomerReg}/>
                                     <div id="modal" className="col-10 mx-auto text-center p-5">
                                         <h3>Vásárló adatai:</h3>
                                         <Form.Group className='mb-3' controlId="validateLastName">
@@ -152,10 +154,10 @@ export default function CustomerReg({value}) {
                                             <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group className='mb-3'>
-                                            <Form.Check required label="A rendelés leadása fizetési köteletettséggel jár!" feedback="Minden adatot ki kell tölteni elküldés előtt!" feedbackType="invalid" onClick={sendCustomerForm}/>
+                                            <Form.Check required label="A rendelés leadása fizetési köteletettséggel jár!" feedback="El kell fogadni a feltételeket!" feedbackType="invalid" onClick={sendCustomerForm}/>
                                         </Form.Group>
                                         <Form.Group className='mb-3'>
-                                            <Form.Check required label="Elfogadom a vásárlói feltételeket!" feedback="Minden adatot ki kell tölteni elküldés előtt!" feedbackType="invalid" onClick={sendOrdersForm}/>
+                                            <Form.Check required label="Elfogadom a vásárlói feltételeket!" feedback="El kell fogadni a feltételeket!" feedbackType="invalid" onClick={sendOrdersForm}/>
                                         </Form.Group>
                                         <Link to='/'>
                                             <ButtonContainer onClick={()=>closeCustomerReg()}>
@@ -187,5 +189,11 @@ align-items:center;
 justify-content:center;
 #modal{
 background:var(--mainWhite);
+}
+.btn-close{
+display:flex;
+cursor:pointer;
+position: absolute;
+padding:0.8rem 0.8rem 0.8rem 0.8rem;
 }
 `;

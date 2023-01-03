@@ -18,7 +18,6 @@ class Product extends Component {
                            }}>
                                <Link to="/details">
                                    <img src={ImageSrc} alt="Nincs kép" className="card-img-top"/>
-
                                </Link>
                                <button className="cart-btn align-self-auto mt-5"
                                        onClick={()=>{

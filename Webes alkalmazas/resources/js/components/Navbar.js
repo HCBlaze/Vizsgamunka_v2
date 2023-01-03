@@ -19,6 +19,22 @@ class Navbar extends Component {
                             Termékek
                         </Link>
                     </li>
+                    <li className="nav-item ml-5">
+                        ||
+                    </li>
+                    <li className="nav-item ml-5">
+                        <Link to="/about" className="nav-link">
+                            Rólam
+                        </Link>
+                    </li>
+                    <li className="nav-item ml-5">
+                        ||
+                    </li>
+                    <li className="nav-item ml-5">
+                        <Link to="/contactus" className="nav-link">
+                            Kapcsolat
+                        </Link>
+                    </li>
                 </ul>
                 <Link to='/cart' className="ml-auto">
                     <ButtonContainer>

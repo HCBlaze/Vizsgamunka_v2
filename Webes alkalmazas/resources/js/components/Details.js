@@ -10,7 +10,6 @@ class Details extends Component {
                 {(value)=>{
                     const {id, ProductName,  UnitPrice, Package, Stock, ImageSrc} = value.detailsProduct
                     const{ CompanyName,ContactName, City, Phone} = value.detailsProduct.supplier
-                    const {inCart} = value;
                     return(
                         <div className="container py-5">
                             <div className="row">
@@ -25,12 +24,10 @@ class Details extends Component {
                                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                                     <h3>Termék megnevezése: {ProductName}</h3>
                                     <h4 className="text-title text-uppercase text-muted mt-3 mb-2 ">
-                                        Beszállító: <span className="text-uppercase">{CompanyName}</span>
+                                        Kiszerelés: <span className="text-uppercase">{Package}</span>
                                     </h4>
                                     <h4 className="text-title text-uppercase text-muted mt-3 mb-2 ">
-                                        Kapcsolattartó: <span className="text-uppercase">{ContactName}</span><br/>
-                                        <br/>
-                                        Mobilszám:<span className="text-uppercase">{Phone}</span>
+                                        Raktárkészlet:<span className="text-uppercase">{Stock} db</span>
                                     </h4>
                                     <h4 className="text-title text-uppercase text-muted mt-3 mb-2 ">
                                         Város: <span className="text-uppercase">{City}</span>
@@ -40,10 +37,16 @@ class Details extends Component {
                                             Ár: {UnitPrice}<span> HUF</span>
                                         </strong>
                                     </h4>
-                                    <p className="font-weight-bold mt-3 mb-0">
-                                        Termék információk:<br/>
-                                        Kiszerelés: {Package}<br/>
-                                        Raktárkészlet: {Stock} db
+                                    <p className="mt-3 mb-0">
+                                        <strong>
+                                            További információk:<br/>
+                                        </strong>
+                                        <p className="text-muted mb-2 ">
+                                            Beszállító: <span className="text-uppercase">{CompanyName}</span>
+                                        </p>
+                                        <p className="text-muted mb-2 ">
+                                            Kapcsolattartó neve: <span className="text-uppercase">{ContactName}</span>
+                                        </p>
                                     </p>
                                     <div>
                                         <Link to="/">

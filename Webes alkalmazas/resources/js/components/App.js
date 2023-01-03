@@ -6,6 +6,8 @@ import Details from "./Details";
 import Cart from "./Cart/Cart";
 import Default from "./Default";
 import Modal from "./Modal";
+import About from "./About";
+import ContactUs from "./ContactUs";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -17,7 +19,9 @@ class App extends Component {
                      <Route exact path="/" element={<ProductList />} />
                      <Route path="/details" element={<Details />} />
                      <Route path="/cart" element={<Cart />} />
-                     <Route element={<Default />} />
+                     <Route path="/about" element={<About />} />
+                     <Route path="/contactus" element={<ContactUs />} />
+                     <Route path="*" element={<Default />} />
                  </Routes>
                  <Modal/>
              </React.Fragment>
