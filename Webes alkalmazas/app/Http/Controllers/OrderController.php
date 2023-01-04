@@ -26,7 +26,7 @@ class OrderController extends Controller
 
         $order->save();
 
-        return response()->json(['id'=>$order->id],200);
+        return response()->json(['id'=>$order->id,'OrderNumber'=>$order->OrderNumber],200);
     }
 
     public function update(Order $order, Request $request)

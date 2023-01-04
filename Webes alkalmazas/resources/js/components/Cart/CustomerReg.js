@@ -5,12 +5,13 @@ import {Link} from 'react-router-dom';
 import styled from "styled-components";
 import {ProductConsumer} from "../Context";
 import {ButtonContainer} from "../Button";
-import Moment from 'moment';
 import { BsXLg } from "react-icons/bs";
+
 export default function CustomerReg({value}) {
-    const {cartTotal} = value
+    const {cartTotal} = value;
+    const customerArray = value.allCustomers[0]
     const [success, setSuccess] = useState(false);
-    const [currentId, setCurrentId] = useState(0);
+    const [currentId, setCurrentId] = useState();
     const [orderId, setOrderId] = useState("");
     const {currentOrderNumber, setCurrentOrderNumber} = useState("");
     const [validated, setValidated] = useState(false);
@@ -64,25 +65,34 @@ export default function CustomerReg({value}) {
         setValidated(true);
     };
 
-    const sendCustomerForm = async () => {
-       await axios.post("/api/customers/create", {
-            First_name: firstname.current.value,
-            Last_name: lastname.current.value,
-            Phone: phone.current.value,
-        }).then((response) => {
-            if (response.status === 200) {
-                firstname.current.value = ""
-                lastname.current.value = ""
-                phone.current.value = ""
-                setSuccess(true);
-                setCurrentId(response.data.id)
-
-
-            }
-
-        })
+    const sendCustomerForm = async () =>{
+        const customerIndex = value.allCustomers.findIndex((customer) =>
+            customer.First_name === firstname.current.value && customer.Last_name === lastname.current.value && customer.Phone === phone.current.value)
+        if(customerIndex >= 0)
+        {
+            console.log("létező felhasználó")
+            setCurrentId(value.allCustomers[customerIndex].id)
+        }
+        else{
+            console.log("nem létező felhasználó")
+            await axios.post("/api/customers/create", {
+                First_name: firstname.current.value,
+                Last_name: lastname.current.value,
+                Phone: phone.current.value,
+            }).then((response) => {
+                if (response.status === 200) {
+                    firstname.current.value = ""
+                    lastname.current.value = ""
+                    phone.current.value = ""
+                    setSuccess(true);
+                    setCurrentId(response.data.id)
+                }
+            })
+        }
     }
+
     const sendOrdersForm = async () => {
+        console.log(currentId)
        await axios.post("/api/orders/create", {
             OrderDate: currentOderDate(),
             OrderNumber: generateOrderNumber(),
@@ -92,11 +102,14 @@ export default function CustomerReg({value}) {
         }).then((response) => {
             if (response.status === 200) {
                 setOrderId(response.data.id);
-            }
+                setCurrentOrderNumber(response.data.OrderNumber)
 
+            }
         })
+
     }
     const sendOrderItems = () => {
+        console.log(currentOrderNumber)
         value.cart.map((item) => {
             const currentProductId = item.id;
             const currentProductUnitPrice = item.UnitPrice;
@@ -134,7 +147,7 @@ export default function CustomerReg({value}) {
                     return (
                         <ModalContainer>
                             <Form id="modal" noValidate validated={validated} onSubmit={handleSubmit}>
-                                <BsXLg className="btn-close" onClick={closeCustomerReg}/>
+                                <BsXLg className="btn-close align-content-end" onClick={closeCustomerReg}/>
                                     <div id="modal" className="col-10 mx-auto text-center p-5">
                                         <h3>Vásárló adatai:</h3>
                                         <Form.Group className='mb-3' controlId="validateLastName">
@@ -150,7 +163,7 @@ export default function CustomerReg({value}) {
                                         <Form.Control.Feedback>Rendben!</Form.Control.Feedback>
                                         <Form.Group className='mb-3' controlId="validatePhone">
                                             <Form.Label>Mobilszám:</Form.Label>
-                                            <Form.Control type="text" placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess} required/>
+                                            <Form.Control type="text" placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess}  required/>
                                             <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group className='mb-3'>
@@ -194,6 +207,6 @@ background:var(--mainWhite);
 display:flex;
 cursor:pointer;
 position: absolute;
-padding:0.8rem 0.8rem 0.8rem 0.8rem;
+padding:0.8rem 0.8rem 0.8rem 65rem;
 }
 `;

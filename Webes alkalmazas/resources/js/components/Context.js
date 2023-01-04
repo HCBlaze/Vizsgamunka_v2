@@ -6,6 +6,7 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
     state={
         allProducts: [],
+        allCustomers:[],
         detailsProduct: [],
         cart: [],
         modalOpen:false,
@@ -15,6 +16,7 @@ class ProductProvider extends Component {
     };
     componentDidMount(){
         this.setProducts();
+        this.setCustomers();
     }
     setProducts = async ()=>{
         let tempProducts = [];
@@ -26,6 +28,18 @@ class ProductProvider extends Component {
             });
             this.setState(()=>{
                 return {allProducts: tempProducts};
+            });
+        }
+    };
+
+    setCustomers = async ()=>{
+        let tempCustomer = [];
+        const response = await axios.get("/api/customers/get");
+        if(response.status === 200){
+            response.data.forEach(customer =>{
+                this.setState(()=>{
+                    return {allCustomers: customer};
+            });
             });
         }
     };
