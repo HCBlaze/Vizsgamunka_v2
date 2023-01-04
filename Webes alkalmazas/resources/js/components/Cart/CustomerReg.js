@@ -6,6 +6,8 @@ import styled from "styled-components";
 import {ProductConsumer} from "../Context";
 import {ButtonContainer} from "../Button";
 import { BsXLg } from "react-icons/bs";
+import Input from 'react-phone-number-input/input'
+
 
 export default function CustomerReg({value}) {
     const {cartTotal} = value;
@@ -13,7 +15,7 @@ export default function CustomerReg({value}) {
     const [success, setSuccess] = useState(false);
     const [currentId, setCurrentId] = useState();
     const [orderId, setOrderId] = useState("");
-    const {currentOrderNumber, setCurrentOrderNumber} = useState("");
+    const [currentOrderNumber, setCurrentOrderNumber] = useState("");
     const [validated, setValidated] = useState(false);
     const lastname = useRef('');
     const firstname = useRef('');
@@ -33,7 +35,6 @@ export default function CustomerReg({value}) {
         return (
             _orderNumber
         )
-
     }
 
     const currentOderDate = () => {
@@ -103,17 +104,15 @@ export default function CustomerReg({value}) {
             if (response.status === 200) {
                 setOrderId(response.data.id);
                 setCurrentOrderNumber(response.data.OrderNumber)
-
             }
         })
-
     }
     const sendOrderItems = () => {
-        console.log(currentOrderNumber)
         value.cart.map((item) => {
             const currentProductId = item.id;
             const currentProductUnitPrice = item.UnitPrice;
-            const quantity = 1;
+            const quantity = 1
+
 
             axios.post("/api/orderitems/create", {
                 OrderId: orderId,
@@ -135,6 +134,9 @@ export default function CustomerReg({value}) {
         if (success) {
             setSuccess(false);
         }
+    }
+    const finish = () =>{
+        alert("Köszönjük a rendelését!\n Az ön rendelés azonosítója a következő: "+currentOrderNumber)
     }
     return(
         <ProductConsumer>
@@ -162,8 +164,9 @@ export default function CustomerReg({value}) {
                                         </Form.Group>
                                         <Form.Control.Feedback>Rendben!</Form.Control.Feedback>
                                         <Form.Group className='mb-3' controlId="validatePhone">
-                                            <Form.Label>Mobilszám:</Form.Label>
-                                            <Form.Control type="text" placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess}  required/>
+                                            <Form.Label>Mobilszám:</Form.Label><br/>
+                                            {/*<Form.Control type="text" placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess}  required/>*/}
+                                            <Input placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess}/>
                                             <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group className='mb-3'>
@@ -177,9 +180,11 @@ export default function CustomerReg({value}) {
                                                 Tovább vásárolok
                                             </ButtonContainer>
                                         </Link>
-                                        <ButtonContainer type="submit" cart onClick={sendOrderItems}>
-                                            Rendelés véglegesítése
-                                        </ButtonContainer>
+                                        <Link to='/'>
+                                            <ButtonContainer type="submit" cart onClick={()=>{sendOrderItems();finish();value.clearCart();closeCustomerReg()}}>
+                                                Rendelés véglegesítése
+                                            </ButtonContainer>
+                                        </Link>
                                     </div>
                             </Form>
                         </ModalContainer>
