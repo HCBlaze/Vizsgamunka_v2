@@ -8,6 +8,7 @@ import Default from "./Default";
 import Modal from "./Modal";
 import About from "./About";
 import ContactUs from "./ContactUs";
+import BackToTop from "./BackToTop";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
                      <Route path="*" element={<Default />} />
                  </Routes>
                  <Modal/>
+                 <BackToTop />
              </React.Fragment>
         );
     }

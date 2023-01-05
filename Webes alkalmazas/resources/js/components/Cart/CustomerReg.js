@@ -123,7 +123,6 @@ export default function CustomerReg({value}) {
     const sendOrderItems = () => {
         orderItems.map((item)=>{
             const product = getItem(parseInt(item.id))
-            console.log(product)
             createOrderItem(item.id,product.UnitPrice,item.count)
             updateStock(item.id,product,item.count)
         })
@@ -159,7 +158,6 @@ export default function CustomerReg({value}) {
     const finish = () =>{
         alert("Köszönjük a rendelését!\n Az ön rendelés azonosítója a következő: "+currentOrderNumber)
     }
-    console.log(orderItems)
     return(
         <ProductConsumer>
             {(value) =>{
@@ -171,7 +169,7 @@ export default function CustomerReg({value}) {
                     return (
                         <ModalContainer>
                             <Form id="modal" noValidate validated={validated} onSubmit={handleSubmit}>
-                                <BsXLg className="btn-close align-content-end" onClick={closeCustomerReg}/>
+                                <BsXLg className="btn-close" onClick={closeCustomerReg}/>
                                     <div id="modal" className="col-10 mx-auto text-center p-5">
                                         <h3>Vásárló adatai:</h3>
                                         <Form.Group className='mb-3' controlId="validateLastName">
