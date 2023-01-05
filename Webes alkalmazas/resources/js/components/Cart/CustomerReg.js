@@ -11,7 +11,6 @@ import Input from 'react-phone-number-input/input'
 
 export default function CustomerReg({value}) {
     const {cartTotal} = value;
-    const customerArray = value.allCustomers[0]
     const [success, setSuccess] = useState(false);
     const [currentId, setCurrentId] = useState();
     const [orderId, setOrderId] = useState("");
@@ -107,29 +106,51 @@ export default function CustomerReg({value}) {
             }
         })
     }
+    const orderItems = Object.entries(
+        value.cart.reduce((prev,{id})=>{
+            prev[id] = prev[id] ? prev[id] + 1 : 1;
+            return prev;
+        },{})
+    )
+        .map(([id,count]) =>({id,count}))
+        .sort((a,b)=> a.id - b.count);
+
+
+    const getItem = (id) =>{
+        const product = value.allProducts.find(item=> item.id ===id)
+        return product;
+    };
     const sendOrderItems = () => {
-        value.cart.map((item) => {
-            const currentProductId = item.id;
-            const currentProductUnitPrice = item.UnitPrice;
-            const quantity = 1
-
-
-            axios.post("/api/orderitems/create", {
-                OrderId: orderId,
-                ProductId: currentProductId,
-                UnitPrice: currentProductUnitPrice,
-                Quantity: quantity,
-            })
-            axios.put("/api/products/update/"+currentProductId, {
-                ProductName:item.ProductName,
-                SupplierId:item.SupplierId,
-                UnitPrice: item.UnitPrice,
-                Package: item.Package,
-                Stock: item.Stock - quantity,
-                ImageSrc: item.ImageSrc
-            })
+        orderItems.map((item)=>{
+            const product = getItem(parseInt(item.id))
+            console.log(product)
+            createOrderItem(item.id,product.UnitPrice,item.count)
+            updateStock(item.id,product,item.count)
         })
     }
+    const createOrderItem = async (currentProductId,currentProductUnitPrice,quantity) =>{
+        await axios.post("/api/orderitems/create", {
+            OrderId: orderId,
+            ProductId: currentProductId,
+            UnitPrice: currentProductUnitPrice,
+            Quantity: quantity,
+        }).then((response) =>{
+            console.log("Sikeres")
+        })
+    }
+    const updateStock = async (currentProductId,item,db) =>{
+        await axios.put("/api/products/update/"+currentProductId, {
+            ProductName:item.ProductName,
+            SupplierId:item.SupplierId,
+            UnitPrice: item.UnitPrice,
+            Package: item.Package,
+            Stock: item.Stock - db,
+            ImageSrc: item.ImageSrc
+        }).then((response)=>{
+            console.log("Sikeres")
+        })
+    }
+
     const resetSuccess = () => {
         if (success) {
             setSuccess(false);
@@ -138,6 +159,7 @@ export default function CustomerReg({value}) {
     const finish = () =>{
         alert("Köszönjük a rendelését!\n Az ön rendelés azonosítója a következő: "+currentOrderNumber)
     }
+    console.log(orderItems)
     return(
         <ProductConsumer>
             {(value) =>{
