@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {ButtonContainer} from "./Button";
 import {BsFillCartCheckFill} from 'react-icons/bs';
 import logo from '../../../public/project_23.png'
-import SearchBar from "./SearchBar";
 
 class Navbar extends Component {
 

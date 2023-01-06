@@ -7,6 +7,7 @@ import {ProductConsumer} from "../Context";
 import {ButtonContainer} from "../Button";
 import { BsXLg } from "react-icons/bs";
 import Input from 'react-phone-number-input/input'
+import emailjs from "@emailjs/browser";
 
 
 export default function CustomerReg({value}) {
@@ -19,6 +20,7 @@ export default function CustomerReg({value}) {
     const lastname = useRef('');
     const firstname = useRef('');
     const phone = useRef('');
+    const form = useRef();
     const currentDate = new Date();
     const getRange = (size, start = 0) => Array(size).fill(0).map((_, i) => i + start);
     const getRandomDigit = () => Math.floor(Math.random() * 10);
@@ -55,13 +57,13 @@ export default function CustomerReg({value}) {
         )
 
     }
+
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
         }
-
         setValidated(true);
     };
 
@@ -158,6 +160,7 @@ export default function CustomerReg({value}) {
     const finish = () =>{
         alert("Köszönjük a rendelését!\n Az ön rendelés azonosítója a következő: "+currentOrderNumber)
     }
+
     return(
         <ProductConsumer>
             {(value) =>{
@@ -168,18 +171,18 @@ export default function CustomerReg({value}) {
                 else{
                     return (
                         <ModalContainer>
-                            <Form id="modal" noValidate validated={validated} onSubmit={handleSubmit}>
+                            <Form ref={form} id="modal" noValidate validated={validated} onSubmit={handleSubmit}>
                                 <BsXLg className="btn-close" onClick={closeCustomerReg}/>
                                     <div id="modal" className="col-10 mx-auto text-center p-5">
                                         <h3>Vásárló adatai:</h3>
                                         <Form.Group className='mb-3' controlId="validateLastName">
                                             <Form.Label>Vezetéknév:</Form.Label>
-                                            <Form.Control type="text" placeholder="Vezetéknév" ref={lastname} onChange={resetSuccess} required/>
+                                            <Form.Control type="text" placeholder="Vezetéknév" ref={lastname} name="customerLastName" onChange={resetSuccess} required/>
                                             <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group className='mb-3' controlId="validateFirstName">
                                             <Form.Label>Keresztnév:</Form.Label>
-                                            <Form.Control type="text" placeholder="Keresztnév" ref={firstname} onChange={resetSuccess} required/>
+                                            <Form.Control type="text" placeholder="Keresztnév" ref={firstname} name="customerFirstName" onChange={resetSuccess} required/>
                                             <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Control.Feedback>Rendben!</Form.Control.Feedback>
