@@ -21,6 +21,8 @@
 - react-bootstrap
 - bootstrap
 - styled
+- react-phone-number-input
+- @emailjs/browser
 
 ### Indítás weboldal
 
