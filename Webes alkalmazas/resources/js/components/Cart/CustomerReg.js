@@ -185,8 +185,7 @@ export default function CustomerReg({value}) {
                                         <Form.Control.Feedback>Rendben!</Form.Control.Feedback>
                                         <Form.Group className='mb-3' controlId="validatePhone">
                                             <Form.Label>Mobilszám:</Form.Label><br/>
-                                            {/*<Form.Control type="text" placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess}  required/>*/}
-                                            <Input placeholder="+36 xx xxx xxxx" ref={phone} onChange={resetSuccess}/>
+                                            <Input placeholder="+36 xx xxx xxxx" ref={phone} required onChange={resetSuccess}/>
                                             <Form.Control.Feedback type="invalid">A mező kitöltése kötelező</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group className='mb-3'>
