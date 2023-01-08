@@ -87,15 +87,16 @@ namespace Asztali_alkalmazas.Classes
         private string _setPhoneNumber(string number)
         {
             string _number;
-            if(number.StartsWith("+36") && number.Length >= 12)
+            if( number != null && number.StartsWith("+36") && number.Trim().Length >= 12)
             {
-                _number= number;
+                _number= string.Format("{0} {1} {2} {3}", number.Substring(0, 3), number.Substring(3, 2), number.Substring(5, 3), number.Substring(8, 4));
             }
             else
             {
                 _number = MessageBox.Show("Nem jó a formátum vagy kevés a karakter!").ToString();
             }
             return _number;
+
         }
     }
 }

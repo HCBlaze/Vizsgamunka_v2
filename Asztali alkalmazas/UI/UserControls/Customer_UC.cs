@@ -247,6 +247,13 @@ namespace Asztali_alkalmazas.UI.UserControls
         {
             ReLoadDGV();
         }
+
+        private void Customer_UC_Leave(object sender, EventArgs e)
+        {
+            ReLoadDGV();
+            deleteTB();
+        }
+
         //------------ Gombok funkciói vége ------------
     }
 }

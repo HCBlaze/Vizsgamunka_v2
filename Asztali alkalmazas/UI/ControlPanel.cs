@@ -231,6 +231,15 @@ namespace Asztali_alkalmazas.UI
             purchase_UC1.Location = adminControl_UC1.Location;
             purchase_UC1.Dock = DockStyle.Fill;
             purchase_UC1.Visible = true;
+            purchase_UC1.ll_OwnName.Text = label3.Text;
+            if(adminLL.Text != "Admin")
+            {
+                purchase_UC1.tb_MyNameOrElse.Enabled = false;
+            }
+            else
+            {
+                purchase_UC1.tb_MyNameOrElse.Enabled = true;
+            }
         }
         private void ExitBT_Click(object sender, EventArgs e)
         {

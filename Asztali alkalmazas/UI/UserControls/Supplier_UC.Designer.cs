@@ -266,6 +266,7 @@
             this.Name = "Supplier_UC";
             this.Size = new System.Drawing.Size(1454, 848);
             this.Load += new System.EventHandler(this.Supplier_UC_Load);
+            this.Leave += new System.EventHandler(this.Supplier_UC_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.suppliersDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

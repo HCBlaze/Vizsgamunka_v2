@@ -51,10 +51,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblcurrentProdStock = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tb_MyNameOrElse = new System.Windows.Forms.TrackBar();
+            this.label_ownName = new System.Windows.Forms.Label();
+            this.label_CustomerName = new System.Windows.Forms.Label();
+            this.gb_OwnData = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tb_OwnPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ll_OwnName = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.gbCart.SuspendLayout();
             this.gbCustomerDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mennyisegNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_MyNameOrElse)).BeginInit();
+            this.gb_OwnData.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -182,6 +193,7 @@
             this.cbCustomers.Name = "cbCustomers";
             this.cbCustomers.Size = new System.Drawing.Size(357, 35);
             this.cbCustomers.TabIndex = 1;
+            this.cbCustomers.Visible = false;
             this.cbCustomers.SelectedIndexChanged += new System.EventHandler(this.cbCustomers_SelectedIndexChanged);
             // 
             // label1
@@ -193,6 +205,7 @@
             this.label1.Size = new System.Drawing.Size(219, 27);
             this.label1.TabIndex = 11;
             this.label1.Text = "Vásárló választása:";
+            this.label1.Visible = false;
             // 
             // label3
             // 
@@ -308,10 +321,115 @@
             this.lblcurrentProdStock.Text = "stock";
             this.lblcurrentProdStock.Visible = false;
             // 
+            // tb_MyNameOrElse
+            // 
+            this.tb_MyNameOrElse.Enabled = false;
+            this.tb_MyNameOrElse.LargeChange = 1;
+            this.tb_MyNameOrElse.Location = new System.Drawing.Point(328, 29);
+            this.tb_MyNameOrElse.Maximum = 1;
+            this.tb_MyNameOrElse.Name = "tb_MyNameOrElse";
+            this.tb_MyNameOrElse.Size = new System.Drawing.Size(104, 45);
+            this.tb_MyNameOrElse.TabIndex = 23;
+            this.tb_MyNameOrElse.Scroll += new System.EventHandler(this.tb_MyNameOrElse_Scroll);
+            // 
+            // label_ownName
+            // 
+            this.label_ownName.AutoSize = true;
+            this.label_ownName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_ownName.ForeColor = System.Drawing.Color.Silver;
+            this.label_ownName.Location = new System.Drawing.Point(255, 56);
+            this.label_ownName.Name = "label_ownName";
+            this.label_ownName.Size = new System.Drawing.Size(128, 18);
+            this.label_ownName.TabIndex = 5;
+            this.label_ownName.Text = "Saját nevemben";
+            // 
+            // label_CustomerName
+            // 
+            this.label_CustomerName.AutoSize = true;
+            this.label_CustomerName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_CustomerName.ForeColor = System.Drawing.Color.Silver;
+            this.label_CustomerName.Location = new System.Drawing.Point(389, 56);
+            this.label_CustomerName.Name = "label_CustomerName";
+            this.label_CustomerName.Size = new System.Drawing.Size(109, 18);
+            this.label_CustomerName.TabIndex = 24;
+            this.label_CustomerName.Text = "Más nevében";
+            // 
+            // gb_OwnData
+            // 
+            this.gb_OwnData.Controls.Add(this.label8);
+            this.gb_OwnData.Controls.Add(this.tb_OwnPhoneNumber);
+            this.gb_OwnData.Controls.Add(this.label10);
+            this.gb_OwnData.Controls.Add(this.ll_OwnName);
+            this.gb_OwnData.Controls.Add(this.label12);
+            this.gb_OwnData.ForeColor = System.Drawing.Color.Silver;
+            this.gb_OwnData.Location = new System.Drawing.Point(21, 80);
+            this.gb_OwnData.Name = "gb_OwnData";
+            this.gb_OwnData.Size = new System.Drawing.Size(571, 188);
+            this.gb_OwnData.TabIndex = 19;
+            this.gb_OwnData.TabStop = false;
+            this.gb_OwnData.Text = "Vásárló adatai:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.Location = new System.Drawing.Point(232, 138);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(216, 15);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Kötelező formátum: +36 ## ### ####";
+            // 
+            // tb_OwnPhoneNumber
+            // 
+            this.tb_OwnPhoneNumber.Location = new System.Drawing.Point(228, 99);
+            this.tb_OwnPhoneNumber.Name = "tb_OwnPhoneNumber";
+            this.tb_OwnPhoneNumber.Size = new System.Drawing.Size(236, 34);
+            this.tb_OwnPhoneNumber.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.tb_OwnPhoneNumber, "12 karater szóközök nélkül és +36 al kell kezdődjön");
+            this.tb_OwnPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_OwnPhoneNumber_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(130, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 18);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Mobilszám:";
+            // 
+            // ll_OwnName
+            // 
+            this.ll_OwnName.AutoSize = true;
+            this.ll_OwnName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ll_OwnName.ForeColor = System.Drawing.Color.Silver;
+            this.ll_OwnName.Location = new System.Drawing.Point(173, 58);
+            this.ll_OwnName.Name = "ll_OwnName";
+            this.ll_OwnName.Size = new System.Drawing.Size(54, 18);
+            this.ll_OwnName.TabIndex = 2;
+            this.ll_OwnName.Text = "label7";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.ForeColor = System.Drawing.Color.Silver;
+            this.label12.Location = new System.Drawing.Point(130, 57);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(42, 18);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Név:";
+            // 
             // Purchase_UC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.gb_OwnData);
+            this.Controls.Add(this.label_CustomerName);
+            this.Controls.Add(this.label_ownName);
+            this.Controls.Add(this.tb_MyNameOrElse);
             this.Controls.Add(this.lblcurrentProdStock);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnPurchaseFinish);
@@ -335,6 +453,9 @@
             this.gbCustomerDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mennyisegNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_MyNameOrElse)).EndInit();
+            this.gb_OwnData.ResumeLayout(false);
+            this.gb_OwnData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +485,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblcurrentProdStock;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label_ownName;
+        private System.Windows.Forms.Label label_CustomerName;
+        private System.Windows.Forms.TextBox tb_OwnPhoneNumber;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TrackBar tb_MyNameOrElse;
+        public System.Windows.Forms.Label ll_OwnName;
+        private System.Windows.Forms.GroupBox gb_OwnData;
+        public System.Windows.Forms.Label label8;
     }
 }

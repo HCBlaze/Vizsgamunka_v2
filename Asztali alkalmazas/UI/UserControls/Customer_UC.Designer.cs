@@ -242,6 +242,7 @@
             this.Name = "Customer_UC";
             this.Size = new System.Drawing.Size(1454, 848);
             this.Load += new System.EventHandler(this.Customer_UC_Load);
+            this.Leave += new System.EventHandler(this.Customer_UC_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

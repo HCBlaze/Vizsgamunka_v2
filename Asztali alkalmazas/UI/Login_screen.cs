@@ -110,7 +110,7 @@ namespace Asztali_alkalmazas.UI
                         int torolt = Convert.ToInt32(dr["Deleted"]);
                         if (torolt == 0 && password == dr["Password"].ToString() && user == dr["Username"].ToString())
                         {
-                            MessageBox.Show("Betudott Lépni");
+                            MessageBox.Show("Sikeres bejelentkezés!");
                             writeLogin(user, dr["Permission"].ToString());
                             ControlPanel CP = new ControlPanel();
                             CP.Show();

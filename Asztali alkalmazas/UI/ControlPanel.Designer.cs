@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPanel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPurchase = new System.Windows.Forms.Button();
             this.panelSlide = new System.Windows.Forms.Panel();
             this.ordersBT = new System.Windows.Forms.Button();
             this.ExitBT = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.adminBT = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnPurchase = new System.Windows.Forms.Button();
             this.purchase_UC1 = new Asztali_alkalmazas.UI.UserControls.Purchase_UC();
             this.homeScreen_UC1 = new Asztali_alkalmazas.UI.UserControls.HomeScreen_UC();
             this.order_UC1 = new Asztali_alkalmazas.UI.UserControls.Order_UC();
@@ -93,6 +93,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(175, 2117);
             this.panel1.TabIndex = 0;
+            // 
+            // btnPurchase
+            // 
+            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_purchase_order_50px;
+            this.btnPurchase.Location = new System.Drawing.Point(0, 735);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(175, 109);
+            this.btnPurchase.TabIndex = 10;
+            this.btnPurchase.Text = "Vásárlás";
+            this.btnPurchase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPurchase.UseVisualStyleBackColor = true;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // panelSlide
             // 
@@ -217,7 +233,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(2, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 23);
+            this.label2.Size = new System.Drawing.Size(156, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "for small businesses";
             // 
@@ -227,7 +243,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(2, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 23);
+            this.label1.Size = new System.Drawing.Size(99, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "ERP Solution";
             // 
@@ -323,7 +339,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(151, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 23);
+            this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 16;
             this.label6.Text = "label6";
             // 
@@ -334,7 +350,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(16, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 23);
+            this.label7.Size = new System.Drawing.Size(114, 18);
             this.label7.TabIndex = 15;
             this.label7.Text = "Dátum és idő:";
             // 
@@ -414,7 +430,7 @@
             this.adminLL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.adminLL.Location = new System.Drawing.Point(287, 76);
             this.adminLL.Name = "adminLL";
-            this.adminLL.Size = new System.Drawing.Size(60, 19);
+            this.adminLL.Size = new System.Drawing.Size(48, 16);
             this.adminLL.TabIndex = 21;
             this.adminLL.Text = "label6";
             // 
@@ -425,7 +441,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label5.Location = new System.Drawing.Point(162, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 23);
+            this.label5.Size = new System.Drawing.Size(108, 19);
             this.label5.TabIndex = 20;
             this.label5.Text = "Jogosultság: ";
             // 
@@ -435,7 +451,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(287, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 19);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 19;
             this.label3.Text = "label3";
             // 
@@ -446,7 +462,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label4.Location = new System.Drawing.Point(162, 34);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 23);
+            this.label4.Size = new System.Drawing.Size(104, 19);
             this.label4.TabIndex = 18;
             this.label4.Text = "Felhasználó:";
             // 
@@ -469,22 +485,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnPurchase
-            // 
-            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPurchase.FlatAppearance.BorderSize = 0;
-            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_purchase_order_50px;
-            this.btnPurchase.Location = new System.Drawing.Point(0, 735);
-            this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(175, 109);
-            this.btnPurchase.TabIndex = 10;
-            this.btnPurchase.Text = "Vásárlás";
-            this.btnPurchase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPurchase.UseVisualStyleBackColor = true;
-            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // purchase_UC1
             // 
@@ -625,7 +625,6 @@
         private System.Windows.Forms.Panel panelSlide;
         public System.Windows.Forms.Label adminLL;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button closeBT;
         private System.Windows.Forms.Label label6;
@@ -649,5 +648,6 @@
         private UserControls.HomeScreen_UC homeScreen_UC1;
         private System.Windows.Forms.Button btnPurchase;
         private UserControls.Purchase_UC purchase_UC1;
+        public System.Windows.Forms.Label label3;
     }
 }

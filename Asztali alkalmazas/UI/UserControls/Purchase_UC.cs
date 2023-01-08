@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Asztali_alkalmazas.Classes;
 using Google.Protobuf;
+using Microsoft.SqlServer.Server;
 using MySql.Data.MySqlClient;
 
 namespace Asztali_alkalmazas.UI.UserControls
@@ -23,7 +24,9 @@ namespace Asztali_alkalmazas.UI.UserControls
         private decimal vegosszeg;
         private string OrderNumber;
         private string deleteOrderItem;
+        private string PhoneNumber;
         private DateTime lastOrderDate;
+        string format = "yyyy-MM-dd HH:mm:ss";
         MySqlCommand cmd;
         MySqlDataReader dr;
         public Purchase_UC()
@@ -47,6 +50,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
             conn.Close();
         }
+        Customer UjVasarlo;
         Product ujTermek;
         OrderItem ujRendeltTermek;
         Order ujRendeles;
@@ -168,6 +172,55 @@ namespace Asztali_alkalmazas.UI.UserControls
                 hibakezeles.ErrorLogs(hiba);
             }            
         }
+        private int setNewCustomer(string Fname,string Lname,string Phone)
+        {
+            UjVasarlo = new Customer();
+            UjVasarlo.setFirstname(Fname);
+            UjVasarlo.setLastname(Lname);
+            UjVasarlo.setPhoneNumber(Phone);
+            int id = 0;
+
+            try
+            {
+                conn.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT id FROM local_store_project_23.customers where First_name = '" + UjVasarlo.First_name + "' and Last_name = '" + UjVasarlo.Last_name + "' and Phone = '" + UjVasarlo.Phone + "';";
+                object result = cmd.ExecuteScalar();
+                if(result == null)
+                {
+                    
+                    cmd = new MySqlCommand();
+                    cmd.Connection = conn;
+                    cmd.CommandText = "INSERT INTO `local_store_project_23`.`customers`(`First_name`, `Last_name`, `Phone`, created_at, updated_at)  VALUES ('" + UjVasarlo.First_name + "', '" + UjVasarlo.Last_name + "', '" + UjVasarlo.Phone + "', '" + DateTime.Now.ToString(format) + "','" + DateTime.Now.ToString(format) + "')";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Létrehozva!");
+                    conn.Close();
+
+
+                    conn.Open();
+                    cmd = new MySqlCommand();
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SELECT id FROM local_store_project_23.customers where First_name = '" + UjVasarlo.First_name + "' and Last_name = '" + UjVasarlo.Last_name + "' and Phone = '" + UjVasarlo.Phone + "';";
+                    object resultNew = cmd.ExecuteScalar();
+                    id = Convert.ToInt32(resultNew);
+                    conn.Close();
+                }
+                else
+                {
+                    id = Convert.ToInt32(result);
+                    MessageBox.Show(id.ToString());
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hiba!" + ex.Message);
+                string hiba = ex.Message.ToString();
+                hibakezeles.ErrorLogs(hiba);
+            }
+            return id;
+        }
         private void setNewOrder(DateTime Orderdate, int i, string totalamount, DateTime createdat, DateTime updatedat)
         {
             ujRendeles = new Order();
@@ -285,6 +338,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             gbCustomerDetails.ForeColor = Color.WhiteSmoke;
             cbCustomers.Font = new Font("Century Gothic", 12, FontStyle.Regular);
             cbProducts.Font = new Font("Century Gothic", 12, FontStyle.Regular);
+
         }
         //------------ UserControl betöltése és adatok elhelyezése és megadása vége------------
         //------------ Gombok és funkciók ------------
@@ -412,6 +466,9 @@ namespace Asztali_alkalmazas.UI.UserControls
                 VegosszegList.Clear();
                 vegosszeg = 0;
                 lblTotalAmount.Text = "";
+                ll_OwnName.Text = "";
+                tb_OwnPhoneNumber.Text = "";
+
             }
             catch (Exception ex)
             {
@@ -462,7 +519,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                     {
 
                         decimal deleteItemPrice = RendeltTermekek[i].UnitPrice * RendeltTermekek[i].Quantity;
-                        MessageBox.Show(deleteItemPrice.ToString());
                         for (int k = VegosszegList.Count - 1; k >= 0; k--)
                         {
                             if (VegosszegList[k] == deleteItemPrice)
@@ -486,6 +542,48 @@ namespace Asztali_alkalmazas.UI.UserControls
                 string hiba = ex.Message.ToString();
                 hibakezeles.ErrorLogs(hiba);
             }            
+        }
+
+        private void tb_MyNameOrElse_Scroll(object sender, EventArgs e)
+        {
+            if (tb_MyNameOrElse.Value == 1)
+            {
+                label1.Visible = true;
+                cbCustomers.Visible = true;
+                gb_OwnData.Visible = false;
+            }
+            else
+            {
+                label1.Visible = false;
+                cbCustomers.Visible = false;
+                gb_OwnData.Visible = true;
+            }           
+        }
+        private void tb_OwnPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals(Convert.ToChar(13)))
+            {
+                string[] ideig = ll_OwnName.Text.Split(' ');
+                if (tb_OwnPhoneNumber.Text.Length == 0 || tb_OwnPhoneNumber.Text.Length < 12 && tb_OwnPhoneNumber.Text.StartsWith("+36"))
+                {
+                    MessageBox.Show("Nem megfelelő mobilszám!");
+                    tb_OwnPhoneNumber.Clear();
+                }
+                else
+                {
+                    customerCurrentId = setNewCustomer(ideig[1], ideig[0], tb_OwnPhoneNumber.Text);
+                    getCustomerDetails(customerCurrentId);
+                    gbCart.Visible = true;
+                    label3.Visible = true;
+                    label4.Visible = true;
+                    cbProducts.Visible = true;
+                    mennyisegNum.Visible = true;
+                    btnAddCart.Visible = true;
+                    btnDeleteCartItem.Visible = true;
+                    btnPurchaseFinish.Visible = true;
+                }
+                
+            }
         }
     }
 }

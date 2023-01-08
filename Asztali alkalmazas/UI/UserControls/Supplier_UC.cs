@@ -53,8 +53,6 @@ namespace Asztali_alkalmazas.UI.UserControls
         AdminControl_UC hibakezeles = new AdminControl_UC();
         private void Supplier_UC_Load(object sender, EventArgs e)
         {
-            suppliersDGV.ClearSelection();
-            deleteTB();
             ReLoadDGV();
         }
         private void getID()
@@ -160,7 +158,6 @@ namespace Asztali_alkalmazas.UI.UserControls
                 supplierUpdateBT.Enabled = true;
                 getSupplierProductsBT.Enabled = true;
                 actual = new Supplier(Convert.ToInt32(currentId),supplierCompanyNameTB.Text,supplierContactNameTB.Text,supplierCityTB.Text,supplierPhoneTB.Text);
-                MessageBox.Show(actual.Id.ToString() + "-" + actual.CompanyName + "-" + actual.ContactName + "-" + actual.City + "-" + actual.Phone);
             }
             catch (Exception ex)
             {
@@ -254,6 +251,11 @@ namespace Asztali_alkalmazas.UI.UserControls
             suppliersDGV.Columns[4].HeaderText = "Terméknév";
             suppliersDGV.Columns[5].HeaderText = "Egységár (HUF)";
             suppliersDGV.Columns[6].HeaderText = "Kiszerelés";
+        }
+
+        private void Supplier_UC_Leave(object sender, EventArgs e)
+        {
+            ReLoadDGV();
         }
         //------------ Gomb műveletekre végzett események vége ------------
     }
