@@ -62,7 +62,17 @@ namespace Asztali_alkalmazas.Classes
 
         private string _setOrderNumber()
         {
-            string _orderNumber = "LS-"+DateTime.Now.Year+"-"+DateTime.Now.Month+"-";
+            int month = DateTime.Now.Month;
+            string editMonth = "0";
+            if(month < 10)
+            {
+                editMonth = "0" + month;
+            }
+            else
+            {
+                editMonth = month.ToString();
+            }
+            string _orderNumber = "LS-"+DateTime.Now.Year+"-"+editMonth+"-";
 
 
                 char [] numbers = new System.Text.StringBuilder().Insert(0, "0123456789", 6).ToString().ToCharArray();
