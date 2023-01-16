@@ -28,7 +28,7 @@ class Modal extends Component {
                                        <h5 className="text-muted">Kiszerelés: {Package}</h5>
                                        <Link to='/'>
                                            <ButtonContainer onClick={()=>closeModal()}>
-                                               Tovább vásárolok
+                                               Tovább vásárlok
                                            </ButtonContainer>
                                        </Link>
                                        <Link to='/cart'>
