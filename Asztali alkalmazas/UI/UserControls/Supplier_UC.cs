@@ -154,6 +154,8 @@ namespace Asztali_alkalmazas.UI.UserControls
                     supplierContactNameTB.Text = suppliersDGV.Rows[e.RowIndex].Cells["Kapcsolattarto neve"].FormattedValue.ToString();
                     supplierCityTB.Text = suppliersDGV.Rows[e.RowIndex].Cells["Varos"].FormattedValue.ToString();
                     supplierPhoneTB.Text = suppliersDGV.Rows[e.RowIndex].Cells["Mobilszam"].FormattedValue.ToString();
+                    string editPhoneNumberText = supplierPhoneTB.Text.Replace(" ", "");
+                    supplierPhoneTB.Text = editPhoneNumberText;
                 }
                 supplierUpdateBT.Enabled = true;
                 getSupplierProductsBT.Enabled = true;
@@ -180,6 +182,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 ReLoadDGV();
+                deleteTB();
             }
         }
         private void supplierCompanyNameTB_Leave(object sender, EventArgs e)
@@ -226,6 +229,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 ReLoadDGV();
+                deleteTB();
             }
             else
             {
@@ -235,6 +239,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         private void supplierDGVReload_Click(object sender, EventArgs e)
         {
             ReLoadDGV();
+            deleteTB();
         }
         private void supplierNewBT_Click(object sender, EventArgs e)
         {
@@ -256,6 +261,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         private void Supplier_UC_Leave(object sender, EventArgs e)
         {
             ReLoadDGV();
+            deleteTB();
         }
         //------------ Gomb műveletekre végzett események vége ------------
     }

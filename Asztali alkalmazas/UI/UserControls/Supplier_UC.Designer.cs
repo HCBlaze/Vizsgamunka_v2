@@ -165,6 +165,7 @@
             // 
             // supplierDeleteBT
             // 
+            this.supplierDeleteBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supplierDeleteBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supplierDeleteBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.supplierDeleteBT.Location = new System.Drawing.Point(1063, 317);
@@ -177,6 +178,7 @@
             // 
             // supplierNewBT
             // 
+            this.supplierNewBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supplierNewBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supplierNewBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.supplierNewBT.Location = new System.Drawing.Point(114, 317);
@@ -189,6 +191,7 @@
             // 
             // supplierUpdateBT
             // 
+            this.supplierUpdateBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supplierUpdateBT.Enabled = false;
             this.supplierUpdateBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supplierUpdateBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -196,7 +199,7 @@
             this.supplierUpdateBT.Name = "supplierUpdateBT";
             this.supplierUpdateBT.Size = new System.Drawing.Size(229, 38);
             this.supplierUpdateBT.TabIndex = 6;
-            this.supplierUpdateBT.Text = "Szerkeztés";
+            this.supplierUpdateBT.Text = "Szerkesztés";
             this.supplierUpdateBT.UseVisualStyleBackColor = true;
             this.supplierUpdateBT.Click += new System.EventHandler(this.supplierUpdateBT_Click);
             // 
@@ -217,6 +220,7 @@
             this.supplierDGVReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.supplierDGVReload.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.icons8_reset_50px_1;
             this.supplierDGVReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.supplierDGVReload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supplierDGVReload.FlatAppearance.BorderSize = 0;
             this.supplierDGVReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.supplierDGVReload.Location = new System.Drawing.Point(1416, 422);
@@ -231,6 +235,7 @@
             // getSupplierProductsBT
             // 
             this.getSupplierProductsBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.getSupplierProductsBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.getSupplierProductsBT.Enabled = false;
             this.getSupplierProductsBT.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getSupplierProductsBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -238,7 +243,7 @@
             this.getSupplierProductsBT.Name = "getSupplierProductsBT";
             this.getSupplierProductsBT.Size = new System.Drawing.Size(499, 38);
             this.getSupplierProductsBT.TabIndex = 9;
-            this.getSupplierProductsBT.Text = "Kijelölt beszállító árucikkjének megjelenítése";
+            this.getSupplierProductsBT.Text = "Kijelölt beszállító árucikkének megjelenítése";
             this.getSupplierProductsBT.UseVisualStyleBackColor = true;
             this.getSupplierProductsBT.Click += new System.EventHandler(this.getSupplierProductsBT_Click);
             // 

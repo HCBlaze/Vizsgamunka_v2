@@ -153,7 +153,9 @@ namespace Asztali_alkalmazas.UI.UserControls
                         customerFNTB.Text = CustomersDGV.Rows[e.RowIndex].Cells["Keresztnev"].FormattedValue.ToString();
                         customerLNTB.Text = CustomersDGV.Rows[e.RowIndex].Cells["Vezeteknev"].FormattedValue.ToString();
                         customerPhone.Text = CustomersDGV.Rows[e.RowIndex].Cells["Mobilszam"].FormattedValue.ToString();
-                    }
+                        string editPhoneNumberText = customerPhone.Text.Replace(" ","");
+                        customerPhone.Text = editPhoneNumberText;
+                }
                 customerUpdateBT.Enabled = true;
                 getCustomerOrderBT.Enabled = true;
                 actual = new Customer(Convert.ToInt32(currentId), customerFNTB.Text, customerLNTB.Text, customerPhone.Text);
@@ -216,6 +218,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             {
                 MessageBox.Show("Nem változtattál semmilyen adaton.");
             }
+            deleteTB();
         }
         private void customerDeleteBT_Click(object sender, EventArgs e)
         {
@@ -231,6 +234,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 ReLoadDGV();
+                deleteTB();
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -246,6 +250,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         private void customerDGVReload_Click(object sender, EventArgs e)
         {
             ReLoadDGV();
+            deleteTB();
         }
 
         private void Customer_UC_Leave(object sender, EventArgs e)

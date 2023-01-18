@@ -425,6 +425,8 @@ namespace Asztali_alkalmazas.UI.UserControls
                 lblTotalAmount.Text = vegosszeg.ToString() + " HUF";
                 cbProducts.Text = " ";
                 mennyisegNum.Value = 0;
+                lblcurrentProdStock.Visible= false;
+                label7.Visible= false;
             }
             catch (Exception ex )
             {

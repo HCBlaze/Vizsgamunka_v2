@@ -332,7 +332,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         private void productDeleteBT_Click(object sender, EventArgs e)
         {
             DialogResult torli;
-            torli = MessageBox.Show("Biztos törli az adott elemet?", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            torli = MessageBox.Show("Biztos törli az adott terméket?", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (torli == DialogResult.Yes)
             {
                 conn.Open();
@@ -593,7 +593,8 @@ namespace Asztali_alkalmazas.UI.UserControls
                 {
                     prodcutUpdateStock(newStock, msg);
                 }
-            }            
+            }
+            suppliersDataCB.Visible= false;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

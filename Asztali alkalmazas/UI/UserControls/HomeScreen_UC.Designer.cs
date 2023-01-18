@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.understockDGV = new System.Windows.Forms.DataGridView();
@@ -153,23 +153,23 @@
             this.understockDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.understockDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.understockDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.understockDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.understockDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.understockDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.understockDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.understockDGV.DefaultCellStyle = dataGridViewCellStyle5;
             this.understockDGV.EnableHeadersVisualStyles = false;
             this.understockDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
             this.understockDGV.Location = new System.Drawing.Point(8, 50);
@@ -177,8 +177,8 @@
             this.understockDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.understockDGV.RowHeadersVisible = false;
             this.understockDGV.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.understockDGV.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.understockDGV.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.understockDGV.RowTemplate.Height = 35;
             this.understockDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.understockDGV.Size = new System.Drawing.Size(757, 221);
@@ -363,15 +363,15 @@
             this.topProductsChart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.topProductsChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea1.Name = "ChartArea1";
-            this.topProductsChart.ChartAreas.Add(chartArea1);
-            legend1.AutoFitMinFontSize = 5;
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.ForeColor = System.Drawing.Color.Silver;
-            legend1.Name = "Legend1";
-            this.topProductsChart.Legends.Add(legend1);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea3.Name = "ChartArea1";
+            this.topProductsChart.ChartAreas.Add(chartArea3);
+            legend3.AutoFitMinFontSize = 5;
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend3.ForeColor = System.Drawing.Color.Silver;
+            legend3.Name = "Legend1";
+            this.topProductsChart.Legends.Add(legend3);
             this.topProductsChart.Location = new System.Drawing.Point(13, 202);
             this.topProductsChart.Name = "topProductsChart";
             this.topProductsChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -382,28 +382,28 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(220)))), ((int)(((byte)(205))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(153)))), ((int)(((byte)(254)))))};
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            series1.BorderWidth = 8;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.topProductsChart.Series.Add(series1);
+            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            series3.BorderWidth = 8;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.topProductsChart.Series.Add(series3);
             this.topProductsChart.Size = new System.Drawing.Size(376, 622);
             this.topProductsChart.TabIndex = 22;
             this.topProductsChart.Text = "chart2";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            title1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            title1.Name = "Title1";
-            title1.Text = "Top 5 termék";
-            this.topProductsChart.Titles.Add(title1);
+            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title3.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            title3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            title3.Name = "Title1";
+            title3.Text = "Top 5 termék";
+            this.topProductsChart.Titles.Add(title3);
             // 
             // GrossRevenueChart
             // 
@@ -411,52 +411,52 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GrossRevenueChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea2.AxisX.IsMarginVisible = false;
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineWidth = 0;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.MajorGrid.LineWidth = 0;
-            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea2.AxisX.MajorTickMark.Size = 3F;
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea2.AxisY.LabelStyle.Format = "{0 }HUF";
-            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineWidth = 0;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea2.AxisY.MajorTickMark.LineWidth = 0;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea2.BorderColor = System.Drawing.Color.Bisque;
-            chartArea2.Name = "ChartArea1";
-            this.GrossRevenueChart.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.GrossRevenueChart.Legends.Add(legend2);
+            chartArea4.AxisX.IsMarginVisible = false;
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea4.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.LineWidth = 0;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.MajorGrid.LineWidth = 0;
+            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea4.AxisX.MajorTickMark.Size = 3F;
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea4.AxisY.LabelStyle.Format = "{0 }HUF";
+            chartArea4.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.LineWidth = 0;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea4.AxisY.MajorTickMark.LineWidth = 0;
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea4.BorderColor = System.Drawing.Color.Bisque;
+            chartArea4.Name = "ChartArea1";
+            this.GrossRevenueChart.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            legend4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            this.GrossRevenueChart.Legends.Add(legend4);
             this.GrossRevenueChart.Location = new System.Drawing.Point(395, 202);
             this.GrossRevenueChart.Name = "GrossRevenueChart";
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.GrossRevenueChart.Series.Add(series2);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.GrossRevenueChart.Series.Add(series4);
             this.GrossRevenueChart.Size = new System.Drawing.Size(1057, 323);
             this.GrossRevenueChart.TabIndex = 21;
             this.GrossRevenueChart.Text = "chart1";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            title2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            title2.Name = "Title1";
-            title2.Text = "Bruttó bevétel";
-            this.GrossRevenueChart.Titles.Add(title2);
+            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title4.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            title4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            title4.Name = "Title1";
+            title4.Text = "Bruttó bevétel";
+            this.GrossRevenueChart.Titles.Add(title4);
             // 
             // panel4
             // 
@@ -598,6 +598,7 @@
             this.okCustomBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
             this.okCustomBT.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.icons8_Done_50px;
             this.okCustomBT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.okCustomBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.okCustomBT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.okCustomBT.FlatAppearance.BorderSize = 0;
             this.okCustomBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -614,6 +615,7 @@
             // customBT
             // 
             this.customBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.customBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customBT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.customBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -629,6 +631,7 @@
             // todayBT
             // 
             this.todayBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.todayBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.todayBT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.todayBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.todayBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -644,6 +647,7 @@
             // last7DaysBT
             // 
             this.last7DaysBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.last7DaysBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.last7DaysBT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.last7DaysBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.last7DaysBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -659,6 +663,7 @@
             // last30daysBT
             // 
             this.last30daysBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.last30daysBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.last30daysBT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.last30daysBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.last30daysBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -674,6 +679,7 @@
             // thisMonthBT
             // 
             this.thisMonthBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.thisMonthBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.thisMonthBT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.thisMonthBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thisMonthBT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -701,6 +707,7 @@
             // labelEndDate
             // 
             this.labelEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEndDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelEndDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelEndDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelEndDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -715,6 +722,7 @@
             // labelStartDate
             // 
             this.labelStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStartDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelStartDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelStartDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelStartDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;

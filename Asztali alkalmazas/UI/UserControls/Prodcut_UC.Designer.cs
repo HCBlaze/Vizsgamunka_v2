@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.newProduct = new System.Windows.Forms.TabPage();
+            this.pbProductPic = new System.Windows.Forms.PictureBox();
             this.productDetailsGB = new System.Windows.Forms.GroupBox();
             this.btnProductPic = new System.Windows.Forms.Button();
             this.newProductBT = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             this.productDeleteBT = new System.Windows.Forms.Button();
             this.productUpdateBT = new System.Windows.Forms.Button();
             this.productUpdateGB = new System.Windows.Forms.GroupBox();
+            this.pbSelectedProductPic = new System.Windows.Forms.PictureBox();
             this.btnUpdateProductPic = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.updateSuppliersCB = new System.Windows.Forms.ComboBox();
@@ -69,6 +71,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.productUpdateNDeleteDGV = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
+            this.productUpdateDGVReload = new System.Windows.Forms.Button();
             this.orderStock = new System.Windows.Forms.TabPage();
             this.selectProductSupplierId = new System.Windows.Forms.Label();
             this.suppliersDataCB = new System.Windows.Forms.GroupBox();
@@ -94,20 +97,17 @@
             this.label20 = new System.Windows.Forms.Label();
             this.productsCB = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pbProductPic = new System.Windows.Forms.PictureBox();
-            this.pbSelectedProductPic = new System.Windows.Forms.PictureBox();
-            this.productUpdateDGVReload = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.newProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductPic)).BeginInit();
             this.productDetailsGB.SuspendLayout();
             this.updateProdcutOrDelete.SuspendLayout();
             this.productUpdateGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedProductPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productUpdateNDeleteDGV)).BeginInit();
             this.orderStock.SuspendLayout();
             this.suppliersDataCB.SuspendLayout();
             this.productSotckGB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProductPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedProductPic)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -143,6 +143,15 @@
             this.newProduct.TabIndex = 0;
             this.newProduct.Text = "Új árucikk felvétele";
             // 
+            // pbProductPic
+            // 
+            this.pbProductPic.Location = new System.Drawing.Point(938, 78);
+            this.pbProductPic.Name = "pbProductPic";
+            this.pbProductPic.Size = new System.Drawing.Size(259, 169);
+            this.pbProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProductPic.TabIndex = 6;
+            this.pbProductPic.TabStop = false;
+            // 
             // productDetailsGB
             // 
             this.productDetailsGB.Controls.Add(this.btnProductPic);
@@ -169,6 +178,7 @@
             // 
             // btnProductPic
             // 
+            this.btnProductPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProductPic.FlatAppearance.BorderSize = 0;
             this.btnProductPic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btnProductPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -185,6 +195,7 @@
             // 
             // newProductBT
             // 
+            this.newProductBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newProductBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.newProductBT.FlatAppearance.BorderSize = 0;
             this.newProductBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -330,6 +341,7 @@
             // 
             // suppliersCB
             // 
+            this.suppliersCB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.suppliersCB.FormattingEnabled = true;
             this.suppliersCB.Location = new System.Drawing.Point(220, 118);
             this.suppliersCB.Name = "suppliersCB";
@@ -370,6 +382,7 @@
             // 
             // productDeleteBT
             // 
+            this.productDeleteBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.productDeleteBT.FlatAppearance.BorderSize = 0;
             this.productDeleteBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.productDeleteBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -386,6 +399,7 @@
             // 
             // productUpdateBT
             // 
+            this.productUpdateBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.productUpdateBT.FlatAppearance.BorderSize = 0;
             this.productUpdateBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.productUpdateBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -395,7 +409,7 @@
             this.productUpdateBT.Name = "productUpdateBT";
             this.productUpdateBT.Size = new System.Drawing.Size(539, 54);
             this.productUpdateBT.TabIndex = 6;
-            this.productUpdateBT.Text = "Termék szerkeztése";
+            this.productUpdateBT.Text = "Termék szerkesztése";
             this.productUpdateBT.UseVisualStyleBackColor = true;
             this.productUpdateBT.Visible = false;
             this.productUpdateBT.Click += new System.EventHandler(this.productUpdateBT_Click);
@@ -426,8 +440,19 @@
             this.productUpdateGB.Text = "Termékek adatainak szerkeztése";
             this.productUpdateGB.Visible = false;
             // 
+            // pbSelectedProductPic
+            // 
+            this.pbSelectedProductPic.Image = global::Asztali_alkalmazas.Properties.Resources.No_Image_Available;
+            this.pbSelectedProductPic.Location = new System.Drawing.Point(358, 172);
+            this.pbSelectedProductPic.Name = "pbSelectedProductPic";
+            this.pbSelectedProductPic.Size = new System.Drawing.Size(159, 182);
+            this.pbSelectedProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSelectedProductPic.TabIndex = 16;
+            this.pbSelectedProductPic.TabStop = false;
+            // 
             // btnUpdateProductPic
             // 
+            this.btnUpdateProductPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateProductPic.FlatAppearance.BorderSize = 0;
             this.btnUpdateProductPic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btnUpdateProductPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -600,6 +625,23 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Új árucikk szerkesztése vagy törlése:";
             // 
+            // productUpdateDGVReload
+            // 
+            this.productUpdateDGVReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.productUpdateDGVReload.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.icons8_reset_50px_1;
+            this.productUpdateDGVReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.productUpdateDGVReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productUpdateDGVReload.FlatAppearance.BorderSize = 0;
+            this.productUpdateDGVReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productUpdateDGVReload.Location = new System.Drawing.Point(1405, 62);
+            this.productUpdateDGVReload.Name = "productUpdateDGVReload";
+            this.productUpdateDGVReload.Size = new System.Drawing.Size(33, 28);
+            this.productUpdateDGVReload.TabIndex = 33;
+            this.productUpdateDGVReload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.productUpdateDGVReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.productUpdateDGVReload.UseVisualStyleBackColor = true;
+            this.productUpdateDGVReload.Click += new System.EventHandler(this.productUpdateDGVReload_Click);
+            // 
             // orderStock
             // 
             this.orderStock.AutoScroll = true;
@@ -758,12 +800,13 @@
             // 
             // productAddOrRemoveBT
             // 
+            this.productAddOrRemoveBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.productAddOrRemoveBT.ForeColor = System.Drawing.Color.Black;
             this.productAddOrRemoveBT.Location = new System.Drawing.Point(594, 26);
             this.productAddOrRemoveBT.Name = "productAddOrRemoveBT";
             this.productAddOrRemoveBT.Size = new System.Drawing.Size(268, 58);
             this.productAddOrRemoveBT.TabIndex = 2;
-            this.productAddOrRemoveBT.Text = "Készletek feltöltése";
+            this.productAddOrRemoveBT.Text = "Készletek csökkentése";
             this.productAddOrRemoveBT.UseVisualStyleBackColor = true;
             this.productAddOrRemoveBT.Click += new System.EventHandler(this.productAddOrRemoveBT_Click);
             // 
@@ -781,6 +824,7 @@
             // selectedProductStockUpdateBT
             // 
             this.selectedProductStockUpdateBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.selectedProductStockUpdateBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectedProductStockUpdateBT.Enabled = false;
             this.selectedProductStockUpdateBT.FlatAppearance.BorderSize = 0;
             this.selectedProductStockUpdateBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -868,47 +912,13 @@
             // 
             // productsCB
             // 
+            this.productsCB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.productsCB.FormattingEnabled = true;
             this.productsCB.Location = new System.Drawing.Point(222, 109);
             this.productsCB.Name = "productsCB";
             this.productsCB.Size = new System.Drawing.Size(261, 24);
             this.productsCB.TabIndex = 1;
             this.productsCB.SelectedIndexChanged += new System.EventHandler(this.productsCB_SelectedIndexChanged);
-            // 
-            // pbProductPic
-            // 
-            this.pbProductPic.Location = new System.Drawing.Point(938, 78);
-            this.pbProductPic.Name = "pbProductPic";
-            this.pbProductPic.Size = new System.Drawing.Size(259, 169);
-            this.pbProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProductPic.TabIndex = 6;
-            this.pbProductPic.TabStop = false;
-            // 
-            // pbSelectedProductPic
-            // 
-            this.pbSelectedProductPic.Image = global::Asztali_alkalmazas.Properties.Resources.No_Image_Available;
-            this.pbSelectedProductPic.Location = new System.Drawing.Point(358, 172);
-            this.pbSelectedProductPic.Name = "pbSelectedProductPic";
-            this.pbSelectedProductPic.Size = new System.Drawing.Size(159, 182);
-            this.pbSelectedProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbSelectedProductPic.TabIndex = 16;
-            this.pbSelectedProductPic.TabStop = false;
-            // 
-            // productUpdateDGVReload
-            // 
-            this.productUpdateDGVReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.productUpdateDGVReload.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.icons8_reset_50px_1;
-            this.productUpdateDGVReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.productUpdateDGVReload.FlatAppearance.BorderSize = 0;
-            this.productUpdateDGVReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productUpdateDGVReload.Location = new System.Drawing.Point(1405, 62);
-            this.productUpdateDGVReload.Name = "productUpdateDGVReload";
-            this.productUpdateDGVReload.Size = new System.Drawing.Size(33, 28);
-            this.productUpdateDGVReload.TabIndex = 33;
-            this.productUpdateDGVReload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.productUpdateDGVReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.productUpdateDGVReload.UseVisualStyleBackColor = true;
-            this.productUpdateDGVReload.Click += new System.EventHandler(this.productUpdateDGVReload_Click);
             // 
             // Prodcut_UC
             // 
@@ -924,12 +934,14 @@
             this.tabControl1.ResumeLayout(false);
             this.newProduct.ResumeLayout(false);
             this.newProduct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductPic)).EndInit();
             this.productDetailsGB.ResumeLayout(false);
             this.productDetailsGB.PerformLayout();
             this.updateProdcutOrDelete.ResumeLayout(false);
             this.updateProdcutOrDelete.PerformLayout();
             this.productUpdateGB.ResumeLayout(false);
             this.productUpdateGB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedProductPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productUpdateNDeleteDGV)).EndInit();
             this.orderStock.ResumeLayout(false);
             this.orderStock.PerformLayout();
@@ -937,8 +949,6 @@
             this.suppliersDataCB.PerformLayout();
             this.productSotckGB.ResumeLayout(false);
             this.productSotckGB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProductPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedProductPic)).EndInit();
             this.ResumeLayout(false);
 
         }

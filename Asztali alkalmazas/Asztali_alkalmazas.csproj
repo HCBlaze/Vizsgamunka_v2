@@ -664,5 +664,8 @@
   <ItemGroup>
     <None Include="src\ProductsPics\tesco_vorosbor.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ProductsPics\milka_piskotateller.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

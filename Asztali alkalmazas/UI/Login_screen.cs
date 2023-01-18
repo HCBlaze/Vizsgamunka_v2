@@ -110,13 +110,17 @@ namespace Asztali_alkalmazas.UI
                         int torolt = Convert.ToInt32(dr["Deleted"]);
                         if (torolt == 0 && password == dr["Password"].ToString() && user == dr["Username"].ToString())
                         {
-                            MessageBox.Show("Sikeres bejelentkezés!");
-                            writeLogin(user, dr["Permission"].ToString());
-                            ControlPanel CP = new ControlPanel();
-                            CP.Show();
-                            CP.BringToFront();
-                            this.Hide();
-                            conn.Close();
+                            DialogResult Successs;
+                            Successs = MessageBox.Show("Sikeres bejelentkezés", "Project 23", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (Successs == DialogResult.OK)
+                            {
+                                writeLogin(user, dr["Permission"].ToString());
+                                ControlPanel CP = new ControlPanel();
+                                CP.Show();
+                                CP.BringToFront();
+                                this.Hide();
+                                conn.Close();
+                            }
                         }
                         else if (torolt == 1)
                         {

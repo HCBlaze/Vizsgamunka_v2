@@ -132,6 +132,7 @@
             // 
             // customerUpdateBT
             // 
+            this.customerUpdateBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerUpdateBT.Enabled = false;
             this.customerUpdateBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerUpdateBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -139,12 +140,13 @@
             this.customerUpdateBT.Name = "customerUpdateBT";
             this.customerUpdateBT.Size = new System.Drawing.Size(229, 38);
             this.customerUpdateBT.TabIndex = 5;
-            this.customerUpdateBT.Text = "Szerkeztés";
+            this.customerUpdateBT.Text = "Szerkesztés";
             this.customerUpdateBT.UseVisualStyleBackColor = true;
             this.customerUpdateBT.Click += new System.EventHandler(this.customerUpdateBT_Click);
             // 
             // customerNewBT
             // 
+            this.customerNewBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerNewBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerNewBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customerNewBT.Location = new System.Drawing.Point(73, 314);
@@ -157,6 +159,7 @@
             // 
             // customerDeleteBT
             // 
+            this.customerDeleteBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerDeleteBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerDeleteBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customerDeleteBT.Location = new System.Drawing.Point(1022, 314);
@@ -170,6 +173,7 @@
             // getCustomerOrderBT
             // 
             this.getCustomerOrderBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.getCustomerOrderBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.getCustomerOrderBT.Enabled = false;
             this.getCustomerOrderBT.Font = new System.Drawing.Font("Akashi_hun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getCustomerOrderBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -209,6 +213,7 @@
             this.customerDGVReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.customerDGVReload.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.icons8_reset_50px_1;
             this.customerDGVReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.customerDGVReload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerDGVReload.FlatAppearance.BorderSize = 0;
             this.customerDGVReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerDGVReload.Location = new System.Drawing.Point(1408, 412);

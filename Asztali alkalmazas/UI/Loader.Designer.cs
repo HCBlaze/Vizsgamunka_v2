@@ -56,11 +56,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(77, 261);
+            this.label1.Location = new System.Drawing.Point(0, 288);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 43);
+            this.label1.Size = new System.Drawing.Size(401, 43);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ERP Solution";
+            this.label1.Text = "E-Commerce Solution";
             // 
             // label2
             // 
@@ -68,7 +68,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(81, 320);
+            this.label2.Location = new System.Drawing.Point(81, 352);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 25);
             this.label2.TabIndex = 2;

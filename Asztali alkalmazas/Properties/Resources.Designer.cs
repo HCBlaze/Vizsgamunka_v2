@@ -833,6 +833,16 @@ namespace Asztali_alkalmazas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap milka_piskotateller {
+            get {
+                object obj = ResourceManager.GetObject("milka_piskotateller", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap milka_tabla_karamel {
             get {
                 object obj = ResourceManager.GetObject("milka_tabla_karamel", resourceCulture);

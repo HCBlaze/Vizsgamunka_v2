@@ -154,6 +154,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Font = new System.Drawing.Font("Akashi_hun", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(298, 341);
             this.checkBox1.Name = "checkBox1";
@@ -165,6 +166,7 @@
             // 
             // updateInfoBT
             // 
+            this.updateInfoBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateInfoBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateInfoBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.updateInfoBT.Location = new System.Drawing.Point(366, 412);
@@ -194,6 +196,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(54, 364);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -301,6 +304,7 @@
             // 
             // passwordChangeBT
             // 
+            this.passwordChangeBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.passwordChangeBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordChangeBT.Location = new System.Drawing.Point(53, 505);
             this.passwordChangeBT.Name = "passwordChangeBT";
@@ -332,6 +336,7 @@
             // 
             // updatePasswordBT
             // 
+            this.updatePasswordBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updatePasswordBT.Enabled = false;
             this.updatePasswordBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatePasswordBT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -406,6 +411,7 @@
             // 
             this.showPWD1.BackgroundImage = global::Asztali_alkalmazas.Properties.Resources.showPWD;
             this.showPWD1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showPWD1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPWD1.Location = new System.Drawing.Point(916, 153);
             this.showPWD1.Name = "showPWD1";
             this.showPWD1.Size = new System.Drawing.Size(34, 23);
@@ -415,6 +421,7 @@
             // 
             // uploadImageBT
             // 
+            this.uploadImageBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uploadImageBT.Font = new System.Drawing.Font("Akashi_hun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadImageBT.Location = new System.Drawing.Point(53, 352);
             this.uploadImageBT.Name = "uploadImageBT";
@@ -457,7 +464,7 @@
             this.Controls.Add(this.uploadImageBT);
             this.Controls.Add(this.label1);
             this.Name = "UserProfil_UC";
-            this.Size = new System.Drawing.Size(1420, 848);
+            this.Size = new System.Drawing.Size(1403, 831);
             this.Load += new System.EventHandler(this.UserProfil_UC_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

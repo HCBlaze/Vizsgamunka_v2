@@ -66,6 +66,7 @@
             // 
             // Exit
             // 
+            this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,6 +82,7 @@
             // 
             // LogIn
             // 
+            this.LogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.LogIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.LogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -96,8 +98,9 @@
             // 
             // Show_Password
             // 
+            this.Show_Password.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Show_Password.Image = global::Asztali_alkalmazas.Properties.Resources.pngwing_com__4_;
-            this.Show_Password.Location = new System.Drawing.Point(348, 360);
+            this.Show_Password.Location = new System.Drawing.Point(354, 360);
             this.Show_Password.Name = "Show_Password";
             this.Show_Password.Size = new System.Drawing.Size(40, 40);
             this.Show_Password.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,8 +142,9 @@
             // 
             // Hide_Password
             // 
+            this.Hide_Password.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Hide_Password.Image = global::Asztali_alkalmazas.Properties.Resources.pngwing_com__5_;
-            this.Hide_Password.Location = new System.Drawing.Point(348, 360);
+            this.Hide_Password.Location = new System.Drawing.Point(354, 360);
             this.Hide_Password.Name = "Hide_Password";
             this.Hide_Password.Size = new System.Drawing.Size(40, 40);
             this.Hide_Password.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

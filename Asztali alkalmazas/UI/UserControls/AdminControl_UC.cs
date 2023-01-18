@@ -403,7 +403,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                         {
                             getJogosultsagCB.SelectedIndex = 1;
                         }
-                        else if (FelhasznalokDGV.Rows[e.RowIndex].Cells["Permission"].FormattedValue.ToString() == "Vezető")
+                        else if (FelhasznalokDGV.Rows[e.RowIndex].Cells["Permission"].FormattedValue.ToString() == "Leader")
                         {
                             getJogosultsagCB.SelectedIndex = 2;
                         }

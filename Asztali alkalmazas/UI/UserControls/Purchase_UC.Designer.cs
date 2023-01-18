@@ -51,12 +51,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblcurrentProdStock = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tb_OwnPhoneNumber = new System.Windows.Forms.TextBox();
             this.tb_MyNameOrElse = new System.Windows.Forms.TrackBar();
             this.label_ownName = new System.Windows.Forms.Label();
             this.label_CustomerName = new System.Windows.Forms.Label();
             this.gb_OwnData = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tb_OwnPhoneNumber = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.ll_OwnName = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -220,6 +220,7 @@
             // 
             // cbProducts
             // 
+            this.cbProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbProducts.FormattingEnabled = true;
             this.cbProducts.Location = new System.Drawing.Point(31, 349);
             this.cbProducts.Name = "cbProducts";
@@ -253,6 +254,7 @@
             // btnAddCart
             // 
             this.btnAddCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnAddCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCart.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -269,6 +271,7 @@
             // btnDeleteCartItem
             // 
             this.btnDeleteCartItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDeleteCartItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteCartItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnDeleteCartItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteCartItem.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -285,6 +288,7 @@
             // btnPurchaseFinish
             // 
             this.btnPurchaseFinish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPurchaseFinish.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPurchaseFinish.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnPurchaseFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchaseFinish.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -320,6 +324,15 @@
             this.lblcurrentProdStock.TabIndex = 19;
             this.lblcurrentProdStock.Text = "stock";
             this.lblcurrentProdStock.Visible = false;
+            // 
+            // tb_OwnPhoneNumber
+            // 
+            this.tb_OwnPhoneNumber.Location = new System.Drawing.Point(228, 99);
+            this.tb_OwnPhoneNumber.Name = "tb_OwnPhoneNumber";
+            this.tb_OwnPhoneNumber.Size = new System.Drawing.Size(236, 34);
+            this.tb_OwnPhoneNumber.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.tb_OwnPhoneNumber, "12 karater szóközök nélkül és +36 al kell kezdődjön");
+            this.tb_OwnPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_OwnPhoneNumber_KeyPress);
             // 
             // tb_MyNameOrElse
             // 
@@ -379,15 +392,6 @@
             this.label8.Size = new System.Drawing.Size(216, 15);
             this.label8.TabIndex = 5;
             this.label8.Text = "Kötelező formátum: +36 ## ### ####";
-            // 
-            // tb_OwnPhoneNumber
-            // 
-            this.tb_OwnPhoneNumber.Location = new System.Drawing.Point(228, 99);
-            this.tb_OwnPhoneNumber.Name = "tb_OwnPhoneNumber";
-            this.tb_OwnPhoneNumber.Size = new System.Drawing.Size(236, 34);
-            this.tb_OwnPhoneNumber.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.tb_OwnPhoneNumber, "12 karater szóközök nélkül és +36 al kell kezdődjön");
-            this.tb_OwnPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_OwnPhoneNumber_KeyPress);
             // 
             // label10
             // 

@@ -105,7 +105,7 @@
             this.label1.Font = new System.Drawing.Font("Akashi_hun", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(521, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 42);
+            this.label1.Size = new System.Drawing.Size(212, 34);
             this.label1.TabIndex = 4;
             this.label1.Text = "Admin felület";
             // 
@@ -146,6 +146,7 @@
             // dataExportBT
             // 
             this.dataExportBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataExportBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataExportBT.FlatAppearance.BorderSize = 0;
             this.dataExportBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.dataExportBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,6 +162,7 @@
             // 
             // deleteUserBT
             // 
+            this.deleteUserBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteUserBT.FlatAppearance.BorderSize = 0;
             this.deleteUserBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.deleteUserBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -176,6 +178,7 @@
             // 
             // editUserBT
             // 
+            this.editUserBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editUserBT.FlatAppearance.BorderSize = 0;
             this.editUserBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.editUserBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -185,12 +188,13 @@
             this.editUserBT.Name = "editUserBT";
             this.editUserBT.Size = new System.Drawing.Size(560, 62);
             this.editUserBT.TabIndex = 1;
-            this.editUserBT.Text = "Felhasználó szerkeztése";
+            this.editUserBT.Text = "Felhasználó szerkesztése";
             this.editUserBT.UseVisualStyleBackColor = true;
             this.editUserBT.Click += new System.EventHandler(this.editUserBT_Click);
             // 
             // addNewUserBT
             // 
+            this.addNewUserBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addNewUserBT.FlatAppearance.BorderSize = 0;
             this.addNewUserBT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.addNewUserBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -207,6 +211,7 @@
             // showActiveBT
             // 
             this.showActiveBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showActiveBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showActiveBT.Location = new System.Drawing.Point(818, 51);
             this.showActiveBT.Name = "showActiveBT";
             this.showActiveBT.Size = new System.Drawing.Size(216, 26);
@@ -222,13 +227,14 @@
             this.label19.Font = new System.Drawing.Font("Akashi_hun", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(1027, 8);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(198, 39);
+            this.label19.Size = new System.Drawing.Size(161, 31);
             this.label19.TabIndex = 62;
             this.label19.Text = "Adatbázis";
             // 
             // showDeletedBT
             // 
             this.showDeletedBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showDeletedBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showDeletedBT.Location = new System.Drawing.Point(1180, 51);
             this.showDeletedBT.Name = "showDeletedBT";
             this.showDeletedBT.Size = new System.Drawing.Size(216, 26);
@@ -280,7 +286,7 @@
             this.editUserGB.Size = new System.Drawing.Size(586, 751);
             this.editUserGB.TabIndex = 65;
             this.editUserGB.TabStop = false;
-            this.editUserGB.Text = "Felhasználó szerkeztése";
+            this.editUserGB.Text = "Felhasználó szerkesztése";
             this.editUserGB.Visible = false;
             // 
             // button7
@@ -312,7 +318,7 @@
             this.getIsDeletedNoRB.AutoSize = true;
             this.getIsDeletedNoRB.Location = new System.Drawing.Point(171, 21);
             this.getIsDeletedNoRB.Name = "getIsDeletedNoRB";
-            this.getIsDeletedNoRB.Size = new System.Drawing.Size(70, 24);
+            this.getIsDeletedNoRB.Size = new System.Drawing.Size(55, 19);
             this.getIsDeletedNoRB.TabIndex = 1;
             this.getIsDeletedNoRB.Text = "Nem";
             this.getIsDeletedNoRB.UseVisualStyleBackColor = true;
@@ -322,7 +328,7 @@
             this.getIsDeletedYesRB.AutoSize = true;
             this.getIsDeletedYesRB.Location = new System.Drawing.Point(74, 21);
             this.getIsDeletedYesRB.Name = "getIsDeletedYesRB";
-            this.getIsDeletedYesRB.Size = new System.Drawing.Size(69, 24);
+            this.getIsDeletedYesRB.Size = new System.Drawing.Size(55, 19);
             this.getIsDeletedYesRB.TabIndex = 0;
             this.getIsDeletedYesRB.Text = "Igen";
             this.getIsDeletedYesRB.UseVisualStyleBackColor = true;
@@ -330,6 +336,7 @@
             // backToOperationBT1
             // 
             this.backToOperationBT1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.backToOperationBT1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backToOperationBT1.FlatAppearance.BorderSize = 0;
             this.backToOperationBT1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backToOperationBT1.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,7 +358,7 @@
             this.rosszJogosultsagLL1.Font = new System.Drawing.Font("Akashi_hun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rosszJogosultsagLL1.Location = new System.Drawing.Point(192, 476);
             this.rosszJogosultsagLL1.Name = "rosszJogosultsagLL1";
-            this.rosszJogosultsagLL1.Size = new System.Drawing.Size(55, 18);
+            this.rosszJogosultsagLL1.Size = new System.Drawing.Size(45, 14);
             this.rosszJogosultsagLL1.TabIndex = 53;
             this.rosszJogosultsagLL1.Text = "label8";
             this.rosszJogosultsagLL1.Visible = false;
@@ -365,7 +372,7 @@
             this.rosszEmailLL1.Font = new System.Drawing.Font("Akashi_hun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rosszEmailLL1.Location = new System.Drawing.Point(195, 366);
             this.rosszEmailLL1.Name = "rosszEmailLL1";
-            this.rosszEmailLL1.Size = new System.Drawing.Size(55, 18);
+            this.rosszEmailLL1.Size = new System.Drawing.Size(45, 14);
             this.rosszEmailLL1.TabIndex = 52;
             this.rosszEmailLL1.Text = "label8";
             this.rosszEmailLL1.Visible = false;
@@ -379,7 +386,7 @@
             this.rosszDatumLL1.Font = new System.Drawing.Font("Akashi_hun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rosszDatumLL1.Location = new System.Drawing.Point(192, 421);
             this.rosszDatumLL1.Name = "rosszDatumLL1";
-            this.rosszDatumLL1.Size = new System.Drawing.Size(55, 18);
+            this.rosszDatumLL1.Size = new System.Drawing.Size(45, 14);
             this.rosszDatumLL1.TabIndex = 51;
             this.rosszDatumLL1.Text = "label8";
             this.rosszDatumLL1.Visible = false;
@@ -393,7 +400,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(238, 388);
             this.dateTimePicker2.MinDate = new System.DateTime(1960, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(152, 28);
+            this.dateTimePicker2.Size = new System.Drawing.Size(152, 24);
             this.dateTimePicker2.TabIndex = 50;
             // 
             // label40
@@ -405,7 +412,7 @@
             this.label40.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(79, 387);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(182, 28);
+            this.label40.Size = new System.Drawing.Size(148, 23);
             this.label40.TabIndex = 49;
             this.label40.Text = "Születési idő:";
             // 
@@ -416,7 +423,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.getEmailTB.Location = new System.Drawing.Point(238, 333);
             this.getEmailTB.Name = "getEmailTB";
-            this.getEmailTB.Size = new System.Drawing.Size(152, 28);
+            this.getEmailTB.Size = new System.Drawing.Size(152, 24);
             this.getEmailTB.TabIndex = 48;
             // 
             // label41
@@ -428,13 +435,14 @@
             this.label41.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(79, 333);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(83, 28);
+            this.label41.Size = new System.Drawing.Size(67, 23);
             this.label41.TabIndex = 47;
             this.label41.Text = "Email:";
             // 
             // editUserBT2
             // 
             this.editUserBT2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.editUserBT2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editUserBT2.FlatAppearance.BorderSize = 0;
             this.editUserBT2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editUserBT2.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -456,7 +464,7 @@
             this.label42.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(79, 222);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(166, 28);
+            this.label42.Size = new System.Drawing.Size(134, 23);
             this.label42.TabIndex = 45;
             this.label42.Text = "Keresztnév:";
             // 
@@ -467,7 +475,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.getKeresztnevTB.Location = new System.Drawing.Point(238, 225);
             this.getKeresztnevTB.Name = "getKeresztnevTB";
-            this.getKeresztnevTB.Size = new System.Drawing.Size(152, 28);
+            this.getKeresztnevTB.Size = new System.Drawing.Size(152, 24);
             this.getKeresztnevTB.TabIndex = 44;
             // 
             // getJogosultsagCB
@@ -483,7 +491,7 @@
             "Felhasználó"});
             this.getJogosultsagCB.Location = new System.Drawing.Point(238, 446);
             this.getJogosultsagCB.Name = "getJogosultsagCB";
-            this.getJogosultsagCB.Size = new System.Drawing.Size(152, 31);
+            this.getJogosultsagCB.Size = new System.Drawing.Size(152, 26);
             this.getJogosultsagCB.TabIndex = 43;
             // 
             // label43
@@ -495,7 +503,7 @@
             this.label43.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.Location = new System.Drawing.Point(79, 442);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(180, 28);
+            this.label43.Size = new System.Drawing.Size(142, 23);
             this.label43.TabIndex = 42;
             this.label43.Text = "Jogosultság:";
             // 
@@ -508,7 +516,7 @@
             this.label44.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Location = new System.Drawing.Point(79, 277);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(103, 28);
+            this.label44.Size = new System.Drawing.Size(83, 23);
             this.label44.TabIndex = 41;
             this.label44.Text = "Jelszó:";
             // 
@@ -520,7 +528,7 @@
             this.getJelszoTB.Location = new System.Drawing.Point(238, 281);
             this.getJelszoTB.Name = "getJelszoTB";
             this.getJelszoTB.PasswordChar = '*';
-            this.getJelszoTB.Size = new System.Drawing.Size(152, 28);
+            this.getJelszoTB.Size = new System.Drawing.Size(152, 24);
             this.getJelszoTB.TabIndex = 40;
             this.toolTip1.SetToolTip(this.getJelszoTB, "Minimum 8 karakter, nagy betűt ás számot is tartalmaznia kell!");
             this.getJelszoTB.Leave += new System.EventHandler(this.getJelszoTB_Leave);
@@ -534,7 +542,7 @@
             this.label45.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(79, 161);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(170, 28);
+            this.label45.Size = new System.Drawing.Size(138, 23);
             this.label45.TabIndex = 39;
             this.label45.Text = "Vezetéknév:";
             // 
@@ -545,7 +553,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.getVezeteknevTB.Location = new System.Drawing.Point(238, 165);
             this.getVezeteknevTB.Name = "getVezeteknevTB";
-            this.getVezeteknevTB.Size = new System.Drawing.Size(152, 28);
+            this.getVezeteknevTB.Size = new System.Drawing.Size(152, 24);
             this.getVezeteknevTB.TabIndex = 38;
             // 
             // panel5
@@ -553,7 +561,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.label46);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(3, 24);
+            this.panel5.Location = new System.Drawing.Point(3, 20);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(580, 100);
             this.panel5.TabIndex = 37;
@@ -564,7 +572,7 @@
             this.label46.Font = new System.Drawing.Font("Akashi_hun", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(118, 23);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(401, 68);
+            this.label46.Size = new System.Drawing.Size(322, 55);
             this.label46.TabIndex = 1;
             this.label46.Text = "Szerkeztés";
             // 
@@ -629,7 +637,7 @@
             this.isDeletedNoRB.AutoSize = true;
             this.isDeletedNoRB.Location = new System.Drawing.Point(171, 21);
             this.isDeletedNoRB.Name = "isDeletedNoRB";
-            this.isDeletedNoRB.Size = new System.Drawing.Size(70, 24);
+            this.isDeletedNoRB.Size = new System.Drawing.Size(55, 19);
             this.isDeletedNoRB.TabIndex = 1;
             this.isDeletedNoRB.Text = "Nem";
             this.isDeletedNoRB.UseVisualStyleBackColor = true;
@@ -639,7 +647,7 @@
             this.isDeletedYesRB.AutoSize = true;
             this.isDeletedYesRB.Location = new System.Drawing.Point(74, 21);
             this.isDeletedYesRB.Name = "isDeletedYesRB";
-            this.isDeletedYesRB.Size = new System.Drawing.Size(69, 24);
+            this.isDeletedYesRB.Size = new System.Drawing.Size(55, 19);
             this.isDeletedYesRB.TabIndex = 0;
             this.isDeletedYesRB.Text = "Igen";
             this.isDeletedYesRB.UseVisualStyleBackColor = true;
@@ -647,6 +655,7 @@
             // backToOperationBT
             // 
             this.backToOperationBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.backToOperationBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backToOperationBT.FlatAppearance.BorderSize = 0;
             this.backToOperationBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backToOperationBT.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -667,7 +676,7 @@
             this.rosszJogosultsagLL.Font = new System.Drawing.Font("Akashi_hun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rosszJogosultsagLL.Location = new System.Drawing.Point(192, 476);
             this.rosszJogosultsagLL.Name = "rosszJogosultsagLL";
-            this.rosszJogosultsagLL.Size = new System.Drawing.Size(55, 18);
+            this.rosszJogosultsagLL.Size = new System.Drawing.Size(45, 14);
             this.rosszJogosultsagLL.TabIndex = 53;
             this.rosszJogosultsagLL.Text = "label8";
             this.rosszJogosultsagLL.Visible = false;
@@ -680,7 +689,7 @@
             this.rosszEmailLL.Font = new System.Drawing.Font("Akashi_hun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rosszEmailLL.Location = new System.Drawing.Point(195, 366);
             this.rosszEmailLL.Name = "rosszEmailLL";
-            this.rosszEmailLL.Size = new System.Drawing.Size(55, 18);
+            this.rosszEmailLL.Size = new System.Drawing.Size(45, 14);
             this.rosszEmailLL.TabIndex = 52;
             this.rosszEmailLL.Text = "label8";
             this.rosszEmailLL.Visible = false;
@@ -693,7 +702,7 @@
             this.rosszDatumLL.Font = new System.Drawing.Font("Akashi_hun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rosszDatumLL.Location = new System.Drawing.Point(192, 421);
             this.rosszDatumLL.Name = "rosszDatumLL";
-            this.rosszDatumLL.Size = new System.Drawing.Size(55, 18);
+            this.rosszDatumLL.Size = new System.Drawing.Size(45, 14);
             this.rosszDatumLL.TabIndex = 51;
             this.rosszDatumLL.Text = "label8";
             this.rosszDatumLL.Visible = false;
@@ -706,7 +715,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(238, 388);
             this.dateTimePicker1.MinDate = new System.DateTime(1960, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(174, 28);
+            this.dateTimePicker1.Size = new System.Drawing.Size(174, 24);
             this.dateTimePicker1.TabIndex = 50;
             this.dateTimePicker1.Leave += new System.EventHandler(this.dateTimePicker1_Leave);
             // 
@@ -718,7 +727,7 @@
             this.label7.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(79, 387);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 28);
+            this.label7.Size = new System.Drawing.Size(148, 23);
             this.label7.TabIndex = 49;
             this.label7.Text = "Születési idő:";
             // 
@@ -728,7 +737,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.emailTB.Location = new System.Drawing.Point(238, 333);
             this.emailTB.Name = "emailTB";
-            this.emailTB.Size = new System.Drawing.Size(174, 28);
+            this.emailTB.Size = new System.Drawing.Size(174, 24);
             this.emailTB.TabIndex = 48;
             this.emailTB.Leave += new System.EventHandler(this.emailTB_Leave);
             // 
@@ -740,13 +749,14 @@
             this.label6.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(79, 333);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 28);
+            this.label6.Size = new System.Drawing.Size(67, 23);
             this.label6.TabIndex = 47;
             this.label6.Text = "Email:";
             // 
             // RegBT
             // 
             this.RegBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.RegBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegBT.FlatAppearance.BorderSize = 0;
             this.RegBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegBT.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -767,7 +777,7 @@
             this.label4.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(79, 222);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 28);
+            this.label4.Size = new System.Drawing.Size(134, 23);
             this.label4.TabIndex = 45;
             this.label4.Text = "Keresztnév:";
             // 
@@ -777,7 +787,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.keresztNevTB.Location = new System.Drawing.Point(238, 225);
             this.keresztNevTB.Name = "keresztNevTB";
-            this.keresztNevTB.Size = new System.Drawing.Size(174, 28);
+            this.keresztNevTB.Size = new System.Drawing.Size(174, 24);
             this.keresztNevTB.TabIndex = 44;
             this.keresztNevTB.Leave += new System.EventHandler(this.keresztNevTB_Leave);
             // 
@@ -793,7 +803,7 @@
             "Felhasználó"});
             this.jogosultsagCB1.Location = new System.Drawing.Point(238, 446);
             this.jogosultsagCB1.Name = "jogosultsagCB1";
-            this.jogosultsagCB1.Size = new System.Drawing.Size(174, 31);
+            this.jogosultsagCB1.Size = new System.Drawing.Size(174, 26);
             this.jogosultsagCB1.TabIndex = 43;
             this.jogosultsagCB1.Leave += new System.EventHandler(this.jogosultsagCB1_Leave);
             // 
@@ -805,7 +815,7 @@
             this.label3.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(79, 442);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 28);
+            this.label3.Size = new System.Drawing.Size(142, 23);
             this.label3.TabIndex = 42;
             this.label3.Text = "Jogosultság:";
             // 
@@ -817,7 +827,7 @@
             this.label5.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(79, 277);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 28);
+            this.label5.Size = new System.Drawing.Size(83, 23);
             this.label5.TabIndex = 41;
             this.label5.Text = "Jelszó:";
             // 
@@ -828,7 +838,7 @@
             this.JelszoTB.Location = new System.Drawing.Point(238, 281);
             this.JelszoTB.Name = "JelszoTB";
             this.JelszoTB.PasswordChar = '*';
-            this.JelszoTB.Size = new System.Drawing.Size(174, 28);
+            this.JelszoTB.Size = new System.Drawing.Size(174, 24);
             this.JelszoTB.TabIndex = 40;
             this.toolTip1.SetToolTip(this.JelszoTB, "Minimum 8 karakter, nagy betűt ás számot is tartalmaznia kell!");
             this.JelszoTB.Leave += new System.EventHandler(this.JelszoTB_Leave);
@@ -841,7 +851,7 @@
             this.label8.Font = new System.Drawing.Font("Akashi_hun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(79, 161);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 28);
+            this.label8.Size = new System.Drawing.Size(138, 23);
             this.label8.TabIndex = 39;
             this.label8.Text = "Vezetéknév:";
             // 
@@ -851,7 +861,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.vezetekNevTB.Location = new System.Drawing.Point(238, 165);
             this.vezetekNevTB.Name = "vezetekNevTB";
-            this.vezetekNevTB.Size = new System.Drawing.Size(174, 28);
+            this.vezetekNevTB.Size = new System.Drawing.Size(174, 24);
             this.vezetekNevTB.TabIndex = 38;
             this.vezetekNevTB.Leave += new System.EventHandler(this.vezetekNevTB_Leave);
             // 
@@ -860,7 +870,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 24);
+            this.panel2.Location = new System.Drawing.Point(3, 20);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(580, 100);
             this.panel2.TabIndex = 37;
@@ -871,7 +881,7 @@
             this.label2.Font = new System.Drawing.Font("Akashi_hun", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(118, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(482, 68);
+            this.label2.Size = new System.Drawing.Size(387, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "Új felhasználó";
             // 

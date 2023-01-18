@@ -96,6 +96,7 @@
             // 
             // btnPurchase
             // 
+            this.btnPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPurchase.FlatAppearance.BorderSize = 0;
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -120,6 +121,7 @@
             // 
             // ordersBT
             // 
+            this.ordersBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ordersBT.Dock = System.Windows.Forms.DockStyle.Top;
             this.ordersBT.FlatAppearance.BorderSize = 0;
             this.ordersBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -137,6 +139,7 @@
             // ExitBT
             // 
             this.ExitBT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ExitBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ExitBT.FlatAppearance.BorderSize = 0;
             this.ExitBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,6 +156,7 @@
             // 
             // raktarBT
             // 
+            this.raktarBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.raktarBT.Dock = System.Windows.Forms.DockStyle.Top;
             this.raktarBT.FlatAppearance.BorderSize = 0;
             this.raktarBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -169,6 +173,7 @@
             // 
             // supplierBT
             // 
+            this.supplierBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supplierBT.Dock = System.Windows.Forms.DockStyle.Top;
             this.supplierBT.FlatAppearance.BorderSize = 0;
             this.supplierBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -185,6 +190,7 @@
             // 
             // CustomerBT
             // 
+            this.CustomerBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CustomerBT.Dock = System.Windows.Forms.DockStyle.Top;
             this.CustomerBT.FlatAppearance.BorderSize = 0;
             this.CustomerBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -201,6 +207,7 @@
             // 
             // mainBT
             // 
+            this.mainBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mainBT.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainBT.FlatAppearance.BorderSize = 0;
             this.mainBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -241,11 +248,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 144);
+            this.label1.Location = new System.Drawing.Point(1, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 19);
+            this.label1.Size = new System.Drawing.Size(177, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ERP Solution";
+            this.label1.Text = "E-Commerce Solution";
             // 
             // pictureBox1
             // 
@@ -270,7 +277,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(175, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2381, 58);
+            this.panel3.Size = new System.Drawing.Size(3244, 58);
             this.panel3.TabIndex = 1;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -278,11 +285,12 @@
             // maxBT
             // 
             this.maxBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maxBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maxBT.FlatAppearance.BorderSize = 0;
             this.maxBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maxBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_toggle_full_screen_50px;
             this.maxBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.maxBT.Location = new System.Drawing.Point(2243, 0);
+            this.maxBT.Location = new System.Drawing.Point(3106, 0);
             this.maxBT.Margin = new System.Windows.Forms.Padding(5);
             this.maxBT.Name = "maxBT";
             this.maxBT.Padding = new System.Windows.Forms.Padding(5);
@@ -297,11 +305,12 @@
             // minBT
             // 
             this.minBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minBT.FlatAppearance.BorderSize = 0;
             this.minBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_minimize_window_50px;
             this.minBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.minBT.Location = new System.Drawing.Point(2177, 0);
+            this.minBT.Location = new System.Drawing.Point(3040, 0);
             this.minBT.Margin = new System.Windows.Forms.Padding(5);
             this.minBT.Name = "minBT";
             this.minBT.Padding = new System.Windows.Forms.Padding(5);
@@ -316,11 +325,12 @@
             // closeBT
             // 
             this.closeBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeBT.FlatAppearance.BorderSize = 0;
             this.closeBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_shutdown_50px;
             this.closeBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.closeBT.Location = new System.Drawing.Point(2309, 0);
+            this.closeBT.Location = new System.Drawing.Point(3172, 0);
             this.closeBT.Margin = new System.Windows.Forms.Padding(5);
             this.closeBT.Name = "closeBT";
             this.closeBT.Padding = new System.Windows.Forms.Padding(5);
@@ -368,7 +378,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(175, 58);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2381, 105);
+            this.panel4.Size = new System.Drawing.Size(3244, 105);
             this.panel4.TabIndex = 2;
             // 
             // panelSlide2
@@ -383,10 +393,11 @@
             // kijelentkezBT
             // 
             this.kijelentkezBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kijelentkezBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kijelentkezBT.FlatAppearance.BorderSize = 0;
             this.kijelentkezBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kijelentkezBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_Logout_50px;
-            this.kijelentkezBT.Location = new System.Drawing.Point(2249, 0);
+            this.kijelentkezBT.Location = new System.Drawing.Point(3112, 0);
             this.kijelentkezBT.Name = "kijelentkezBT";
             this.kijelentkezBT.Size = new System.Drawing.Size(125, 132);
             this.kijelentkezBT.TabIndex = 23;
@@ -399,10 +410,11 @@
             // userProfilBT
             // 
             this.userProfilBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userProfilBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userProfilBT.FlatAppearance.BorderSize = 0;
             this.userProfilBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userProfilBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_profile_50px;
-            this.userProfilBT.Location = new System.Drawing.Point(2176, 19);
+            this.userProfilBT.Location = new System.Drawing.Point(3039, 19);
             this.userProfilBT.Name = "userProfilBT";
             this.userProfilBT.Size = new System.Drawing.Size(60, 86);
             this.userProfilBT.TabIndex = 3;
@@ -469,10 +481,11 @@
             // adminBT
             // 
             this.adminBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminBT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adminBT.FlatAppearance.BorderSize = 0;
             this.adminBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminBT.Image = global::Asztali_alkalmazas.Properties.Resources.icons8_system_administrator_male_50px;
-            this.adminBT.Location = new System.Drawing.Point(2029, 19);
+            this.adminBT.Location = new System.Drawing.Point(2892, 19);
             this.adminBT.Name = "adminBT";
             this.adminBT.Size = new System.Drawing.Size(134, 86);
             this.adminBT.TabIndex = 25;
@@ -490,7 +503,7 @@
             // 
             this.purchase_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(43)))));
             this.purchase_UC1.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.purchase_UC1.Location = new System.Drawing.Point(1045, 1259);
+            this.purchase_UC1.Location = new System.Drawing.Point(1925, 1259);
             this.purchase_UC1.Name = "purchase_UC1";
             this.purchase_UC1.Size = new System.Drawing.Size(1454, 858);
             this.purchase_UC1.TabIndex = 10;
@@ -501,7 +514,7 @@
             this.homeScreen_UC1.AutoScroll = true;
             this.homeScreen_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.homeScreen_UC1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.homeScreen_UC1.Location = new System.Drawing.Point(279, 562);
+            this.homeScreen_UC1.Location = new System.Drawing.Point(1142, 562);
             this.homeScreen_UC1.Name = "homeScreen_UC1";
             this.homeScreen_UC1.Size = new System.Drawing.Size(1454, 858);
             this.homeScreen_UC1.TabIndex = 9;
@@ -511,7 +524,7 @@
             this.order_UC1.AllowDrop = true;
             this.order_UC1.AutoScroll = true;
             this.order_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.order_UC1.Location = new System.Drawing.Point(758, 623);
+            this.order_UC1.Location = new System.Drawing.Point(1621, 623);
             this.order_UC1.Name = "order_UC1";
             this.order_UC1.Size = new System.Drawing.Size(1454, 848);
             this.order_UC1.TabIndex = 8;
@@ -523,7 +536,7 @@
             this.prodcut_UC1.AutoScrollMargin = new System.Drawing.Size(1, 1);
             this.prodcut_UC1.AutoScrollMinSize = new System.Drawing.Size(500, 350);
             this.prodcut_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.prodcut_UC1.Location = new System.Drawing.Point(216, 916);
+            this.prodcut_UC1.Location = new System.Drawing.Point(1079, 916);
             this.prodcut_UC1.Name = "prodcut_UC1";
             this.prodcut_UC1.Size = new System.Drawing.Size(1454, 848);
             this.prodcut_UC1.TabIndex = 7;
@@ -532,7 +545,7 @@
             // supplier_UC1
             // 
             this.supplier_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.supplier_UC1.Location = new System.Drawing.Point(1102, 774);
+            this.supplier_UC1.Location = new System.Drawing.Point(1965, 774);
             this.supplier_UC1.Name = "supplier_UC1";
             this.supplier_UC1.Size = new System.Drawing.Size(1454, 848);
             this.supplier_UC1.TabIndex = 6;
@@ -541,7 +554,7 @@
             // customer_UC1
             // 
             this.customer_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
-            this.customer_UC1.Location = new System.Drawing.Point(859, 562);
+            this.customer_UC1.Location = new System.Drawing.Point(1722, 562);
             this.customer_UC1.Margin = new System.Windows.Forms.Padding(4);
             this.customer_UC1.Name = "customer_UC1";
             this.customer_UC1.Size = new System.Drawing.Size(1454, 848);
@@ -552,7 +565,7 @@
             // 
             this.adminControl_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(57)))));
             this.adminControl_UC1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.adminControl_UC1.Location = new System.Drawing.Point(388, 586);
+            this.adminControl_UC1.Location = new System.Drawing.Point(1251, 586);
             this.adminControl_UC1.Name = "adminControl_UC1";
             this.adminControl_UC1.Size = new System.Drawing.Size(1454, 848);
             this.adminControl_UC1.TabIndex = 4;
@@ -566,7 +579,7 @@
             this.userProfil_UC1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.userProfil_UC1.Location = new System.Drawing.Point(175, 163);
             this.userProfil_UC1.Name = "userProfil_UC1";
-            this.userProfil_UC1.Size = new System.Drawing.Size(2381, 1954);
+            this.userProfil_UC1.Size = new System.Drawing.Size(3244, 1954);
             this.userProfil_UC1.TabIndex = 3;
             this.userProfil_UC1.Visible = false;
             // 
@@ -576,7 +589,7 @@
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(1480, 920);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1676, 1004);
+            this.ClientSize = new System.Drawing.Size(1693, 1021);
             this.Controls.Add(this.purchase_UC1);
             this.Controls.Add(this.homeScreen_UC1);
             this.Controls.Add(this.order_UC1);
