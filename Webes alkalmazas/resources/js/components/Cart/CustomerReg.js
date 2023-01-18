@@ -1,18 +1,18 @@
 import React, {useState,useRef} from "react";
 import axios from "axios";
-import {Alert, Button, Col, Form, Row} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import styled from "styled-components";
 import {ProductConsumer} from "../Context";
 import {ButtonContainer} from "../Button";
 import { BsXLg } from "react-icons/bs";
 import Input from 'react-phone-number-input/input'
-import emailjs from "@emailjs/browser";
 
 
 export default function CustomerReg({value}) {
     const {cartTotal} = value;
     const [success, setSuccess] = useState(false);
+    const [ errors, setErrors ] = useState({});
     const [currentId, setCurrentId] = useState();
     const [orderId, setOrderId] = useState("");
     const [currentOrderNumber, setCurrentOrderNumber] = useState("");
@@ -199,7 +199,7 @@ export default function CustomerReg({value}) {
                                         </Form.Group>
                                         <Link to='/'>
                                             <ButtonContainer onClick={()=>closeCustomerReg()}>
-                                                Tovább vásárolok
+                                                Tovább vásárlok
                                             </ButtonContainer>
                                         </Link>
                                         <Link to='/'>
