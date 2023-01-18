@@ -155,7 +155,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                         customerPhone.Text = CustomersDGV.Rows[e.RowIndex].Cells["Mobilszam"].FormattedValue.ToString();
                         string editPhoneNumberText = customerPhone.Text.Replace(" ","");
                         customerPhone.Text = editPhoneNumberText;
-                }
+                    }
                 customerUpdateBT.Enabled = true;
                 getCustomerOrderBT.Enabled = true;
                 actual = new Customer(Convert.ToInt32(currentId), customerFNTB.Text, customerLNTB.Text, customerPhone.Text);

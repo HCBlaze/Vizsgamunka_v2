@@ -50,6 +50,7 @@ namespace Asztali_alkalmazas.UI.UserControls
         }
         DbConnection db = new DbConnection();
         Users uj = new Users();
+        Users actual;
         PasswordCrypt pwd = new PasswordCrypt();
         private void addNewUserBT_Click(object sender, EventArgs e)
         {
@@ -334,6 +335,15 @@ namespace Asztali_alkalmazas.UI.UserControls
             jogosultsagCB1.SelectedIndex = 0;
             JelszoTB.PasswordChar = '*';
         }
+        private void updateSectionTBClear()
+        {
+            getKeresztnevTB.Clear();
+            getVezeteknevTB.Clear();
+            getJelszoTB.Clear();
+            getEmailTB.Clear();
+            dateTimePicker2.Value = DateTime.Now;
+            getJogosultsagCB.SelectedIndex = 0;
+        }
 
         private void AdminControl_UC_Load(object sender, EventArgs e)
         {
@@ -382,6 +392,8 @@ namespace Asztali_alkalmazas.UI.UserControls
         //DataGridView cellákra kattintva feltöltöm a textboxokat
         private void FelhasznalokDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string pw = "";
+            int deleted = 0;
             try
             {
                 if (editUserGB.Visible == true)
@@ -392,7 +404,7 @@ namespace Asztali_alkalmazas.UI.UserControls
                         username = FelhasznalokDGV.Rows[e.RowIndex].Cells["Username"].FormattedValue.ToString();
                         currentId = FelhasznalokDGV.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
                         getJelszoTB.Text = FelhasznalokDGV.Rows[e.RowIndex].Cells["Password"].FormattedValue.ToString();
-                        string pw = pwd.fejtettPWD(getJelszoTB.Text);
+                        pw = pwd.fejtettPWD(getJelszoTB.Text);
                         getJelszoTB.Text = pw;
                         getKeresztnevTB.Text = FelhasznalokDGV.Rows[e.RowIndex].Cells["First_name"].FormattedValue.ToString();
                         getVezeteknevTB.Text = FelhasznalokDGV.Rows[e.RowIndex].Cells["Last_name"].FormattedValue.ToString();
@@ -415,14 +427,16 @@ namespace Asztali_alkalmazas.UI.UserControls
                         {
                             getIsDeletedNoRB.Checked = true;
                             getIsDeletedYesRB.Checked = false;
+                            deleted = 0;
                         }
                         else
                         {
                             getIsDeletedYesRB.Checked = true;
                             getIsDeletedNoRB.Checked = false;
+                            deleted = 1;
                         }
-
                     }
+                    actual = new Users(int.Parse(currentId), username, pw, getKeresztnevTB.Text, getVezeteknevTB.Text, getEmailTB.Text, dateTimePicker2.Value, getJogosultsagCB.SelectedIndex, deleted);
                 }
                 else
                 {
@@ -536,7 +550,7 @@ namespace Asztali_alkalmazas.UI.UserControls
             }
 
 
-            if (uj.Firstname != getKeresztnevTB.Text || uj.Lastname != getVezeteknevTB.Text || uj.Password != getJelszoTB.Text || uj.Email != getEmailTB.Text || uj.BirthDate != dateTimePicker2.Value || uj.Permission != getJogosultsagCB.SelectedIndex)
+            if (actual.Firstname != getKeresztnevTB.Text || actual.Lastname != getVezeteknevTB.Text || actual.Password != getJelszoTB.Text || actual.Email != getEmailTB.Text || actual.BirthDate != dateTimePicker2.Value || actual.Permission != getJogosultsagCB.SelectedIndex)
             {
                 uj.setFirstname(getKeresztnevTB.Text);
                 uj.setLastname(getVezeteknevTB.Text);
@@ -551,15 +565,16 @@ namespace Asztali_alkalmazas.UI.UserControls
                 cmd.CommandText = "UPDATE `local_store_project_23`.`users` SET Password= '" + pwd.CryptedPwd + "', First_name= '" + uj.Firstname + "',Last_name= '" + uj.Lastname + "', `Email`= '" + uj.Email + "',Birth= '" + uj.BirthDate.ToString(format) + "',Permission= '" + uj.Permission + "', Deleted= '" + uj.Deleted + "', updated_at= '"+DateTime.Now.ToString(createNUpdateFormat)+"' WHERE id= '" + currentId + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
+                updateSectionTBClear();
                 reLoadActive();
+                
+            }
+            else
+            {
+                MessageBox.Show("Nem változtattál semmilyen adaton.");
             }
 
-            getKeresztnevTB.Clear();
-            getVezeteknevTB.Clear();
-            getJelszoTB.Clear();
-            getEmailTB.Clear();
-            dateTimePicker2.Value = DateTime.Now;
-            getJogosultsagCB.SelectedIndex = 0;
+            
         }
 
         private void getJelszoTB_Leave(object sender, EventArgs e)
