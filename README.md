@@ -69,7 +69,7 @@ Szükséges hogy a fent is említett mappaszerkezetben bent legyen ez a git repo
 Alkalmazás telepítőjének letöltése(dokumentáció is itt található)
 
 ```bash
-https://drive.google.com/drive/folders/1BQWhsgn9oQfvIUHINSO070bKsUlLN8hx?usp=sharing
+Google drive link 
 
 ```	
 - Mappában mellékelt fontok telepítése
