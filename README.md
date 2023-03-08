@@ -1,11 +1,11 @@
 # Local Store project '23
-	Vizsgamunka laravel/react + c# asztali alkalmazás
-	Egy kis bolt üzemeltetésének könnyítés érdekében gondoltam ki egy Weboldalt és egy asztali alkalmazást.
-	Egyenlőre a Weboldal egy online shop, késöbbiekben akár teljesen kiválthatja az asztali alkalmazást is.
-	Az asztali alkalmazás végzi a bolt igazgatását.(Felhasználó kezelés, Termékek kezelése, Beszállítók, stb...).
+	For the final exam, I create laravel/react + c# destop application
+	In order to running a small shop, I came up with a website and a desktop application.
+	At the same time, the Website is an online shop, later on it can even completely replace the desktop application.
+	The desktop application manages the store (User management, Product management, Suppliers, etc...).
 	
 ---
-### Használt programok és csomagok
+### Used programs and extensions
 
 - Visual Studio 2022
 - PhStorm
@@ -24,9 +24,9 @@
 - react-phone-number-input
 - @emailjs/browser
 
-### Indítás weboldal
+### Launch web application
 
-A projektet a C: meghajtóra kell másolni mivel csak így fogja tudni kezelni a képeket az alkalmazás. Másold ki az alábbi parancsot és létrejön a mappaszerkezet
+The project must be copied to the C: drive, as this is the only way the application will be able to handle the images. Copy the command below and the folder structure will be created
 
 ```bash
 cd c:
@@ -38,48 +38,49 @@ mkdir laragon\www\Vizsgamunka_23_v2\Vizsgamunka_v2\
 
 ```
 
-Projekt lemásolása (Clone) (A fent létrehozott mappába kell lemásolni!!!)
+Copying a project (Clone) (It must be copied to the folder created above!!!)
 
 ```bash
 git@github.com:HCBlaze/Vizsgamunka_v2.git
 
 ```
 
-Ezután elnavigálunk a Webes alklamazás mappába
+Then we navigate to the Web application folder
 ```bash
 cd "Webes alkalmazas"
 
 ```
-A webes alkalmazás mappában található egy .env fájl itt kell megadni az adatbázissal kapcsolatos adatokat! (pl. jelszó)
+In the web application folder, there is an .env file where the data related to the database must be entered! (e.g. password)
 
-NPM feltelepítése 
+
+Install NPM
 
 ```bash
 npm install
 
 ```
 
-Szerver elindítása(én Laragon -t használtam)
+Start server (I used Laragon)
 
-Webböngészőben padig a localhoston elérhető az oldal vagy a Vizsgamunka_23_v2.test címen.
+The page is available in a web browser on localhost or at Vizsgamunka_23_v2.test.
 
-### Asztali alkalmazás indítása
-Szükséges hogy a fent is említett mappaszerkezetben bent legyen ez a git repository (c:\laragon\www\Vizsgamunka_23_v2\Vizsgamunka_v2\) csak így találja meg a képeket a program.
+### Launch desktop application
+This git repository (c:\laragon\www\Vizsgamunka_23_v2\Vizsgamunka_v2\) must be in the folder structure mentioned above, this is the only way the program can find the images.
 
-Alkalmazás telepítőjének letöltése(dokumentáció is itt található)
+Download the application installer (documentation can also be found here)
 
 ```bash
-Google drive link 
+Google drive link ---> if you need contact me via e-mail  
 
 ```	
-- Mappában mellékelt fontok telepítése
-- Az alkalmazás úgy írtam meg hogy helyi gépen kell futatni egy mysql adatbázist.
-- Az adatbázist nem kell létrehozni, a mellékelt .sql fájlt be importálva létrehozza az adatbázist, a táblákat és a teszt adatokat is!
-- Telepítő (.exe) futtatása
-- A telepítés után be kell állítani a helyi mysql adatokat. A program könytárában van egy connectionString.txt fájl itt kell a megfelelő adatokat átírni.
-- Ezután indíthatjuk a programot.
-- Ahhoz hogy a program minden funkciója működjön MS Office -ra és egy .pdf megtekintő programra is szükség lesz.
+- Install fonts included in a folder
+- I wrote the application in such a way that a mysql database must be run on the local machine.
+- The database does not need to be created, by importing the attached .sql file you will create the database, the tables and the test data as well!
+- Run installer (.exe).
+- After installation, the local mysql data must be set. There is a connectionString.txt file in the program's library, the corresponding data must be rewritten here.
+- Then we can start the program.
+- In order for all functions of the program to work, you will need MS Office and a .pdf viewing program.
 ---
 
-Készítette:
-Csóbor Sándor Erik
+Created:
+Sandor Erik Csobor
